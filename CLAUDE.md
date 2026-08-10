@@ -141,18 +141,18 @@ Ao mexer no header, testar a 320px (iPhone SE) antes de subir.
 1. Header sticky escuro (+ menu mobile)
 2. Hero carvão/dourado, prazo de 25 dias como gancho. A imagem grande é um
    **carrossel** de 10 obras; as duas laterais são estáticas
-3. Faixa de diferenciais (3 dores do 09:26)
-4. Bifurcação casa × empresa
-5. Residencial, 6 ambientes
-6. Empresas, 4 tipos de projeto
-7. Como funciona, 5 etapas
-8. Acabamentos
-9. Sobre, história real sem inflar tempo de mercado, seguido de duas galerias
+3. Bifurcação casa × empresa
+4. Residencial, 6 ambientes
+5. Empresas, 4 tipos de projeto
+6. Como funciona, 5 etapas
+7. Acabamentos
+8. Sobre, história real sem inflar tempo de mercado, seguido de duas galerias
    de obras (residencial e comercial)
-10. Avaliações do Google (ver abaixo)
-11. CTA final
-12. FAQ, 8 perguntas com termos soft
-13. Rodapé
+9. Avaliações do Google (ver abaixo)
+10. CTA final
+11. FAQ, 8 perguntas com termos soft
+13. "Você já ouviu alguma dessas histórias" (as 3 dores do 09:26), última seção
+14. Rodapé
 
 A seção "Antes de decidir" (comparativo planejado × móvel pronto) foi removida
 a pedido do Gabriel em 07/08. O FAQ ainda cobre o tema, que era o que capturava
@@ -322,3 +322,37 @@ perfil do Meu Negócio quando ele for criado.
 **Integração futura:** trocar a constante por um `fetch` que devolva o mesmo
 formato (Places API, endpoint `place/details`, campo `reviews`, ou um JSON
 gerado por rotina). O resto da seção não muda, ela só lê o array.
+
+## SEO
+
+Aplicado em 10/08. As URLs apontam para `https://moveta-moveis.pages.dev`;
+**trocar nos 5 lugares** quando o domínio próprio entrar (canonical, og:url,
+og:image, twitter:image, JSON-LD, além de `robots.txt` e `sitemap.xml`).
+
+- `canonical`, `robots` com `max-image-preview:large`, `geo.region`/`geo.placename`
+- Open Graph completo e Twitter `summary_large_image`
+- `public/robots.txt` e `public/sitemap.xml`, com cache de 1h no `_headers`
+
+**JSON-LD, dois blocos:**
+1. `HomeAndConstructionBusiness`: nome, telefone, `areaServed` (Curitiba, Fazenda
+   Rio Grande e região metropolitana), horário e `makesOffer` com os 5 serviços
+   confirmados.
+2. `FAQPage` com as 8 perguntas, **gerado a partir do HTML do próprio FAQ**, para
+   não haver divergência entre o que o Google lê e o que o usuário vê. Ao editar
+   uma pergunta, regenerar o bloco.
+
+> Deixei de fora, de propósito: `aggregateRating` (a empresa não tem avaliações;
+> declarar nota inventada é motivo de penalização manual do Google) e o endereço
+> de rua (o barracão não foi confirmado como endereço público). Quando o Meu
+> Negócio existir, os dois entram juntos.
+
+## Deploy
+
+Repositório: `gabrielpriss/moveta-moveis`. Projeto Cloudflare Pages: `moveta-moveis`.
+
+```bash
+npm run deploy    # wrangler pages deploy public --project-name=moveta-moveis
+```
+
+O `.gitignore` exclui `arte-original/` e `fotos-originais/` (~10 MB), que ficam
+no Drive do cliente.
