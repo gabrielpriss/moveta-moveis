@@ -150,7 +150,7 @@ Ao mexer no header, testar a 320px (iPhone SE) antes de subir.
    de obras (residencial e comercial)
 9. Avaliações do Google (ver abaixo)
 10. CTA final
-11. FAQ, 8 perguntas com termos soft
+11. FAQ, 4 perguntas com termos soft
 13. "Você já ouviu alguma dessas histórias" (as 3 dores do 09:26), última seção
 14. Rodapé
 
@@ -341,7 +341,7 @@ campos do JSON-LD, `robots.txt` e `sitemap.xml`).
 1. `HomeAndConstructionBusiness`: nome, telefone, `areaServed` (Curitiba, Fazenda
    Rio Grande e região metropolitana), horário e `makesOffer` com os 5 serviços
    confirmados.
-2. `FAQPage` com as 8 perguntas, **gerado a partir do HTML do próprio FAQ**, para
+2. `FAQPage` com as 4 perguntas, **gerado a partir do HTML do próprio FAQ**, para
    não haver divergência entre o que o Google lê e o que o usuário vê. Ao editar
    uma pergunta, regenerar o bloco.
 
@@ -360,3 +360,18 @@ npm run deploy    # wrangler pages deploy public --project-name=moveta-moveis
 
 O `.gitignore` exclui `arte-original/` e `fotos-originais/` (~10 MB), que ficam
 no Drive do cliente.
+
+## Negrito nos blocos de texto
+
+Aplicado em 10/08: 29 termos em `<strong>` nos blocos longos (FAQ, cards de
+diferenciais, "Sobre", aberturas de seção, etapas do processo). Critério: **1 a 2
+por parágrafo**, sempre no diferencial ou no número decisivo (25 dias, no seu
+endereço, antes de fechar, cada centímetro, medida real). Bold demais anula o
+próprio destaque.
+
+A cor acompanha o fundo: `text-white` sobre carvão, `text-carvao` sobre creme e
+areia. Verificado que nenhum ficou com contraste invertido.
+
+> ⚠️ As respostas do FAQ existem **duas vezes** no arquivo: no HTML e no JSON-LD.
+> O negrito entra só no HTML; o schema fica em texto puro. Ao editar, limitar a
+> busca ao trecho depois de `</head>`.
