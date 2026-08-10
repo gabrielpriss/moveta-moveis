@@ -416,3 +416,27 @@ entregar, contando a partir do fechamento (35:30 a 36:02).
 ### Discutido sem decisão, não aplicar sem confirmar
 - Empresas tem 4 cards contra 6 do residencial: Gabriel levantou, sem decisão (14:36)
 - Power numbers: possibilidade de incluir "projetos entregues", sem decisão (29:30)
+
+## Armadilha: `hidden` perde para classe utilitária
+
+O atributo `hidden` só vale `display: none` na folha do navegador, que perde
+para qualquer classe do Tailwind. Um elemento com `hidden` **e** `flex`
+continua na tela. Foi o que aconteceu com o lightbox, que ficou cobrindo a
+página inteira com `z-index: 60`.
+
+A página traz esta regra global no `<style>`:
+
+```css
+[hidden] { display: none !important; }
+```
+
+Vale para todos os elementos que alternam por `hidden`: `#lightbox`,
+`#qualificador`, `#menu-mobile`, `#avaliacoes-vazio`, `#aviso-previa` e as
+`.q-etapa`. Não remover.
+
+## Lightbox: escopo
+
+Só as fotos das **duas galerias** abaixo de "Quem faz" (`#galeria-residencial`
+e `#galeria-comercial`) abrem ampliadas. O carrossel do hero e os cards de
+ambiente **não** abrem lightbox: os cards levam ao popup qualificador, que é o
+caminho de conversão. Ao mexer no seletor, manter esse escopo.

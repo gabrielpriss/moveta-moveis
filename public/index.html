@@ -189,9 +189,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       .trilho::-webkit-scrollbar { display: none; }
       .trilho > * { scroll-snap-align: start; }
 
+      /* O atributo `hidden` vale só display:none na folha do navegador, que
+         perde para qualquer classe utilitária. Sem esta regra, um elemento
+         com `hidden` e `flex` (o caso do lightbox e do qualificador) continua
+         aparecendo na tela. Vale para a página inteira, para o problema não
+         voltar em outro elemento. */
+      [hidden] { display: none !important; }
+
       /* Popup qualificador */
       #qualificador { transition: opacity .3s ease; }
-      #qualificador[hidden] { display: none; }
       .opcao-btn {
         transition: border-color .2s, background-color .2s, transform .2s;
       }
