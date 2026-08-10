@@ -1,7 +1,7 @@
 {
-  "name": "moveta-planejados",
+  "name": "moveta-moveis",
   "private": true,
-  "description": "Landing page Movetá Móveis Planejados — Cloudflare Pages",
+  "description": "Landing page Movetá Móveis Planejados, Cloudflare Pages",
   "engines": {
     "node": ">=18"
   },
@@ -11,8 +11,8 @@
     "fotos": "python3 scripts/tratar-fotos.py",
     "dev": "python3 -m http.server 8934 --directory public",
     "dev:wrangler": "wrangler pages dev public --port 8934",
-    "deploy": "wrangler pages deploy public --project-name=moveta-planejados --branch=main",
-    "deploy:preview": "wrangler pages deploy public --project-name=moveta-planejados"
+    "deploy": "wrangler pages deploy public --project-name=moveta-moveis --branch=main",
+    "deploy:preview": "wrangler pages deploy public --project-name=moveta-moveis"
   },
   "devDependencies": {
     "wrangler": "^4.100.0"
