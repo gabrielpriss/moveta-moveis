@@ -375,3 +375,38 @@ areia. Verificado que nenhum ficou com contraste invertido.
 > ⚠️ As respostas do FAQ existem **duas vezes** no arquivo: no HTML e no JSON-LD.
 > O negrito entra só no HTML; o schema fica em texto puro. Ao editar, limitar a
 > busca ao trecho depois de `</head>`.
+
+## Reunião de apresentação ao cliente (10/08/2026)
+
+Participantes: Eduardo, Grazi e Diego (o marceneiro sócio). Transcrição em
+`Meeting Transcription (84).txt`.
+
+### Aplicado (fechado na reunião)
+
+| Mudança | Ref. |
+|---|---|
+| Foto da cozinha trocada: o fogão roubava a atenção (15.37.01 → 15.36.59, sem fogão no quadro) | 07:32 |
+| Foto do escritório trocada: o móvel estava cortado e não favorecia o gaveteiro (16.00.36 → 16.00.34-1) | 07:38 |
+| Fotos de **dormitório e home office trocadas entre si**: estavam invertidas | 14:13 |
+| Título do residencial virou **"Sua casa pronta até o final do ano"** | 24:14 |
+| Exemplo do prazo deixou de ser cozinha: Eduardo confirmou que **cozinha é dos mais demorados**. Agora é guarda-roupa ou painel de TV | 36:20 |
+| Instagram no rodapé | 15:53, 33:17 |
+| Fotos das galerias **clicáveis com lightbox** | 36:36 |
+| Botão destacado "Solicitar catálogo no WhatsApp" nos acabamentos | 44:06 |
+
+O **prazo de 25 dias foi mantido**: Diego e Eduardo confirmaram que dá para
+entregar, contando a partir do fechamento (35:30 a 36:02).
+
+### Pendente, aguardando material do cliente
+- **Foto de lavanderia de verdade**: a atual não é lavanderia. A Grazi ia mandar (12:18)
+- **Fotos dos acabamentos**: trocar os blocos de cor por madeiras reais. Ninguém tinha o material na reunião (44:51)
+- **Antes e depois**: Eduardo sugeriu um comparador deslizante. Depende de pares de fotos do mesmo ângulo (12:49)
+- **Foto da equipe** na seção "Quem faz" (27:28)
+- **CNPJ no rodapé**: acordado, mas o número não foi passado e o CNPJ está em transição (33:17)
+- **Handle do Instagram**: o perfil ainda estava como "deg"; a Grazi ia trocar para movetaplanejados no mesmo dia. Confirmar antes de publicar (17:22, 55:29)
+
+### Discutido sem decisão, não aplicar sem confirmar
+- Renomear "Dormitório" para "Quarto": Gabriel disse "talvez ficaria mais natural", ninguém fechou (11:58)
+- Última seção considerada repetitiva por Gabriel e Eduardo, mas sem decisão entre remover ou substituir (32:15, 34:31)
+- Empresas tem 4 cards contra 6 do residencial: Gabriel levantou, sem decisão (14:36)
+- Power numbers: possibilidade de incluir "projetos entregues", sem decisão (29:30)

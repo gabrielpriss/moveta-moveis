@@ -41,14 +41,14 @@ QUALIDADE = 88
 FOTOS = {
     # ---- Hero: duas laterais estaticas ----
     'hero-detalhe-1':          ('15.58.05.jpg',        420, 0),
-    'hero-detalhe-2':          ('16.00.36.jpg',        420, 0),
+    'hero-detalhe-2':          ('16.00.34-1.jpg',      420, 0),
 
     # ---- Hero: carrossel, alternando residencial e comercial ----
     'hero-slide-01':           ('15.36.42-1.jpg',      800, 0),      # R painel ripado com TV
     'hero-slide-02':           ('15.56.44.jpg',        800, 0),      # C balcao de recepcao
     'hero-slide-03':           ('15.58.02.jpg',        800, 0),      # R home office fendi
     'hero-slide-04':           ('16.00.33.jpg',        800, 0),      # C escritorio mesa em L
-    'hero-slide-05':           ('15.37.01.jpg',        800, 0.06),   # R cozinha branca
+    'hero-slide-05':           ('15.36.59.jpg',        800, 0.06),   # R cozinha branca
     'hero-slide-06':           ('0722-17.11.36-1.jpg', 800, 0),      # C mesa de reuniao
     'hero-slide-07':           ('15.37.05-1.jpg',      800, 0),      # R painel com TV ligada
     'hero-slide-08':           ('16.00.36.jpg',        800, 0),      # C estacoes de trabalho
@@ -56,12 +56,12 @@ FOTOS = {
     'hero-slide-10':           ('15.37.24.jpg',        800, 0),      # C sala de reuniao com TV
 
     # ---- Cards residenciais ----
-    'residencial-cozinha':     ('15.37.01.jpg',       1200, 0.06),
-    'residencial-dormitorio':  ('15.36.40-1.jpg',      800, 0),
+    'residencial-cozinha':     ('15.36.59.jpg',       1200, 0.06),
+    'residencial-dormitorio':  ('15.57.58-1.jpg',      800, 0),
     'residencial-painel-tv':   ('15.37.05-1.jpg',      800, 0),
     'residencial-banheiro':    ('15.58.04-1.jpg',      800, 0),
     'residencial-lavanderia':  ('15.36.58.jpg',        800, 0),
-    'residencial-home-office': ('15.57.58-1.jpg',      800, 0),
+    'residencial-home-office': ('15.36.40-1.jpg',      800, 0),
 
     # ---- Cards de empresa ----
     'empresa-mesa':            ('15.56.44.jpg',       1200, 0),
