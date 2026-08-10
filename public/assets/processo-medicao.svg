@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="750" viewBox="0 0 1000 750" role="img" aria-label="Medição no local do cliente">
+  <rect width="1000" height="750" fill="#EDE7DB"/>
+  <rect x="12" y="12" width="976" height="726" fill="none" stroke="#C9A24B" stroke-width="2" stroke-dasharray="10 8" opacity=".55"/>
+  <g fill="none" stroke="#C9A24B" stroke-width="2.5" opacity=".7" transform="translate(478 331)">
+    <rect x="0" y="0" width="44" height="34" rx="3"/>
+    <circle cx="32" cy="9" r="4"/>
+    <path d="M0 26l13-12 10 9 8-6 13 11"/>
+  </g>
+  <text x="500" y="383" font-family="Georgia, serif" font-size="29" fill="#211D1A" text-anchor="middle">Medição no local do cliente</text>
+  <text x="500" y="418" font-family="system-ui, sans-serif" font-size="22" fill="#211D1A" opacity=".55" text-anchor="middle">substituir por foto real · 1000x750</text>
+</svg>

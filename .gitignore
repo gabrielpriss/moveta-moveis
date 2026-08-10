@@ -1,0 +1,9 @@
+node_modules/
+.wrangler/
+.DS_Store
+*.log
+
+# Arte e fotos originais: pesam ~10 MB e nao vao para o deploy.
+# Ficam no Drive do cliente (pasta DEG MOVEIS - Prime).
+arte-original/
+fotos-originais/

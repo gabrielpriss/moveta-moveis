@@ -1,0 +1,1672 @@
+<!DOCTYPE html>
+<html lang="pt-BR" id="site" class="scroll-smooth">
+<head>
+<!--
+  ============================================================================
+  MOVETA MOVEIS PLANEJADOS - Landing Page (Google Ads)
+  ============================================================================
+
+  TROCAR O WHATSAPP:  buscar e substituir  5541991264615
+      Numero informado: +55 41 9126-4615. Como celular no Parana tem 9 digitos
+      e o informado veio com 8, foi assumido o 9 inicial -> (41) 99126-4615.
+      >>> CONFIRMAR COM O CLIENTE ANTES DE PUBLICAR. <<<
+
+  TROCAR AS FOTOS:    os arquivos em /assets sao placeholders SVG. Salve a foto
+      real como .webp com o MESMO nome-base e troque a extensao no src.
+
+  IDENTIDADE VISUAL:  paleta e fontes seguem a logo oficial (monograma dourado
+      sobre carvao, lettering serif classico). assets/logo-moveta.png vem da
+      arte original em arte-original/, recortada e com o fundo removido por
+      scripts/preparar-logo.py (npm run logo).
+
+  REGRA DE CONTEUDO:  a pagina afirma somente o que o cliente citou na reuniao
+      de onboarding (03/08/2026). NAO ha mencao a projeto 3D, showroom,
+      garantia, parcelamento, nota fiscal ou anos de mercado porque nada disso
+      foi citado. Antes de adicionar qualquer claim novo, confirmar com o
+      cliente.
+
+  PENDENTE (preencher so com dado real):
+      - Depoimentos: empresa nova, zero avaliacoes. Secao oculta com hidden;
+        remover o atributo quando as primeiras avaliacoes do Google chegarem.
+      - Endereco do barracao (Google Meu Negocio e rodape).
+      - Dias exatos de atendimento (so "horario comercial" foi confirmado).
+      - SEO (canonical, OG, JSON-LD, sitemap, robots) na proxima etapa.
+  ============================================================================
+-->
+
+<!-- Google Tag Manager - inserir o ID do container quando criado
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Movetá Móveis Planejados | Sob Medida em Curitiba e Região</title>
+    <meta name="description" content="Móveis planejados sob medida para casa e empresa em Curitiba e região. Marcenaria própria, projeto apresentado antes de fechar e entrega em 25 dias. Orçamento pelo WhatsApp.">
+    <meta name="theme-color" content="#211D1A">
+
+    <link rel="icon" href="/assets/favicon-moveta.png" type="image/png">
+    <link rel="apple-touch-icon" href="/assets/favicon-moveta.png">
+
+    <!-- SEO. Trocar https://moveta-moveis.pages.dev nas 5 URLs abaixo quando o dominio proprio entrar.
+         O canonical usa a forma sem barra final, igual ao que o Pages serve. -->
+    <link rel="canonical" href="https://moveta-moveis.pages.dev/">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="author" content="Movetá Móveis Planejados">
+    <meta name="geo.region" content="BR-PR">
+    <meta name="geo.placename" content="Curitiba">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Movetá Móveis Planejados">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:title" content="Movetá Móveis Planejados | Sob Medida em Curitiba e Região">
+    <meta property="og:description" content="Móveis planejados sob medida para casa e empresa em Curitiba e região. Marcenaria própria, projeto apresentado antes de fechar e entrega em 25 dias.">
+    <meta property="og:url" content="https://moveta-moveis.pages.dev/">
+    <meta property="og:image" content="https://moveta-moveis.pages.dev/assets/hero-slide-01.webp">
+    <meta property="og:image:width" content="800">
+    <meta property="og:image:height" content="1065">
+    <meta property="og:image:alt" content="Painel ripado de madeira com TV e bancada, projeto executado pela Movetá">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Movetá Móveis Planejados | Sob Medida em Curitiba e Região">
+    <meta name="twitter:description" content="Móveis planejados sob medida para casa e empresa em Curitiba e região. Entrega em 25 dias.">
+    <meta name="twitter:image" content="https://moveta-moveis.pages.dev/assets/hero-slide-01.webp">
+
+    <!-- Schema.org. Sem endereco e sem aggregateRating de proposito: o barracao
+         nao foi confirmado como endereco publico e a empresa ainda nao tem
+         avaliacoes. Inventar qualquer um dos dois quebraria o rich result. -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HomeAndConstructionBusiness",
+      "@id": "https://moveta-moveis.pages.dev/#empresa",
+      "name": "Movetá Móveis Planejados",
+      "description": "Móveis planejados sob medida para residências e empresas em Curitiba e região metropolitana, com marcenaria própria e entrega em 25 dias.",
+      "url": "https://moveta-moveis.pages.dev/",
+      "image": "https://moveta-moveis.pages.dev/assets/hero-slide-01.webp",
+      "logo": "https://moveta-moveis.pages.dev/assets/logo-moveta.png",
+      "telephone": "+55-41-99126-4615",
+      "priceRange": "$$",
+      "areaServed": [
+        { "@type": "City", "name": "Curitiba" },
+        { "@type": "City", "name": "Fazenda Rio Grande" },
+        { "@type": "AdministrativeArea", "name": "Região Metropolitana de Curitiba" }
+      ],
+      "address": { "@type": "PostalAddress", "addressLocality": "Curitiba", "addressRegion": "PR", "addressCountry": "BR" },
+      "openingHoursSpecification": [{
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+        "opens": "08:00", "closes": "18:00"
+      }],
+      "makesOffer": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Cozinha planejada sob medida" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Dormitório e guarda-roupa planejado" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Painel para TV sob medida" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Home office planejado" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Móveis planejados para escritório" } }
+      ]
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Montserrat', 'system-ui', 'sans-serif'],
+              display: ['Marcellus', 'Georgia', 'serif'],
+            },
+            colors: {
+              // Paleta extraida da logo oficial: monograma dourado sobre
+              // fundo carvao, wordmark prata.
+              carvao: '#211D1A',  // fundo escuro da logo
+              ouro:   '#C9A24B',  // dourado do monograma (usar sobre fundo escuro)
+              bronze: '#7A5F24',  // dourado escuro (texto e icones sobre fundo claro)
+              prata:  '#D8D5D0',  // prata do wordmark (texto sobre fundo escuro)
+              areia:  '#EDE7DB',  // fundo claro alternado
+              creme:  '#F7F4EE',  // fundo claro geral
+              pedra:  '#6B6560',  // texto secundario
+              zap:    '#25D366',  // WhatsApp
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      html#site { scroll-padding-top: 5rem; overflow-x: clip; }
+      body { overflow-x: clip; padding-bottom: calc(4.25rem + env(safe-area-inset-bottom, 0px)); }
+      @media (min-width: 768px) { body { padding-bottom: 0; } }
+      img, svg { max-width: 100%; height: auto; }
+
+      .sr-only {
+        position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+        overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+      }
+      .pular-para:focus {
+        position: fixed; top: 1rem; left: 1rem; z-index: 90; width: auto; height: auto;
+        clip: auto; margin: 0; padding: .75rem 1.25rem; background: #211D1A; color: #fff; border-radius: .5rem;
+      }
+
+      /* Botao principal com brilho sutil no hover */
+      .btn-zap {
+        background: #25D366; color: #0B2B18;
+        box-shadow: 0 6px 20px -6px rgba(37, 211, 102, .65);
+        transition: transform .25s cubic-bezier(.22,1,.36,1), box-shadow .25s, filter .25s;
+      }
+      .btn-zap:hover { transform: translateY(-2px); filter: brightness(1.06); box-shadow: 0 12px 28px -8px rgba(37, 211, 102, .8); }
+
+      /* Cartoes de ambiente: zoom leve na imagem */
+      .card-amb img { transition: transform .6s cubic-bezier(.22,1,.36,1); }
+      .card-amb:hover img { transform: scale(1.06); }
+
+      /* Numero grande decorativo das etapas do processo */
+      .etapa-num {
+        font-family: 'Marcellus', Georgia, serif; font-size: 3.5rem; line-height: 1;
+        color: #A6823A; opacity: .35;
+      }
+
+      /* FAQ nativo com <details> */
+      .faq-item[open] .faq-seta { transform: rotate(180deg); }
+      .faq-seta { transition: transform .3s ease; }
+      .faq-item summary::-webkit-details-marker { display: none; }
+      .faq-item summary { list-style: none; cursor: pointer; }
+
+      /* Carrossel horizontal com scroll-snap */
+      .trilho { scroll-snap-type: x mandatory; scrollbar-width: none; }
+      .trilho::-webkit-scrollbar { display: none; }
+      .trilho > * { scroll-snap-align: start; }
+
+      /* Popup qualificador */
+      #qualificador { transition: opacity .3s ease; }
+      #qualificador[hidden] { display: none; }
+      .opcao-btn {
+        transition: border-color .2s, background-color .2s, transform .2s;
+      }
+      .opcao-btn:hover { border-color: #C9A24B; background: #FBF7EC; transform: translateY(-1px); }
+      .opcao-btn[aria-pressed="true"] { border-color: #211D1A; background: #211D1A; color: #fff; }
+
+      @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+      }
+    </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Qual é o prazo de entrega dos móveis?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "São 25 dias entre o fechamento e a montagem, para um projeto de porte normal, como uma cozinha de apartamento. Projetos maiores, vários ambientes de uma vez ou a agenda do momento alongam esse prazo, e nesse caso o número certo entra no orçamento antes de você fechar."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quanto custa um móvel planejado?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Depende do tamanho do ambiente, do acabamento escolhido e das ferragens. Por isso não trabalhamos com tabela fechada: medimos o espaço, montamos o projeto e apresentamos o valor detalhado antes de qualquer compromisso."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Vocês atendem quais regiões?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Curitiba e região metropolitana. Um dos projetos fechados recentemente, por exemplo, é uma lavanderia em Fazenda Rio Grande. Se o seu endereço estiver um pouco além, pergunte assim mesmo: dependendo do projeto, conseguimos atender."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Como funciona o atendimento?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "O atendimento é feito no seu endereço, no horário que for melhor para você. Agendamos a visita, tiramos as medidas e apresentamos o projeto ali mesmo, com o seu ambiente e a sua iluminação na frente. Isso costuma dar bem mais acerto na escolha das cores do que decidir longe do espaço real."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qual a diferença entre planejado, modulado e móvel pronto?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "O móvel pronto vem em medidas fixas de catálogo. O modulado combina módulos padronizados, o que ajuda, mas ainda deixa vãos sobrando. O planejado sob medida é desenhado a partir da medida real da sua parede, sem vão morto, aproveitando canto, viga e pé-direito. É o que fazemos."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Como funciona o pagamento?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Essa conversa acontece junto com o orçamento. Chama no WhatsApp e a gente explica as condições para o seu projeto."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Vocês fazem móveis para empresas e escritórios?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Fazemos: móveis para escritório, mesa de reunião, armários, divisórias e painéis. Um pedido recente, por exemplo: armários sob medida para os funcionários de uma empresa guardarem os pertences. A execução costuma ser mais rápida que a de um projeto residencial."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Dá para fazer só um ambiente?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Dá sim. O orçamento cobre exatamente o que você precisa, de um ambiente único à casa toda."
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="bg-creme font-sans text-carvao antialiased">
+
+<!-- GTM noscript - reativar junto com o script do head
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+-->
+
+<a href="#conteudo" class="sr-only pular-para">Pular para o conteúdo</a>
+
+<!-- ═══════════════════════════════════════════════════════════
+     HEADER (escuro, como o fundo da logo)
+     ═══════════════════════════════════════════════════════════ -->
+<header class="sticky top-0 z-40 bg-carvao/95 backdrop-blur border-b border-white/10">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 sm:h-20 flex items-center justify-between gap-4">
+
+    <a href="#inicio" class="flex items-center gap-3 min-w-0" aria-label="Movetá Móveis Planejados, início">
+      <!-- A logo e larga (955x240, proporcao ~4:1). Em telas de 320px ela
+           precisa encolher, senao empurra o CTA e o hamburguer para fora
+           da viewport. -->
+      <img src="assets/logo-moveta.png" alt="Movetá Móveis Planejados" width="955" height="240" class="h-8 min-[360px]:h-10 sm:h-12 w-auto">
+    </a>
+
+    <nav class="hidden lg:flex items-center gap-7 text-sm font-medium text-prata/80" aria-label="Navegação principal">
+      <a href="#residencial" class="hover:text-ouro transition-colors">Para sua casa</a>
+      <a href="#empresas" class="hover:text-ouro transition-colors">Para sua empresa</a>
+      <a href="#processo" class="hover:text-ouro transition-colors">Como funciona</a>
+      <a href="#acabamentos" class="hover:text-ouro transition-colors">Acabamentos</a>
+      <a href="#duvidas" class="hover:text-ouro transition-colors">Dúvidas</a>
+    </nav>
+
+    <div class="flex items-center gap-3">
+      <span class="hidden xl:flex items-center gap-2 text-xs text-prata/60">
+        <i class="fa-solid fa-location-dot text-ouro" aria-hidden="true"></i>
+        Curitiba e região
+      </span>
+      <!-- Abaixo de 400px o rotulo sai e sobra so o icone: o aria-label
+           garante o nome acessivel nesse caso. -->
+      <button type="button"
+              class="btn-zap js-abrir-qualificador rounded-full px-3 min-[360px]:px-4 sm:px-5 py-2.5 text-sm font-semibold flex items-center gap-2 shrink-0"
+              data-origem="Header" aria-label="Pedir orçamento no WhatsApp">
+        <i class="fa-brands fa-whatsapp text-base" aria-hidden="true"></i>
+        <span class="hidden sm:inline">Pedir orçamento</span>
+        <span class="hidden min-[360px]:inline sm:hidden">Orçamento</span>
+      </button>
+
+      <button type="button" id="abrir-menu"
+              class="lg:hidden w-10 h-10 -mr-2 flex items-center justify-center text-prata"
+              aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-mobile">
+        <i class="fa-solid fa-bars text-xl" aria-hidden="true"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Menu mobile: a pagina e longa, sem isto nao ha navegacao no celular -->
+  <div id="menu-mobile" hidden class="lg:hidden border-t border-white/10 bg-carvao">
+    <nav class="max-w-7xl mx-auto px-4 py-3" aria-label="Navegação mobile">
+      <ul class="divide-y divide-white/10 text-sm font-medium">
+        <li><a href="#residencial" class="js-link-menu block py-3.5 text-prata">Para sua casa</a></li>
+        <li><a href="#empresas"    class="js-link-menu block py-3.5 text-prata">Para sua empresa</a></li>
+        <li><a href="#processo"    class="js-link-menu block py-3.5 text-prata">Como funciona</a></li>
+        <li><a href="#acabamentos" class="js-link-menu block py-3.5 text-prata">Acabamentos</a></li>
+        <li><a href="#duvidas"     class="js-link-menu block py-3.5 text-prata">Dúvidas frequentes</a></li>
+      </ul>
+      <p class="flex items-center gap-2 text-xs text-prata/60 pt-3">
+        <i class="fa-solid fa-location-dot text-ouro" aria-hidden="true"></i>
+        Curitiba e região metropolitana
+      </p>
+    </nav>
+  </div>
+</header>
+
+<main id="conteudo">
+
+<!-- ═══════════════════════════════════════════════════════════
+     1. HERO (carvao e dourado, ecoando a logo)
+     ═══════════════════════════════════════════════════════════ -->
+<section id="inicio" class="relative overflow-hidden bg-carvao text-prata">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 pt-12 pb-16 sm:pt-16 sm:pb-24 grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
+
+    <div data-aos="fade-up">
+      <h1 class="font-display text-3xl sm:text-4xl lg:text-5xl leading-[1.15] text-white mb-5">
+        Móveis planejados sob medida,<br class="hidden sm:block">
+        entregues em <span class="text-ouro">25 dias</span>
+      </h1>
+
+      <p class="text-base sm:text-lg text-prata/85 leading-relaxed mb-7 max-w-xl">
+        Você vê o projeto e o valor antes de fechar, o prazo é combinado com clareza
+        e a mesma marcenaria que projeta é a que executa e monta. Para a sua casa ou
+        para a sua empresa, <strong class="text-prata">em Curitiba e região</strong>,
+        a gente vai até você.
+      </p>
+
+      <!-- Provas rapidas: todas citadas pelo cliente na reuniao -->
+      <ul class="grid grid-cols-2 gap-x-5 gap-y-3 mb-8 max-w-lg text-sm">
+        <li class="flex items-start gap-2.5">
+          <i class="fa-solid fa-circle-check text-ouro mt-0.5" aria-hidden="true"></i>
+          <span>Prazo de <strong class="text-white">25 dias</strong></span>
+        </li>
+        <li class="flex items-start gap-2.5">
+          <i class="fa-solid fa-circle-check text-ouro mt-0.5" aria-hidden="true"></i>
+          <span>Projeto <strong class="text-white">antes de fechar</strong></span>
+        </li>
+        <li class="flex items-start gap-2.5">
+          <i class="fa-solid fa-circle-check text-ouro mt-0.5" aria-hidden="true"></i>
+          <span>Atendimento <strong class="text-white">no seu endereço</strong></span>
+        </li>
+        <li class="flex items-start gap-2.5">
+          <i class="fa-solid fa-circle-check text-ouro mt-0.5" aria-hidden="true"></i>
+          <span>Equipe própria, do projeto à montagem</span>
+        </li>
+      </ul>
+
+      <div class="flex flex-col sm:flex-row gap-3">
+        <button type="button"
+                class="btn-zap js-abrir-qualificador rounded-full px-7 py-4 text-base font-semibold flex items-center justify-center gap-2.5"
+                data-origem="Hero">
+          <i class="fa-brands fa-whatsapp text-xl" aria-hidden="true"></i>
+          Pedir meu orçamento
+        </button>
+        <a href="#residencial"
+           class="rounded-full px-7 py-4 text-base font-semibold border-2 border-ouro text-ouro flex items-center justify-center gap-2.5 hover:bg-ouro hover:text-carvao transition-colors">
+          Ver o que fazemos
+          <i class="fa-solid fa-arrow-down text-sm" aria-hidden="true"></i>
+        </a>
+      </div>
+
+      <p class="mt-4 text-xs text-prata/70">
+        Resposta no WhatsApp em horário comercial
+      </p>
+    </div>
+
+    <!-- Colagem do hero -->
+    <div class="grid grid-cols-3 gap-3 sm:gap-4" data-aos="fade-left" data-aos-delay="150">
+      <!-- Carrossel: anda sozinho a cada 4s e tambem no botao. Pausa no hover,
+           no foco do teclado e quando a aba sai de vista. -->
+      <div class="col-span-2 row-span-2 relative overflow-hidden rounded-2xl bg-white/5 ring-1 ring-white/10 group/carrossel"
+           id="hero-carrossel" aria-roledescription="carrossel" aria-label="Projetos executados pela Movetá">
+          <img src="assets/hero-slide-01.webp" alt="Painel ripado de madeira com TV e bancada, projeto residencial" width="800" height="1065"
+               class="hero-slide absolute inset-0 w-full h-full object-cover"
+               data-indice="0" fetchpriority="high">
+          <img src="assets/hero-slide-02.webp" alt="Balcão de recepção planejado, projeto comercial" width="800" height="600"
+               class="hero-slide absolute inset-0 w-full h-full object-cover"
+               data-indice="1" loading="lazy">
+          <img src="assets/hero-slide-03.webp" alt="Home office planejado com bancada e iluminação embutida" width="800" height="1067"
+               class="hero-slide absolute inset-0 w-full h-full object-cover"
+               data-indice="2" loading="lazy">
+          <img src="assets/hero-slide-04.webp" alt="Escritório com mesa em L planejada" width="800" height="1067"
+               class="hero-slide absolute inset-0 w-full h-full object-cover"
+               data-indice="3" loading="lazy">
+          <img src="assets/hero-slide-05.webp" alt="Cozinha planejada em L com bancada de granito" width="800" height="564"
+               class="hero-slide absolute inset-0 w-full h-full object-cover"
+               data-indice="4" loading="lazy">
+          <img src="assets/hero-slide-06.webp" alt="Mesa de reunião planejada com gaveteiros" width="800" height="600"
+               class="hero-slide absolute inset-0 w-full h-full object-cover"
+               data-indice="5" loading="lazy">
+          <img src="assets/hero-slide-07.webp" alt="Painel ripado para TV na sala" width="800" height="1065"
+               class="hero-slide absolute inset-0 w-full h-full object-cover"
+               data-indice="6" loading="lazy">
+          <img src="assets/hero-slide-08.webp" alt="Estações de trabalho planejadas em escritório" width="800" height="1067"
+               class="hero-slide absolute inset-0 w-full h-full object-cover"
+               data-indice="7" loading="lazy">
+          <img src="assets/hero-slide-09.webp" alt="Armários de dormitório com nichos e iluminação" width="800" height="1067"
+               class="hero-slide absolute inset-0 w-full h-full object-cover"
+               data-indice="8" loading="lazy">
+          <img src="assets/hero-slide-10.webp" alt="Sala de reunião com painel para TV" width="800" height="1069"
+               class="hero-slide absolute inset-0 w-full h-full object-cover"
+               data-indice="9" loading="lazy">
+
+        <button type="button" id="hero-anterior" aria-label="Imagem anterior"
+                class="absolute left-2 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-carvao/60 text-white backdrop-blur flex items-center justify-center opacity-0 group-hover/carrossel:opacity-100 focus:opacity-100 transition-opacity">
+          <i class="fa-solid fa-chevron-left text-sm" aria-hidden="true"></i>
+        </button>
+        <button type="button" id="hero-proximo" aria-label="Próxima imagem"
+                class="absolute right-2 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-carvao/60 text-white backdrop-blur flex items-center justify-center opacity-0 group-hover/carrossel:opacity-100 focus:opacity-100 transition-opacity">
+          <i class="fa-solid fa-chevron-right text-sm" aria-hidden="true"></i>
+        </button>
+
+        <div class="absolute inset-x-0 bottom-3 flex justify-center gap-1.5" id="hero-pontos">
+          <button type="button" class="hero-ponto w-2 h-2 rounded-full bg-white/40 transition-colors" data-ir="0" aria-label="Ir para a imagem 1"></button>
+          <button type="button" class="hero-ponto w-2 h-2 rounded-full bg-white/40 transition-colors" data-ir="1" aria-label="Ir para a imagem 2"></button>
+          <button type="button" class="hero-ponto w-2 h-2 rounded-full bg-white/40 transition-colors" data-ir="2" aria-label="Ir para a imagem 3"></button>
+          <button type="button" class="hero-ponto w-2 h-2 rounded-full bg-white/40 transition-colors" data-ir="3" aria-label="Ir para a imagem 4"></button>
+          <button type="button" class="hero-ponto w-2 h-2 rounded-full bg-white/40 transition-colors" data-ir="4" aria-label="Ir para a imagem 5"></button>
+          <button type="button" class="hero-ponto w-2 h-2 rounded-full bg-white/40 transition-colors" data-ir="5" aria-label="Ir para a imagem 6"></button>
+          <button type="button" class="hero-ponto w-2 h-2 rounded-full bg-white/40 transition-colors" data-ir="6" aria-label="Ir para a imagem 7"></button>
+          <button type="button" class="hero-ponto w-2 h-2 rounded-full bg-white/40 transition-colors" data-ir="7" aria-label="Ir para a imagem 8"></button>
+          <button type="button" class="hero-ponto w-2 h-2 rounded-full bg-white/40 transition-colors" data-ir="8" aria-label="Ir para a imagem 9"></button>
+          <button type="button" class="hero-ponto w-2 h-2 rounded-full bg-white/40 transition-colors" data-ir="9" aria-label="Ir para a imagem 10"></button>
+        </div>
+      </div>
+      <div class="overflow-hidden rounded-2xl bg-white/5 ring-1 ring-white/10">
+        <img src="assets/hero-detalhe-1.webp" alt="Guarda-roupa planejado até o teto, executado pela Movetá" width="420" height="560" class="w-full h-full object-cover" loading="lazy">
+      </div>
+      <div class="overflow-hidden rounded-2xl bg-white/5 ring-1 ring-white/10">
+        <img src="assets/hero-detalhe-2.webp" alt="Estações de trabalho planejadas em escritório, executadas pela Movetá" width="420" height="560" class="w-full h-full object-cover" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     3. DOIS PUBLICOS: bifurcacao B2C / B2B
+        Pedido explicito do Gabriel na reuniao (39:06)
+     ═══════════════════════════════════════════════════════════ -->
+<section class="py-16 sm:py-24 bg-areia" aria-labelledby="publicos-titulo">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="text-center mb-12 max-w-2xl mx-auto" data-aos="fade-up">
+      <p class="text-bronze font-semibold text-sm uppercase tracking-widest mb-3">Por onde começamos</p>
+      <h2 id="publicos-titulo" class="font-display text-3xl sm:text-4xl text-carvao mb-4">
+        O projeto é para a sua casa ou para a sua empresa?
+      </h2>
+      <p class="text-pedra">
+        O caminho muda bastante nos dois casos. Escolha abaixo e a conversa já começa no ponto certo.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-6">
+
+      <!-- Residencial -->
+      <div class="group rounded-3xl overflow-hidden bg-white border border-carvao/10 flex flex-col" data-aos="fade-up">
+        <div class="overflow-hidden bg-areia aspect-[16/10]">
+          <img src="assets/residencial-cozinha.webp" alt="Cozinha planejada em L com bancada de granito, executada pela Movetá" width="1200" height="846" class="w-full h-full object-cover" loading="lazy">
+        </div>
+        <div class="p-6 sm:p-8 flex flex-col flex-1">
+          <h3 class="font-display text-2xl text-carvao mb-3">Para a sua casa</h3>
+          <p class="text-pedra text-sm leading-relaxed mb-5">
+            Cozinha, dormitório, painel de TV, banheiro, lavanderia e home office.
+            Aproveitamos cada centímetro do apartamento ou da casa, inclusive os espaços
+            que móvel pronto não resolve.
+          </p>
+          <ul class="text-sm text-pedra space-y-2 mb-7">
+            <li class="flex gap-2.5"><i class="fa-solid fa-check text-bronze mt-1" aria-hidden="true"></i> A gente vai até você medir</li>
+            <li class="flex gap-2.5"><i class="fa-solid fa-check text-bronze mt-1" aria-hidden="true"></i> Você vê o projeto antes de fechar</li>
+            <li class="flex gap-2.5"><i class="fa-solid fa-check text-bronze mt-1" aria-hidden="true"></i> Dá para fazer um ambiente por vez</li>
+          </ul>
+          <button type="button"
+                  class="btn-zap js-abrir-qualificador mt-auto rounded-full px-6 py-3.5 text-sm font-semibold flex items-center justify-center gap-2"
+                  data-origem="Card Residencial" data-perfil="casa">
+            <i class="fa-brands fa-whatsapp text-lg" aria-hidden="true"></i>
+            Quero para minha casa
+          </button>
+        </div>
+      </div>
+
+      <!-- Empresas -->
+      <div class="group rounded-3xl overflow-hidden bg-white border border-carvao/10 flex flex-col" data-aos="fade-up" data-aos-delay="100">
+        <div class="overflow-hidden bg-areia aspect-[16/10]">
+          <img src="assets/empresa-mesa.webp" alt="Balcão de recepção planejado, executado pela Movetá" width="1200" height="900" class="w-full h-full object-cover" loading="lazy">
+        </div>
+        <div class="p-6 sm:p-8 flex flex-col flex-1">
+          <h3 class="font-display text-2xl text-carvao mb-3">Para a sua empresa</h3>
+          <p class="text-pedra text-sm leading-relaxed mb-5">
+            Móveis para escritório: mesa de reunião, armários, divisórias e painéis
+            para a equipe. Projeto objetivo e execução mais rápida que a de um
+            móvel residencial.
+          </p>
+          <ul class="text-sm text-pedra space-y-2 mb-7">
+            <li class="flex gap-2.5"><i class="fa-solid fa-check text-bronze mt-1" aria-hidden="true"></i> Execução mais rápida</li>
+            <li class="flex gap-2.5"><i class="fa-solid fa-check text-bronze mt-1" aria-hidden="true"></i> Você define o que precisa e o projeto sai direto</li>
+            <li class="flex gap-2.5"><i class="fa-solid fa-check text-bronze mt-1" aria-hidden="true"></i> Armários e divisórias sob medida para equipes</li>
+          </ul>
+          <button type="button"
+                  class="btn-zap js-abrir-qualificador mt-auto rounded-full px-6 py-3.5 text-sm font-semibold flex items-center justify-center gap-2"
+                  data-origem="Card Empresa" data-perfil="empresa">
+            <i class="fa-brands fa-whatsapp text-lg" aria-hidden="true"></i>
+            Quero para minha empresa
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     4. RESIDENCIAL: 1 foto por projeto DIFERENTE (39:06)
+     ═══════════════════════════════════════════════════════════ -->
+<section id="residencial" class="py-16 sm:py-24 bg-creme" aria-labelledby="residencial-titulo">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="mb-10 sm:mb-12 max-w-2xl" data-aos="fade-up">
+      <p class="text-bronze font-semibold text-sm uppercase tracking-widest mb-3">Residencial</p>
+      <h2 id="residencial-titulo" class="font-display text-3xl sm:text-4xl text-carvao mb-4">
+        Móveis planejados para cada ambiente da casa
+      </h2>
+      <p class="text-pedra">
+        Tudo desenhado do zero, a partir da medida real do seu espaço.
+        Toque em um ambiente para conversar sobre o seu projeto.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+      <!-- Cada card leva o ambiente para dentro da mensagem do WhatsApp -->
+      <button type="button" class="card-amb js-abrir-qualificador group relative overflow-hidden rounded-2xl bg-white text-left" data-origem="Ambiente" data-perfil="casa" data-ambiente="Cozinha" data-aos="fade-up">
+        <div class="aspect-[4/5] overflow-hidden bg-areia">
+          <img src="assets/residencial-cozinha.webp" alt="Cozinha planejada em L com bancada de granito, executada pela Movetá" width="1200" height="846" class="w-full h-full object-cover" loading="lazy">
+        </div>
+        <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-carvao/90 to-transparent p-4 sm:p-5">
+          <h3 class="font-display text-lg sm:text-xl text-white">Cozinha</h3>
+          <p class="text-white/70 text-xs sm:text-sm mt-0.5">Armários e bancada sob medida</p>
+        </div>
+      </button>
+
+      <button type="button" class="card-amb js-abrir-qualificador group relative overflow-hidden rounded-2xl bg-white text-left" data-origem="Ambiente" data-perfil="casa" data-ambiente="Dormitório" data-aos="fade-up" data-aos-delay="50">
+        <div class="aspect-[4/5] overflow-hidden bg-areia">
+          <img src="assets/residencial-dormitorio.webp" alt="Armários de dormitório com nichos e iluminação embutida" width="800" height="1067" class="w-full h-full object-cover" loading="lazy">
+        </div>
+        <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-carvao/90 to-transparent p-4 sm:p-5">
+          <h3 class="font-display text-lg sm:text-xl text-white">Dormitório</h3>
+          <p class="text-white/70 text-xs sm:text-sm mt-0.5">Guarda-roupa sob medida</p>
+        </div>
+      </button>
+
+      <button type="button" class="card-amb js-abrir-qualificador group relative overflow-hidden rounded-2xl bg-white text-left" data-origem="Ambiente" data-perfil="casa" data-ambiente="Painel de TV / sala" data-aos="fade-up" data-aos-delay="100">
+        <div class="aspect-[4/5] overflow-hidden bg-areia">
+          <img src="assets/residencial-painel-tv.webp" alt="Painel ripado para TV com bancada, na sala" width="800" height="1065" class="w-full h-full object-cover" loading="lazy">
+        </div>
+        <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-carvao/90 to-transparent p-4 sm:p-5">
+          <h3 class="font-display text-lg sm:text-xl text-white">Sala</h3>
+          <p class="text-white/70 text-xs sm:text-sm mt-0.5">Painel para TV</p>
+        </div>
+      </button>
+
+      <button type="button" class="card-amb js-abrir-qualificador group relative overflow-hidden rounded-2xl bg-white text-left" data-origem="Ambiente" data-perfil="casa" data-ambiente="Banheiro" data-aos="fade-up" data-aos-delay="150">
+        <div class="aspect-[4/5] overflow-hidden bg-areia">
+          <img src="assets/residencial-banheiro.webp" alt="Gabinete de banheiro planejado com bancada de granito" width="800" height="1067" class="w-full h-full object-cover" loading="lazy">
+        </div>
+        <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-carvao/90 to-transparent p-4 sm:p-5">
+          <h3 class="font-display text-lg sm:text-xl text-white">Banheiro</h3>
+          <p class="text-white/70 text-xs sm:text-sm mt-0.5">Gabinete sob medida</p>
+        </div>
+      </button>
+
+      <button type="button" class="card-amb js-abrir-qualificador group relative overflow-hidden rounded-2xl bg-white text-left" data-origem="Ambiente" data-perfil="casa" data-ambiente="Lavanderia" data-aos="fade-up" data-aos-delay="200">
+        <div class="aspect-[4/5] overflow-hidden bg-areia">
+          <img src="assets/residencial-lavanderia.webp" alt="Lavanderia planejada com bancada e armários sob medida" width="800" height="1069" class="w-full h-full object-cover" loading="lazy">
+        </div>
+        <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-carvao/90 to-transparent p-4 sm:p-5">
+          <h3 class="font-display text-lg sm:text-xl text-white">Lavanderia</h3>
+          <p class="text-white/70 text-xs sm:text-sm mt-0.5">Armários sob medida</p>
+        </div>
+      </button>
+
+      <button type="button" class="card-amb js-abrir-qualificador group relative overflow-hidden rounded-2xl bg-white text-left" data-origem="Ambiente" data-perfil="casa" data-ambiente="Home office" data-aos="fade-up" data-aos-delay="250">
+        <div class="aspect-[4/5] overflow-hidden bg-areia">
+          <img src="assets/residencial-home-office.webp" alt="Home office planejado com bancada e armários aéreos" width="800" height="1067" class="w-full h-full object-cover" loading="lazy">
+        </div>
+        <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-carvao/90 to-transparent p-4 sm:p-5">
+          <h3 class="font-display text-lg sm:text-xl text-white">Home office</h3>
+          <p class="text-white/70 text-xs sm:text-sm mt-0.5">Bancada e armários</p>
+        </div>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     5. EMPRESAS: servico "nivel 1" do cliente (52:01)
+     ═══════════════════════════════════════════════════════════ -->
+<section id="empresas" class="py-16 sm:py-24 bg-areia" aria-labelledby="empresas-titulo">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="mb-10 sm:mb-12 max-w-2xl" data-aos="fade-up">
+      <p class="text-bronze font-semibold text-sm uppercase tracking-widest mb-3">Empresas</p>
+      <h2 id="empresas-titulo" class="font-display text-3xl sm:text-4xl text-carvao mb-4">
+        Móveis sob medida para escritórios e empresas
+      </h2>
+      <p class="text-pedra">
+        Projeto comercial costuma ser mais objetivo: você já sabe o que precisa e para
+        quando, e a execução é mais rápida que a de um móvel residencial. Foi assim com
+        uma empresa da região, que pediu armários sob medida para a equipe guardar os
+        pertences.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+      <button type="button" class="card-amb js-abrir-qualificador group relative overflow-hidden rounded-2xl bg-white text-left" data-origem="Empresa" data-perfil="empresa" data-ambiente="Móveis para escritório" data-aos="fade-up">
+        <div class="aspect-[4/5] overflow-hidden bg-areia">
+          <img src="assets/empresa-escritorio.webp" alt="Escritório com estações de trabalho planejadas" width="800" height="1067" class="w-full h-full object-cover" loading="lazy">
+        </div>
+        <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-carvao/90 to-transparent p-4 sm:p-5">
+          <h3 class="font-display text-base sm:text-lg text-white">Móveis para escritório</h3>
+        </div>
+      </button>
+
+      <button type="button" class="card-amb js-abrir-qualificador group relative overflow-hidden rounded-2xl bg-white text-left" data-origem="Empresa" data-perfil="empresa" data-ambiente="Painel para TV" data-aos="fade-up" data-aos-delay="50">
+        <div class="aspect-[4/5] overflow-hidden bg-areia">
+          <img src="assets/empresa-painel-tv.webp" alt="Sala de reunião com painel para TV" width="800" height="1069" class="w-full h-full object-cover" loading="lazy">
+        </div>
+        <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-carvao/90 to-transparent p-4 sm:p-5">
+          <h3 class="font-display text-base sm:text-lg text-white">Painel para TV</h3>
+        </div>
+      </button>
+
+      <button type="button" class="card-amb js-abrir-qualificador group relative overflow-hidden rounded-2xl bg-white text-left" data-origem="Empresa" data-perfil="empresa" data-ambiente="Armários e divisórias" data-aos="fade-up" data-aos-delay="100">
+        <div class="aspect-[4/5] overflow-hidden bg-areia">
+          <img src="assets/empresa-armarios.webp" alt="Escaninhos e nichos sob medida para equipe" width="800" height="1066" class="w-full h-full object-cover" loading="lazy">
+        </div>
+        <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-carvao/90 to-transparent p-4 sm:p-5">
+          <h3 class="font-display text-base sm:text-lg text-white">Armários e divisórias</h3>
+        </div>
+      </button>
+
+      <button type="button" class="card-amb js-abrir-qualificador group relative overflow-hidden rounded-2xl bg-white text-left" data-origem="Empresa" data-perfil="empresa" data-ambiente="Sala de reunião" data-aos="fade-up" data-aos-delay="150">
+        <div class="aspect-[4/5] overflow-hidden bg-areia">
+          <img src="assets/empresa-sala-reuniao.webp" alt="Mesa de reunião planejada com gaveteiros" width="800" height="600" class="w-full h-full object-cover" loading="lazy">
+        </div>
+        <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-carvao/90 to-transparent p-4 sm:p-5">
+          <h3 class="font-display text-base sm:text-lg text-white">Mesa de reunião</h3>
+        </div>
+      </button>
+    </div>
+
+    <div class="mt-10 text-center" data-aos="fade-up">
+      <button type="button"
+              class="btn-zap js-abrir-qualificador rounded-full px-8 py-4 text-base font-semibold inline-flex items-center gap-2.5"
+              data-origem="CTA Empresas" data-perfil="empresa">
+        <i class="fa-brands fa-whatsapp text-xl" aria-hidden="true"></i>
+        Solicitar orçamento para empresa
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     6. COMO FUNCIONA: 5 etapas
+     ═══════════════════════════════════════════════════════════ -->
+<section id="processo" class="py-16 sm:py-24 bg-creme" aria-labelledby="processo-titulo">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="text-center mb-12 max-w-2xl mx-auto" data-aos="fade-up">
+      <p class="text-bronze font-semibold text-sm uppercase tracking-widest mb-3">Como funciona</p>
+      <h2 id="processo-titulo" class="font-display text-3xl sm:text-4xl text-carvao mb-4">
+        Do primeiro contato à montagem
+      </h2>
+      <p class="text-pedra">
+        Sem letra miúda. Você sabe o que acontece em cada etapa e quanto tempo ela leva.
+      </p>
+    </div>
+
+    <ol class="grid sm:grid-cols-2 lg:grid-cols-5 gap-5">
+      <li class="bg-white rounded-2xl p-6 border border-carvao/10" data-aos="fade-up">
+        <div class="etapa-num mb-2">01</div>
+        <h3 class="font-display text-lg text-carvao mb-2">Conversa no WhatsApp</h3>
+        <p class="text-sm text-pedra leading-relaxed">Você conta o que precisa e a gente entende o ambiente, o prazo e a faixa de investimento.</p>
+      </li>
+      <li class="bg-white rounded-2xl p-6 border border-carvao/10" data-aos="fade-up" data-aos-delay="80">
+        <div class="etapa-num mb-2">02</div>
+        <h3 class="font-display text-lg text-carvao mb-2">Visita e medição</h3>
+        <p class="text-sm text-pedra leading-relaxed">Vamos até o seu endereço conhecer o espaço e tirar as medidas.</p>
+      </li>
+      <li class="bg-white rounded-2xl p-6 border border-carvao/10" data-aos="fade-up" data-aos-delay="160">
+        <div class="etapa-num mb-2">03</div>
+        <h3 class="font-display text-lg text-carvao mb-2">Projeto e orçamento</h3>
+        <p class="text-sm text-pedra leading-relaxed">Você vê o projeto e o valor detalhado antes de decidir, com o prazo já definido.</p>
+      </li>
+      <li class="bg-white rounded-2xl p-6 border border-carvao/10" data-aos="fade-up" data-aos-delay="240">
+        <div class="etapa-num mb-2">04</div>
+        <h3 class="font-display text-lg text-carvao mb-2">Produção</h3>
+        <p class="text-sm text-pedra leading-relaxed">Seu projeto entra em produção. É aqui que correm os 25 dias combinados.</p>
+      </li>
+      <li class="bg-white rounded-2xl p-6 border border-carvao/10" data-aos="fade-up" data-aos-delay="320">
+        <div class="etapa-num mb-2">05</div>
+        <h3 class="font-display text-lg text-carvao mb-2">Montagem</h3>
+        <p class="text-sm text-pedra leading-relaxed">Assim que os móveis ficam prontos, entramos em contato para agendar a montagem.</p>
+      </li>
+    </ol>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     8. ACABAMENTOS
+     ═══════════════════════════════════════════════════════════ -->
+<section id="acabamentos" class="py-16 sm:py-24 bg-creme" aria-labelledby="acabamentos-titulo">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="text-center mb-12 max-w-2xl mx-auto" data-aos="fade-up">
+      <p class="text-bronze font-semibold text-sm uppercase tracking-widest mb-3">Acabamentos</p>
+      <h2 id="acabamentos-titulo" class="font-display text-3xl sm:text-4xl text-carvao mb-4">
+        Escolha as cores e texturas do seu projeto
+      </h2>
+      <p class="text-pedra">
+        As cores e os acabamentos são definidos junto com o projeto, para combinar com
+        o seu ambiente. As opções abaixo são exemplos ilustrativos.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4" data-aos="fade-up">
+      <img src="assets/acabamento-off-white.svg" alt="Acabamento Off White em MDF" width="400" height="400" class="rounded-xl w-full" loading="lazy">
+      <img src="assets/acabamento-bege.svg" alt="Acabamento Bege em MDF" width="400" height="400" class="rounded-xl w-full" loading="lazy">
+      <img src="assets/acabamento-carvalho.svg" alt="Acabamento Carvalho Natural" width="400" height="400" class="rounded-xl w-full" loading="lazy">
+      <img src="assets/acabamento-pau-ferro.svg" alt="Acabamento Pau Ferro" width="400" height="400" class="rounded-xl w-full" loading="lazy">
+      <img src="assets/acabamento-verde-jade.svg" alt="Acabamento Verde Jade em MDF" width="400" height="400" class="rounded-xl w-full" loading="lazy">
+      <img src="assets/acabamento-azul-royal.svg" alt="Acabamento Azul Royal em MDF" width="400" height="400" class="rounded-xl w-full" loading="lazy">
+    </div>
+
+    <p class="text-center text-sm text-pedra mt-8" data-aos="fade-up">
+      <i class="fa-solid fa-palette text-bronze mr-1.5" aria-hidden="true"></i>
+      Não encontrou a cor que imaginou? Pergunte no WhatsApp qual opção encaixa no seu projeto.
+    </p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     9. SOBRE: historia real e curta (07:01). Sem inflar tempo
+        de mercado: a empresa e nova e isso nao e escondido.
+     ═══════════════════════════════════════════════════════════ -->
+<section id="sobre" class="py-16 sm:py-24 bg-areia" aria-labelledby="sobre-titulo">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+
+    <div class="rounded-3xl overflow-hidden bg-white aspect-[4/5] lg:aspect-[4/4.5] order-2 lg:order-1" data-aos="fade-right">
+      <img src="assets/sobre-equipe.svg" alt="Sócios da Movetá: comercial e marcenaria" width="800" height="1000" class="w-full h-full object-cover" loading="lazy">
+    </div>
+
+    <div class="order-1 lg:order-2" data-aos="fade-left">
+      <p class="text-bronze font-semibold text-sm uppercase tracking-widest mb-3">Quem faz</p>
+      <h2 id="sobre-titulo" class="font-display text-3xl sm:text-4xl text-carvao mb-6">
+        Marcenaria e gestão na mesma sociedade
+      </h2>
+      <div class="space-y-4 text-pedra leading-relaxed">
+        <p>
+          A Movetá é a união de duas competências que raramente andam juntas nesse
+          mercado. De um lado, a marcenaria: técnica de bancada, projeto e execução
+          de quem já entregou móvel sob medida e conhece cada etapa da produção.
+        </p>
+        <p>
+          Do outro, a gestão: sócios com experiência comercial e financeira cuidando
+          do atendimento, dos prazos e da organização de cada obra. Foi essa combinação
+          que deu origem à sociedade.
+        </p>
+        <p>
+          Trabalhamos com um número controlado de projetos por vez, e isso é uma
+          escolha. É ela que sustenta o prazo de 25 dias e garante que ninguém
+          fique sem resposta no meio do caminho.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-3 gap-4 mt-8 pt-8 border-t border-carvao/10">
+        <div>
+          <div class="font-display text-2xl sm:text-3xl text-bronze">25</div>
+          <div class="text-xs text-pedra mt-1">dias de prazo</div>
+        </div>
+        <div>
+          <div class="font-display text-2xl sm:text-3xl text-bronze">100%</div>
+          <div class="text-xs text-pedra mt-1">projetado sob medida</div>
+        </div>
+        <div>
+          <div class="font-display text-2xl sm:text-3xl text-bronze">5</div>
+          <div class="text-xs text-pedra mt-1">etapas, do contato à montagem</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Duas galerias de obras entregues: uma residencial, outra comercial -->
+  <div class="mt-14 space-y-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6" data-aos="fade-up">
+      <div class="flex items-end justify-between gap-4 mb-4">
+        <div>
+          <h3 class="font-display text-xl sm:text-2xl text-carvao">Projetos residenciais</h3>
+          <p class="text-sm text-pedra mt-1">Ambientes que já entregamos em casas e apartamentos.</p>
+        </div>
+        <div class="hidden sm:flex gap-2 shrink-0">
+          <button type="button" class="js-galeria-anterior w-9 h-9 rounded-full border border-carvao/20 text-carvao flex items-center justify-center hover:bg-carvao hover:text-white transition-colors" data-alvo="galeria-residencial" aria-label="Ver imagens anteriores">
+            <i class="fa-solid fa-chevron-left text-sm" aria-hidden="true"></i>
+          </button>
+          <button type="button" class="js-galeria-proximo w-9 h-9 rounded-full border border-carvao/20 text-carvao flex items-center justify-center hover:bg-carvao hover:text-white transition-colors" data-alvo="galeria-residencial" aria-label="Ver próximas imagens">
+            <i class="fa-solid fa-chevron-right text-sm" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+      <div id="galeria-residencial" class="trilho flex gap-3 sm:gap-4 overflow-x-auto pb-2 snap-x">
+        <img src="assets/galeria-res-01.webp" alt="Painel ripado de madeira com TV" width="560" height="746" loading="lazy"
+             class="snap-start shrink-0 h-56 sm:h-64 w-auto rounded-xl object-cover">
+        <img src="assets/galeria-res-02.webp" alt="Armários de dormitório com nichos e iluminação" width="560" height="420" loading="lazy"
+             class="snap-start shrink-0 h-56 sm:h-64 w-auto rounded-xl object-cover">
+        <img src="assets/galeria-res-03.webp" alt="Painel para TV com bancada" width="560" height="746" loading="lazy"
+             class="snap-start shrink-0 h-56 sm:h-64 w-auto rounded-xl object-cover">
+        <img src="assets/galeria-res-04.webp" alt="Nicho infantil sob medida em formato de casa" width="560" height="749" loading="lazy"
+             class="snap-start shrink-0 h-56 sm:h-64 w-auto rounded-xl object-cover">
+        <img src="assets/galeria-res-05.webp" alt="Cômoda planejada com puxadores dourados" width="560" height="749" loading="lazy"
+             class="snap-start shrink-0 h-56 sm:h-64 w-auto rounded-xl object-cover">
+        <img src="assets/galeria-res-06.webp" alt="Estante com nichos na sala" width="560" height="994" loading="lazy"
+             class="snap-start shrink-0 h-56 sm:h-64 w-auto rounded-xl object-cover">
+        <img src="assets/galeria-res-07.webp" alt="Home office com bancada e armários aéreos" width="560" height="747" loading="lazy"
+             class="snap-start shrink-0 h-56 sm:h-64 w-auto rounded-xl object-cover">
+        <img src="assets/galeria-res-08.webp" alt="Armário e estante planejados" width="560" height="747" loading="lazy"
+             class="snap-start shrink-0 h-56 sm:h-64 w-auto rounded-xl object-cover">
+      </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6" data-aos="fade-up">
+      <div class="flex items-end justify-between gap-4 mb-4">
+        <div>
+          <h3 class="font-display text-xl sm:text-2xl text-carvao">Projetos comerciais</h3>
+          <p class="text-sm text-pedra mt-1">Escritórios e empresas atendidos pela Movetá.</p>
+        </div>
+        <div class="hidden sm:flex gap-2 shrink-0">
+          <button type="button" class="js-galeria-anterior w-9 h-9 rounded-full border border-carvao/20 text-carvao flex items-center justify-center hover:bg-carvao hover:text-white transition-colors" data-alvo="galeria-comercial" aria-label="Ver imagens anteriores">
+            <i class="fa-solid fa-chevron-left text-sm" aria-hidden="true"></i>
+          </button>
+          <button type="button" class="js-galeria-proximo w-9 h-9 rounded-full border border-carvao/20 text-carvao flex items-center justify-center hover:bg-carvao hover:text-white transition-colors" data-alvo="galeria-comercial" aria-label="Ver próximas imagens">
+            <i class="fa-solid fa-chevron-right text-sm" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+      <div id="galeria-comercial" class="trilho flex gap-3 sm:gap-4 overflow-x-auto pb-2 snap-x">
+        <img src="assets/galeria-com-01.webp" alt="Mesa de escritório planejada junto à janela" width="560" height="420" loading="lazy"
+             class="snap-start shrink-0 h-56 sm:h-64 w-auto rounded-xl object-cover">
+        <img src="assets/galeria-com-02.webp" alt="Bancada e mesa de trabalho em escritório" width="560" height="747" loading="lazy"
+             class="snap-start shrink-0 h-56 sm:h-64 w-auto rounded-xl object-cover">
+        <img src="assets/galeria-com-03.webp" alt="Estações de trabalho planejadas" width="560" height="747" loading="lazy"
+             class="snap-start shrink-0 h-56 sm:h-64 w-auto rounded-xl object-cover">
+        <img src="assets/galeria-com-04.webp" alt="Armário baixo de apoio em escritório" width="560" height="747" loading="lazy"
+             class="snap-start shrink-0 h-56 sm:h-64 w-auto rounded-xl object-cover">
+        <img src="assets/galeria-com-05.webp" alt="Escritório com mesa em L" width="560" height="996" loading="lazy"
+             class="snap-start shrink-0 h-56 sm:h-64 w-auto rounded-xl object-cover">
+        <img src="assets/galeria-com-06.webp" alt="Divisória ripada de madeira" width="560" height="749" loading="lazy"
+             class="snap-start shrink-0 h-56 sm:h-64 w-auto rounded-xl object-cover">
+        <img src="assets/galeria-com-07.webp" alt="Mesa de escritório em L, outro ângulo" width="560" height="420" loading="lazy"
+             class="snap-start shrink-0 h-56 sm:h-64 w-auto rounded-xl object-cover">
+        <img src="assets/galeria-com-08.webp" alt="Armário de apoio com nichos" width="560" height="747" loading="lazy"
+             class="snap-start shrink-0 h-56 sm:h-64 w-auto rounded-xl object-cover">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     10. AVALIACOES DO GOOGLE
+
+     Secao estatica com a identidade visual do Google, pronta para receber
+     as avaliacoes reais do Google Meu Negocio.
+
+     COMO ATUALIZAR: a secao e montada a partir da constante AVALIACOES no
+     script do rodape. Cole ali cada avaliacao real e apague o campo
+     `exemplo: true`. Enquanto existir qualquer entrada com `exemplo: true`,
+     a pagina mostra uma tarja de aviso, para que conteudo de demonstracao
+     nunca va ao ar como se fosse depoimento de cliente.
+
+     INTEGRACAO FUTURA: trocar a constante por um fetch na Places API
+     (endpoint place/details, campo `reviews`) ou por um JSON gerado por
+     rotina. O restante da secao nao muda: ela so le o array.
+     ═══════════════════════════════════════════════════════════ -->
+<section id="depoimentos" class="py-16 sm:py-24 bg-white" aria-labelledby="depoimentos-titulo">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+
+    <div class="text-center mb-10" data-aos="fade-up">
+      <p class="text-bronze font-semibold text-sm uppercase tracking-widest mb-3">Avaliações</p>
+      <h2 id="depoimentos-titulo" class="font-display text-3xl sm:text-4xl text-carvao mb-4">
+        O que dizem nossos clientes
+      </h2>
+    </div>
+
+    <!-- Resumo, no formato do cartao de avaliacoes do Google -->
+    <div class="max-w-md mx-auto mb-10 rounded-2xl border border-carvao/10 bg-white shadow-sm p-6 text-center"
+         data-aos="fade-up">
+      <div class="flex items-center justify-center gap-2 mb-3">
+        <!-- G do Google, nas quatro cores da marca -->
+        <svg viewBox="0 0 48 48" class="w-6 h-6" aria-hidden="true">
+          <path fill="#4285F4" d="M45.1 24.5c0-1.6-.1-3.1-.4-4.5H24v8.5h11.8c-.5 2.7-2 5-4.4 6.6v5.5h7.1c4.1-3.8 6.6-9.4 6.6-16.1z"/>
+          <path fill="#34A853" d="M24 46c5.9 0 10.9-2 14.5-5.4l-7.1-5.5c-2 1.3-4.5 2.1-7.4 2.1-5.7 0-10.5-3.8-12.2-9H4.5v5.7C8.1 41.1 15.5 46 24 46z"/>
+          <path fill="#FBBC05" d="M11.8 28.2c-.4-1.3-.7-2.7-.7-4.2s.2-2.9.7-4.2v-5.7H4.5C3 17.1 2.2 20.4 2.2 24s.8 6.9 2.3 9.9l7.3-5.7z"/>
+          <path fill="#EA4335" d="M24 10.8c3.2 0 6.1 1.1 8.4 3.3l6.3-6.3C34.9 4.1 29.9 2 24 2 15.5 2 8.1 6.9 4.5 14.1l7.3 5.7c1.7-5.2 6.5-9 12.2-9z"/>
+        </svg>
+        <span class="text-sm font-semibold text-carvao">Avaliações no Google</span>
+      </div>
+      <div class="flex items-baseline justify-center gap-3">
+        <span id="avaliacoes-nota" class="font-display text-5xl text-carvao">0,0</span>
+        <div class="text-left">
+          <div id="avaliacoes-estrelas" class="flex gap-0.5 text-[#FBBC04] text-lg" aria-hidden="true"></div>
+          <p id="avaliacoes-total" class="text-xs text-pedra mt-1">sem avaliações ainda</p>
+        </div>
+      </div>
+      <a id="link-google" href="#" target="_blank" rel="noopener noreferrer"
+         class="mt-5 inline-flex items-center gap-2 text-sm font-medium text-[#1a73e8] hover:underline">
+        Ver no Google
+        <i class="fa-solid fa-arrow-up-right-from-square text-xs" aria-hidden="true"></i>
+      </a>
+    </div>
+
+    <!-- Cartoes: preenchidos pelo script -->
+    <div id="avaliacoes-lista" class="trilho flex gap-5 overflow-x-auto pb-4 snap-x" data-aos="fade-up"></div>
+
+    <!-- Aviso discreto: some sozinho quando nao houver mais item de exemplo -->
+    <p id="aviso-previa" hidden class="text-center text-xs text-pedra/70 mt-2">
+      Prévia de layout. As avaliações reais aparecem aqui assim que o perfil no Google Meu Negócio começar a recebê-las.
+    </p>
+
+    <!-- Estado sem avaliacao: convite honesto, sem inventar depoimento -->
+    <div id="avaliacoes-vazio" hidden class="max-w-lg mx-auto text-center rounded-2xl border border-dashed border-carvao/20 p-8">
+      <i class="fa-regular fa-star text-bronze text-3xl mb-4" aria-hidden="true"></i>
+      <p class="text-carvao font-medium mb-2">Estamos começando a receber nossas primeiras avaliações</p>
+      <p class="text-sm text-pedra">
+        Já é nosso cliente? Sua avaliação no Google ajuda muita gente a decidir com segurança.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     11. CTA FINAL
+     ═══════════════════════════════════════════════════════════ -->
+<section class="py-16 sm:py-24 bg-carvao text-white relative overflow-hidden" aria-labelledby="cta-titulo">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center relative" data-aos="fade-up">
+    <h2 id="cta-titulo" class="font-display text-3xl sm:text-4xl lg:text-5xl mb-5 leading-tight">
+      Manda a medida do seu ambiente
+    </h2>
+    <p class="text-prata/75 text-base sm:text-lg mb-9 max-w-xl mx-auto">
+      É só isso para começar. A gente responde com uma ideia inicial e, se fizer
+      sentido, agenda a visita para medir.
+    </p>
+    <button type="button"
+            class="btn-zap js-abrir-qualificador rounded-full px-8 py-4 text-base sm:text-lg font-semibold inline-flex items-center gap-3"
+            data-origem="CTA Final">
+      <i class="fa-brands fa-whatsapp text-2xl" aria-hidden="true"></i>
+      Falar no WhatsApp agora
+    </button>
+    <p class="mt-5 text-xs text-prata/70">
+      Atendimento em horário comercial · Curitiba e região metropolitana
+    </p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     12. FAQ: termos soft para o Google Ads / SEO
+     ═══════════════════════════════════════════════════════════ -->
+<section id="duvidas" class="py-16 sm:py-24 bg-creme" aria-labelledby="faq-titulo">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6">
+    <div class="text-center mb-10" data-aos="fade-up">
+      <p class="text-bronze font-semibold text-sm uppercase tracking-widest mb-3">Dúvidas frequentes</p>
+      <h2 id="faq-titulo" class="font-display text-3xl sm:text-4xl text-carvao">Perguntas que sempre chegam</h2>
+    </div>
+
+    <div class="space-y-3" data-aos="fade-up">
+
+      <details class="faq-item bg-white rounded-2xl border border-carvao/10 overflow-hidden">
+        <summary class="flex items-center justify-between gap-4 p-5 font-medium text-carvao">
+          Qual é o prazo de entrega dos móveis?
+          <i class="faq-seta fa-solid fa-chevron-down text-bronze shrink-0" aria-hidden="true"></i>
+        </summary>
+        <div class="px-5 pb-5 text-sm text-pedra leading-relaxed">
+          São 25 dias entre o fechamento e a montagem, para um projeto de porte
+          normal, como uma cozinha de apartamento. Projetos maiores, vários ambientes
+          de uma vez ou a agenda do momento alongam esse prazo, e nesse caso o número
+          certo entra no orçamento antes de você fechar.
+        </div>
+      </details>
+
+      <details class="faq-item bg-white rounded-2xl border border-carvao/10 overflow-hidden">
+        <summary class="flex items-center justify-between gap-4 p-5 font-medium text-carvao">
+          Quanto custa um móvel planejado?
+          <i class="faq-seta fa-solid fa-chevron-down text-bronze shrink-0" aria-hidden="true"></i>
+        </summary>
+        <div class="px-5 pb-5 text-sm text-pedra leading-relaxed">
+          Depende do tamanho do ambiente, do acabamento escolhido e das ferragens.
+          Por isso não trabalhamos com tabela fechada: medimos o espaço, montamos o
+          projeto e apresentamos o valor detalhado antes de qualquer compromisso.
+        </div>
+      </details>
+
+      <details class="faq-item bg-white rounded-2xl border border-carvao/10 overflow-hidden">
+        <summary class="flex items-center justify-between gap-4 p-5 font-medium text-carvao">
+          Vocês atendem quais regiões?
+          <i class="faq-seta fa-solid fa-chevron-down text-bronze shrink-0" aria-hidden="true"></i>
+        </summary>
+        <div class="px-5 pb-5 text-sm text-pedra leading-relaxed">
+          Curitiba e região metropolitana. Um dos projetos fechados recentemente, por
+          exemplo, é uma lavanderia em Fazenda Rio Grande. Se o seu endereço estiver um
+          pouco além, pergunte assim mesmo: dependendo do projeto, conseguimos atender.
+        </div>
+      </details>
+
+      <details class="faq-item bg-white rounded-2xl border border-carvao/10 overflow-hidden">
+        <summary class="flex items-center justify-between gap-4 p-5 font-medium text-carvao">
+          Como funciona o atendimento?
+          <i class="faq-seta fa-solid fa-chevron-down text-bronze shrink-0" aria-hidden="true"></i>
+        </summary>
+        <div class="px-5 pb-5 text-sm text-pedra leading-relaxed">
+          O atendimento é feito no seu endereço, no horário que for melhor para você.
+          Agendamos a visita, tiramos as medidas e apresentamos o projeto ali mesmo,
+          com o seu ambiente e a sua iluminação na frente. Isso costuma dar bem mais
+          acerto na escolha das cores do que decidir longe do espaço real.
+        </div>
+      </details>
+
+      <details class="faq-item bg-white rounded-2xl border border-carvao/10 overflow-hidden">
+        <summary class="flex items-center justify-between gap-4 p-5 font-medium text-carvao">
+          Qual a diferença entre planejado, modulado e móvel pronto?
+          <i class="faq-seta fa-solid fa-chevron-down text-bronze shrink-0" aria-hidden="true"></i>
+        </summary>
+        <div class="px-5 pb-5 text-sm text-pedra leading-relaxed">
+          O móvel pronto vem em medidas fixas de catálogo. O modulado combina módulos
+          padronizados, o que ajuda, mas ainda deixa vãos sobrando. O planejado sob
+          medida é desenhado a partir da medida real da sua parede, sem vão morto,
+          aproveitando canto, viga e pé-direito. É o que fazemos.
+        </div>
+      </details>
+
+      <details class="faq-item bg-white rounded-2xl border border-carvao/10 overflow-hidden">
+        <summary class="flex items-center justify-between gap-4 p-5 font-medium text-carvao">
+          Como funciona o pagamento?
+          <i class="faq-seta fa-solid fa-chevron-down text-bronze shrink-0" aria-hidden="true"></i>
+        </summary>
+        <div class="px-5 pb-5 text-sm text-pedra leading-relaxed">
+          Essa conversa acontece junto com o orçamento. Chama no WhatsApp e a gente
+          explica as condições para o seu projeto.
+        </div>
+      </details>
+
+      <details class="faq-item bg-white rounded-2xl border border-carvao/10 overflow-hidden">
+        <summary class="flex items-center justify-between gap-4 p-5 font-medium text-carvao">
+          Vocês fazem móveis para empresas e escritórios?
+          <i class="faq-seta fa-solid fa-chevron-down text-bronze shrink-0" aria-hidden="true"></i>
+        </summary>
+        <div class="px-5 pb-5 text-sm text-pedra leading-relaxed">
+          Fazemos: móveis para escritório, mesa de reunião, armários, divisórias e
+          painéis. Um pedido recente, por exemplo: armários sob medida para os
+          funcionários de uma empresa guardarem os pertences. A execução costuma ser
+          mais rápida que a de um projeto residencial.
+        </div>
+      </details>
+
+      <details class="faq-item bg-white rounded-2xl border border-carvao/10 overflow-hidden">
+        <summary class="flex items-center justify-between gap-4 p-5 font-medium text-carvao">
+          Dá para fazer só um ambiente?
+          <i class="faq-seta fa-solid fa-chevron-down text-bronze shrink-0" aria-hidden="true"></i>
+        </summary>
+        <div class="px-5 pb-5 text-sm text-pedra leading-relaxed">
+          Dá sim. O orçamento cobre exatamente o que você precisa, de um ambiente
+          único à casa toda.
+        </div>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     ULTIMA SECAO: FAIXA DE DIFERENCIAIS: responde as 3 dores do mercado
+        que o proprio cliente nomeou na reuniao (09:26)
+     ═══════════════════════════════════════════════════════════ -->
+<section class="bg-creme py-12 sm:py-16" aria-labelledby="dores-titulo">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="text-center mb-10 max-w-2xl mx-auto" data-aos="fade-up">
+      <h2 id="dores-titulo" class="font-display text-2xl sm:text-3xl text-carvao mb-3">
+        Você já ouviu alguma dessas histórias
+      </h2>
+      <p class="text-pedra text-sm sm:text-base">
+        O prazo que virou o dobro. O acabamento que chegou diferente do combinado.
+        A obra que parou no meio. A Movetá nasceu para fazer diferente.
+      </p>
+    </div>
+
+    <div class="grid sm:grid-cols-3 gap-5 sm:gap-6">
+      <div class="bg-carvao rounded-2xl p-6" data-aos="fade-up" data-aos-delay="0">
+        <i class="fa-solid fa-calendar-check text-ouro text-2xl mb-4" aria-hidden="true"></i>
+        <h3 class="font-display text-lg text-white mb-2">Prazo claro desde o início</h3>
+        <p class="text-sm text-prata/75 leading-relaxed">
+          São 25 dias para um projeto de porte normal, como uma cozinha de
+          apartamento. Se o projeto for maior ou a agenda do momento estiver cheia,
+          você fica sabendo do prazo real antes de fechar, nunca depois.
+        </p>
+      </div>
+      <div class="bg-carvao rounded-2xl p-6" data-aos="fade-up" data-aos-delay="100">
+        <i class="fa-solid fa-hammer text-ouro text-2xl mb-4" aria-hidden="true"></i>
+        <h3 class="font-display text-lg text-white mb-2">Projeto e execução na mesma casa</h3>
+        <p class="text-sm text-prata/75 leading-relaxed">
+          O projeto, a produção e a montagem ficam com a nossa equipe do começo ao
+          fim. Você não é repassado de um fornecedor para outro no meio do caminho.
+        </p>
+      </div>
+      <div class="bg-carvao rounded-2xl p-6" data-aos="fade-up" data-aos-delay="200">
+        <i class="fa-solid fa-house-circle-check text-ouro text-2xl mb-4" aria-hidden="true"></i>
+        <h3 class="font-display text-lg text-white mb-2">Atendimento no seu endereço</h3>
+        <p class="text-sm text-prata/75 leading-relaxed">
+          Nossa equipe vai até você para entender o espaço, tirar as medidas e
+          apresentar o projeto. Depois voltamos para montar, quando os móveis
+          ficam prontos.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ═══════════════════════════════════════════════════════════
+     RODAPE: unico lugar da pagina com telefone exposto
+     ═══════════════════════════════════════════════════════════ -->
+<footer class="bg-[#17140F] text-prata/80 border-t border-ouro/20 pt-14 pb-28 md:pb-14">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 pb-10 border-b border-white/10">
+
+      <div class="lg:col-span-2">
+        <img src="assets/logo-moveta.png" alt="Movetá Móveis Planejados" width="955" height="240" class="h-14 w-auto mb-4" loading="lazy">
+        <p class="text-sm leading-relaxed max-w-sm">
+          Móveis planejados sob medida para casa e empresa, com marcenaria própria
+          em Curitiba e região. Você vê o projeto e o prazo antes de fechar.
+        </p>
+      </div>
+
+      <nav aria-label="Navegação do rodapé">
+        <h2 class="font-display text-white text-base mb-4">Navegação</h2>
+        <ul class="space-y-2.5 text-sm">
+          <li><a href="#residencial" class="hover:text-ouro transition-colors">Para sua casa</a></li>
+          <li><a href="#empresas" class="hover:text-ouro transition-colors">Para sua empresa</a></li>
+          <li><a href="#processo" class="hover:text-ouro transition-colors">Como funciona</a></li>
+          <li><a href="#acabamentos" class="hover:text-ouro transition-colors">Acabamentos</a></li>
+          <li><a href="#duvidas" class="hover:text-ouro transition-colors">Dúvidas frequentes</a></li>
+        </ul>
+      </nav>
+
+      <div>
+        <h2 class="font-display text-white text-base mb-4">Contato</h2>
+        <ul class="space-y-3 text-sm">
+          <li>
+            <a href="https://wa.me/5541991264615?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Movet%C3%A1%20e%20gostaria%20de%20um%20or%C3%A7amento."
+               class="flex items-center gap-2.5 hover:text-ouro transition-colors">
+              <i class="fa-brands fa-whatsapp text-zap" aria-hidden="true"></i>
+              WhatsApp
+            </a>
+          </li>
+          <li>
+            <!-- Telefone aparece somente aqui no rodape -->
+            <a href="tel:+5541991264615" class="flex items-center gap-2.5 hover:text-ouro transition-colors">
+              <i class="fa-solid fa-phone text-ouro" aria-hidden="true"></i>
+              (41) 99126-4615
+            </a>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <i class="fa-solid fa-location-dot text-ouro mt-1" aria-hidden="true"></i>
+            <span>Curitiba e região metropolitana, PR<br><span class="text-prata/70 text-xs">Atendimento no endereço do cliente</span></span>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <i class="fa-regular fa-clock text-ouro mt-1" aria-hidden="true"></i>
+            <span>Atendimento em horário comercial</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="pt-8 text-xs text-prata/60 text-center">
+      © <span id="ano">2026</span> Movetá Móveis Planejados. Todos os direitos reservados.
+    </p>
+  </div>
+</footer>
+
+<!-- Botao flutuante (desktop) -->
+<button type="button"
+        class="js-abrir-qualificador hidden md:flex fixed bottom-6 right-6 z-30 w-14 h-14 rounded-full bg-zap text-white items-center justify-center shadow-lg hover:scale-110 transition-transform"
+        data-origem="Botão flutuante" aria-label="Falar no WhatsApp">
+  <i class="fa-brands fa-whatsapp text-3xl" aria-hidden="true"></i>
+</button>
+
+<!-- Barra fixa (mobile) -->
+<div class="md:hidden fixed bottom-0 inset-x-0 z-30 bg-creme/95 backdrop-blur border-t border-carvao/10 px-4 py-3"
+     style="padding-bottom: calc(0.75rem + env(safe-area-inset-bottom, 0px));">
+  <button type="button"
+          class="btn-zap js-abrir-qualificador w-full rounded-full py-3.5 text-base font-semibold flex items-center justify-center gap-2.5"
+          data-origem="Barra mobile">
+    <i class="fa-brands fa-whatsapp text-xl" aria-hidden="true"></i>
+    Pedir orçamento no WhatsApp
+  </button>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════
+     POPUP QUALIFICADOR: 4 etapas, termina abrindo o wa.me
+     com a mensagem ja montada. Serve como filtro de lead,
+     conforme discutido em 42:56.
+     ═══════════════════════════════════════════════════════════ -->
+<div id="qualificador" hidden class="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-4"
+     role="dialog" aria-modal="true" aria-labelledby="qualificador-titulo">
+  <div class="absolute inset-0 bg-carvao/70 backdrop-blur-sm" data-fechar></div>
+
+  <div class="relative bg-white w-full sm:max-w-md rounded-t-3xl sm:rounded-3xl overflow-hidden shadow-2xl">
+
+    <div class="bg-zap px-5 py-4 flex items-center gap-3">
+      <i class="fa-brands fa-whatsapp text-2xl text-[#0B2B18]" aria-hidden="true"></i>
+      <div class="flex-1">
+        <h2 id="qualificador-titulo" class="font-semibold text-[#0B2B18] text-sm">Orçamento pelo WhatsApp</h2>
+        <p class="text-[#0B2B18]/70 text-xs">Leva menos de 30 segundos</p>
+      </div>
+      <button type="button" data-fechar class="text-[#0B2B18]/70 hover:text-[#0B2B18] w-8 h-8 flex items-center justify-center" aria-label="Fechar">
+        <i class="fa-solid fa-xmark text-lg" aria-hidden="true"></i>
+      </button>
+    </div>
+
+    <div class="h-1 bg-areia">
+      <div id="q-progresso" class="h-full bg-ouro transition-all duration-300" style="width:25%"></div>
+    </div>
+
+    <div class="p-5 sm:p-6">
+
+      <!-- Etapa 1 -->
+      <div class="q-etapa" data-etapa="1">
+        <p class="font-display text-lg text-carvao mb-4">O projeto é para onde?</p>
+        <div class="grid gap-2.5">
+          <button type="button" class="opcao-btn border-2 border-carvao/15 rounded-xl px-4 py-3.5 text-left text-sm font-medium flex items-center gap-3" data-campo="perfil" data-valor="Minha casa">
+            <i class="fa-solid fa-house text-bronze w-5" aria-hidden="true"></i> Minha casa
+          </button>
+          <button type="button" class="opcao-btn border-2 border-carvao/15 rounded-xl px-4 py-3.5 text-left text-sm font-medium flex items-center gap-3" data-campo="perfil" data-valor="Minha empresa">
+            <i class="fa-solid fa-building text-bronze w-5" aria-hidden="true"></i> Minha empresa
+          </button>
+        </div>
+      </div>
+
+      <!-- Etapa 2 -->
+      <div class="q-etapa" data-etapa="2" hidden>
+        <p class="font-display text-lg text-carvao mb-4">Qual ambiente?</p>
+        <div id="q-ambientes" class="grid grid-cols-2 gap-2.5"></div>
+      </div>
+
+      <!-- Etapa 3 -->
+      <div class="q-etapa" data-etapa="3" hidden>
+        <p class="font-display text-lg text-carvao mb-4">Quando pretende começar?</p>
+        <div class="grid gap-2.5">
+          <button type="button" class="opcao-btn border-2 border-carvao/15 rounded-xl px-4 py-3.5 text-left text-sm font-medium" data-campo="prazo" data-valor="O quanto antes">O quanto antes</button>
+          <button type="button" class="opcao-btn border-2 border-carvao/15 rounded-xl px-4 py-3.5 text-left text-sm font-medium" data-campo="prazo" data-valor="Nos próximos 3 meses">Nos próximos 3 meses</button>
+          <button type="button" class="opcao-btn border-2 border-carvao/15 rounded-xl px-4 py-3.5 text-left text-sm font-medium" data-campo="prazo" data-valor="Ainda estou pesquisando">Ainda estou pesquisando</button>
+        </div>
+      </div>
+
+      <!-- Etapa 4 -->
+      <form class="q-etapa" data-etapa="4" hidden novalidate>
+        <p class="font-display text-lg text-carvao mb-4">Como podemos te chamar?</p>
+        <label for="q-nome" class="block text-xs font-medium text-pedra mb-1.5">Seu nome</label>
+        <input id="q-nome" name="nome" type="text" autocomplete="given-name" required
+               class="w-full border-2 border-carvao/15 rounded-xl px-4 py-3 text-sm mb-4 focus:border-bronze focus:outline-none"
+               placeholder="Ex.: Ana">
+
+        <label for="q-tel" class="block text-xs font-medium text-pedra mb-1.5">Seu WhatsApp</label>
+        <input id="q-tel" name="telefone" type="tel" inputmode="numeric" autocomplete="tel" required
+               class="w-full border-2 border-carvao/15 rounded-xl px-4 py-3 text-sm mb-2 focus:border-bronze focus:outline-none"
+               placeholder="(41) 90000-0000">
+        <p id="q-erro" class="text-xs text-red-600 mb-3 hidden">Confira o número: precisa ter DDD e 9 dígitos.</p>
+
+        <button type="submit" class="btn-zap w-full rounded-xl py-3.5 text-sm font-semibold flex items-center justify-center gap-2 mt-2">
+          <i class="fa-brands fa-whatsapp text-lg" aria-hidden="true"></i>
+          Abrir conversa no WhatsApp
+        </button>
+        <p class="text-[11px] text-pedra text-center mt-3">
+          Seus dados são usados apenas para este atendimento.
+        </p>
+      </form>
+
+      <div class="flex items-center justify-between mt-5 pt-4 border-t border-carvao/10">
+        <button type="button" id="q-voltar" class="text-xs text-pedra hover:text-bronze transition-colors flex items-center gap-1.5 invisible">
+          <i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Voltar
+        </button>
+        <span id="q-passo" class="text-xs text-pedra">Etapa 1 de 4</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  'use strict';
+
+  // ── Configuração ────────────────────────────────────────────
+  // ATENCAO: numero assumido a partir de "+55 41 9126-4615".
+  // Confirmar com o cliente antes de publicar.
+  var WHATSAPP = '5541991264615';
+
+  var AMBIENTES = {
+    'Minha casa':    ['Cozinha', 'Dormitório', 'Sala / painel de TV', 'Banheiro', 'Lavanderia', 'Home office'],
+    'Minha empresa': ['Móveis para escritório', 'Mesa de reunião', 'Armários e divisórias', 'Painel para TV', 'Outro projeto'],
+  };
+
+  var dl = window.dataLayer || (window.dataLayer = []);
+  function evento(nome, dados) { dl.push(Object.assign({ event: nome }, dados || {})); }
+
+  // ── Avaliações do Google ────────────────────────────────────
+  // Link do perfil no Google Meu Negócio. Trocar quando o perfil for criado.
+  var LINK_GOOGLE = 'https://www.google.com/maps';
+
+  // Cada item: { nome, inicial, quando, nota, texto, exemplo }
+  //
+  // ATENÇÃO: os itens abaixo são PRÉVIA DE LAYOUT, não avaliações reais. A
+  // empresa ainda não tem nenhuma. Enquanto existir algum `exemplo: true`, a
+  // seção exibe a nota de rodapé avisando disso. Ao colar as avaliações reais
+  // do Google, apague o campo `exemplo` de cada uma e a nota some sozinha.
+  //
+  // Para integrar com a Places API no futuro, basta trocar esta constante por
+  // um fetch que devolva o mesmo formato. Nada mais na seção precisa mudar.
+  var AVALIACOES = [
+    { nome: 'Ana L.', inicial: 'A', quando: 'há 2 semanas', nota: 5, exemplo: true,
+      texto: 'Espaço para o texto da avaliação do cliente. Aqui aparece o comentário publicado no perfil do Google, do jeito que a pessoa escreveu.' },
+    { nome: 'Rodrigo M.', inicial: 'R', quando: 'há 3 semanas', nota: 5, exemplo: true,
+      texto: 'Cada avaliação publicada vira um cartão como este, com a nota, a data e o nome de quem avaliou.' },
+    { nome: 'Juliana P.', inicial: 'J', quando: 'há 1 mês', nota: 5, exemplo: true,
+      texto: 'A nota média e o total que aparecem acima são calculados automaticamente a partir das avaliações da lista.' },
+  ];
+
+  function estrelas(nota) {
+    var html = '';
+    for (var i = 1; i <= 5; i++) {
+      html += '<i class="fa-' + (i <= nota ? 'solid' : 'regular') + ' fa-star"></i>';
+    }
+    return html;
+  }
+
+  function montarAvaliacoes() {
+    var lista  = document.getElementById('avaliacoes-lista');
+    var vazio  = document.getElementById('avaliacoes-vazio');
+    var resumo = document.getElementById('avaliacoes-nota').parentElement.parentElement;
+
+    document.getElementById('link-google').href = LINK_GOOGLE;
+
+    if (!AVALIACOES.length) {
+      vazio.hidden = false;
+      resumo.hidden = true;
+      return;
+    }
+
+    // Nota de prévia: some sozinha quando todas as avaliações forem reais.
+    document.getElementById('aviso-previa').hidden =
+      !AVALIACOES.some(function (a) { return a.exemplo; });
+
+    var media = AVALIACOES.reduce(function (t, a) { return t + a.nota; }, 0) / AVALIACOES.length;
+    document.getElementById('avaliacoes-nota').textContent = media.toFixed(1).replace('.', ',');
+    document.getElementById('avaliacoes-estrelas').innerHTML = estrelas(Math.round(media));
+    document.getElementById('avaliacoes-total').textContent =
+      AVALIACOES.length + (AVALIACOES.length === 1 ? ' avaliação' : ' avaliações');
+
+    lista.innerHTML = AVALIACOES.map(function (a) {
+      return '<figure class="snap-start shrink-0 w-[85%] sm:w-[47%] lg:w-[31.5%] rounded-2xl border border-carvao/10 bg-white p-6 shadow-sm">'
+        + '<div class="flex items-center gap-3 mb-4">'
+          + '<div class="w-10 h-10 rounded-full bg-bronze text-white flex items-center justify-center font-display text-lg shrink-0" aria-hidden="true">'
+            + a.inicial + '</div>'
+          + '<div class="min-w-0">'
+            + '<div class="text-sm font-semibold text-carvao truncate">' + a.nome + '</div>'
+            + '<div class="text-xs text-pedra">' + a.quando + '</div>'
+          + '</div>'
+        + '</div>'
+        + '<div class="flex gap-0.5 text-[#FBBC04] text-sm mb-3" aria-label="' + a.nota + ' de 5 estrelas">'
+          + estrelas(a.nota) + '</div>'
+        + '<blockquote class="text-sm text-pedra leading-relaxed">' + a.texto + '</blockquote>'
+      + '</figure>';
+    }).join('');
+  }
+
+  // ── Estado do popup ─────────────────────────────────────────
+  var modal    = document.getElementById('qualificador');
+  var progresso= document.getElementById('q-progresso');
+  var rotulo   = document.getElementById('q-passo');
+  var btnVoltar= document.getElementById('q-voltar');
+  var gradeAmb = document.getElementById('q-ambientes');
+  var form     = modal.querySelector('form[data-etapa="4"]');
+  var inputNome= document.getElementById('q-nome');
+  var inputTel = document.getElementById('q-tel');
+  var erroTel  = document.getElementById('q-erro');
+
+  var etapa = 1;
+  var resposta = { perfil: '', ambiente: '', prazo: '', origem: '' };
+  var focoAnterior = null;
+
+  function mostrarEtapa(n) {
+    etapa = n;
+    modal.querySelectorAll('.q-etapa').forEach(function (el) {
+      el.hidden = Number(el.dataset.etapa) !== n;
+    });
+    progresso.style.width = (n / 4 * 100) + '%';
+    rotulo.textContent = 'Etapa ' + n + ' de 4';
+    btnVoltar.classList.toggle('invisible', n === 1);
+    if (n === 4) setTimeout(function () { inputNome.focus(); }, 80);
+  }
+
+  function montarAmbientes() {
+    gradeAmb.innerHTML = '';
+    (AMBIENTES[resposta.perfil] || []).forEach(function (nome) {
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'opcao-btn border-2 border-carvao/15 rounded-xl px-3 py-3 text-sm font-medium text-center';
+      b.textContent = nome;
+      b.dataset.campo = 'ambiente';
+      b.dataset.valor = nome;
+      gradeAmb.appendChild(b);
+    });
+  }
+
+  function abrir(origem, perfil, ambiente) {
+    focoAnterior = document.activeElement;
+    resposta = { perfil: perfil || '', ambiente: ambiente || '', prazo: '', origem: origem || 'Não informado' };
+    modal.hidden = false;
+    document.body.style.overflow = 'hidden';
+    evento('abriu_qualificador', { origem: resposta.origem });
+
+    // Pula as etapas que o proprio botao ja respondeu.
+    if (resposta.perfil && resposta.ambiente) { montarAmbientes(); mostrarEtapa(3); }
+    else if (resposta.perfil)                 { montarAmbientes(); mostrarEtapa(2); }
+    else                                       { mostrarEtapa(1); }
+  }
+
+  function fechar() {
+    modal.hidden = true;
+    document.body.style.overflow = '';
+    if (focoAnterior) focoAnterior.focus();
+  }
+
+  // ── Abertura pelos CTAs ─────────────────────────────────────
+  // Cada botao pode pre-responder o perfil e o ambiente via data-*.
+  document.addEventListener('click', function (e) {
+    var gatilho = e.target.closest('.js-abrir-qualificador');
+    if (!gatilho) return;
+    e.preventDefault();
+    var perfil = gatilho.dataset.perfil === 'casa' ? 'Minha casa'
+               : gatilho.dataset.perfil === 'empresa' ? 'Minha empresa'
+               : '';
+    abrir(gatilho.dataset.origem, perfil, gatilho.dataset.ambiente || '');
+  });
+
+  modal.addEventListener('click', function (e) {
+    if (e.target.closest('[data-fechar]')) fechar();
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !modal.hidden) fechar();
+  });
+
+  btnVoltar.addEventListener('click', function () {
+    if (etapa > 1) mostrarEtapa(etapa - 1);
+  });
+
+  // ── Selecao das opcoes ──────────────────────────────────────
+  modal.addEventListener('click', function (e) {
+    var opcao = e.target.closest('.opcao-btn');
+    if (!opcao) return;
+
+    resposta[opcao.dataset.campo] = opcao.dataset.valor;
+
+    if (opcao.dataset.campo === 'perfil') { montarAmbientes(); mostrarEtapa(2); }
+    else if (opcao.dataset.campo === 'ambiente') { mostrarEtapa(3); }
+    else if (opcao.dataset.campo === 'prazo') { mostrarEtapa(4); }
+  });
+
+  // ── Telefone ────────────────────────────────────────────────
+  // Formata (41) 99999-9999. O DDI 55, se o usuario digitar, e removido:
+  // ele ja entra fixo no link do wa.me e duplicaria o prefixo.
+  function formatarTel(bruto) {
+    var d = String(bruto || '').replace(/\D/g, '');
+    if (d.length > 11 && d.slice(0, 2) === '55') d = d.slice(2);
+    d = d.slice(0, 11);
+    if (d.length <= 10) return d.replace(/^(\d{2})(\d{4})(\d{0,4})/, '($1) $2-$3');
+    return d.replace(/^(\d{2})(\d{5})(\d{0,4})/, '($1) $2-$3');
+  }
+
+  inputTel.addEventListener('input', function () {
+    inputTel.value = formatarTel(inputTel.value);
+    erroTel.classList.add('hidden');
+  });
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    var nome = inputNome.value.trim();
+    var digitos = inputTel.value.replace(/\D/g, '');
+
+    if (!nome) { inputNome.focus(); return; }
+    if (digitos.length < 10) {
+      erroTel.classList.remove('hidden');
+      inputTel.focus();
+      return;
+    }
+
+    var linhas = [
+      'Olá! Sou ' + nome + ' e vim pelo site da Movetá.',
+      '',
+      'Projeto para: ' + (resposta.perfil || 'não informado'),
+      'Ambiente: '     + (resposta.ambiente || 'não informado'),
+      'Pretendo começar: ' + (resposta.prazo || 'não informado'),
+      'Meu WhatsApp: ' + inputTel.value,
+    ];
+
+    evento('lead_qualificado', {
+      origem: resposta.origem,
+      perfil: resposta.perfil,
+      ambiente: resposta.ambiente,
+      prazo: resposta.prazo,
+    });
+
+    window.location.href = 'https://wa.me/' + WHATSAPP + '?text=' + encodeURIComponent(linhas.join('\n'));
+  });
+
+  // ── Links diretos de WhatsApp (rodape) ──────────────────────
+  document.addEventListener('click', function (e) {
+    var link = e.target.closest('a[href*="wa.me"]');
+    if (link) evento('clique_whatsapp', { local: link.textContent.trim() || 'WhatsApp' });
+  });
+
+  // ── Carrossel do hero ───────────────────────────────────────
+  // Anda sozinho a cada 4s, com os botões e os pontos como controle manual.
+  // Pausa no hover, no foco do teclado e quando a aba sai de vista, para não
+  // gastar bateria rodando invisível.
+  (function () {
+    var caixa = document.getElementById('hero-carrossel');
+    if (!caixa) return;
+
+    var slides = [].slice.call(caixa.querySelectorAll('.hero-slide'));
+    var pontos = [].slice.call(caixa.querySelectorAll('.hero-ponto'));
+    if (slides.length < 2) return;
+
+    var INTERVALO = 4000;
+    var atual = 0;
+    var timer = null;
+    var reduzido = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    slides.forEach(function (s, i) {
+      s.style.transition = 'opacity .6s ease';
+      s.style.opacity = i === 0 ? '1' : '0';
+      // Só o slide visível recebe foco/leitura; os outros somem da árvore.
+      s.setAttribute('aria-hidden', i === 0 ? 'false' : 'true');
+    });
+
+    function mostrar(n) {
+      atual = (n + slides.length) % slides.length;
+      slides.forEach(function (s, i) {
+        s.style.opacity = i === atual ? '1' : '0';
+        s.setAttribute('aria-hidden', i === atual ? 'false' : 'true');
+      });
+      pontos.forEach(function (p, i) {
+        p.classList.toggle('bg-white', i === atual);
+        p.classList.toggle('bg-white/40', i !== atual);
+      });
+    }
+
+    function comecar() {
+      if (reduzido || timer) return;
+      timer = setInterval(function () { mostrar(atual + 1); }, INTERVALO);
+    }
+    function parar() { clearInterval(timer); timer = null; }
+    // Reinicia a contagem após uma ação manual, para o slide escolhido
+    // não trocar logo em seguida.
+    function manual(n) { parar(); mostrar(n); comecar(); }
+
+    document.getElementById('hero-anterior').addEventListener('click', function () { manual(atual - 1); });
+    document.getElementById('hero-proximo').addEventListener('click', function () { manual(atual + 1); });
+    pontos.forEach(function (p) {
+      p.addEventListener('click', function () { manual(Number(p.dataset.ir)); });
+    });
+
+    caixa.addEventListener('mouseenter', parar);
+    caixa.addEventListener('mouseleave', comecar);
+    caixa.addEventListener('focusin', parar);
+    caixa.addEventListener('focusout', comecar);
+    document.addEventListener('visibilitychange', function () {
+      if (document.hidden) { parar(); } else { comecar(); }
+    });
+
+    mostrar(0);
+    comecar();
+  })();
+
+  // ── Setas das galerias de obras ─────────────────────────────
+  // Rolam ~85% da largura visível, para sempre sobrar uma imagem de
+  // referência entre um avanço e outro.
+  document.addEventListener('click', function (e) {
+    var btn = e.target.closest('.js-galeria-anterior, .js-galeria-proximo');
+    if (!btn) return;
+    var trilho = document.getElementById(btn.dataset.alvo);
+    if (!trilho) return;
+    var passo = trilho.clientWidth * 0.85;
+    trilho.scrollBy({
+      left: btn.classList.contains('js-galeria-proximo') ? passo : -passo,
+      behavior: 'smooth',
+    });
+  });
+
+  // ── Menu mobile ─────────────────────────────────────────────
+  var btnMenu = document.getElementById('abrir-menu');
+  var menu = document.getElementById('menu-mobile');
+
+  function alternarMenu(abrir) {
+    menu.hidden = !abrir;
+    btnMenu.setAttribute('aria-expanded', String(abrir));
+    btnMenu.querySelector('i').className = abrir
+      ? 'fa-solid fa-xmark text-xl'
+      : 'fa-solid fa-bars text-xl';
+  }
+
+  btnMenu.addEventListener('click', function () { alternarMenu(menu.hidden); });
+  menu.addEventListener('click', function (e) {
+    if (e.target.closest('.js-link-menu')) alternarMenu(false);
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !menu.hidden) { alternarMenu(false); btnMenu.focus(); }
+  });
+
+  // ── Rodape ──────────────────────────────────────────────────
+  document.getElementById('ano').textContent = new Date().getFullYear();
+  montarAvaliacoes();
+
+  // ── AOS ─────────────────────────────────────────────────────
+  window.addEventListener('load', function () {
+    if (window.AOS) AOS.init({ duration: 650, easing: 'ease-out-cubic', once: true, offset: 60 });
+  });
+})();
+</script>
+
+</body>
+</html>
