@@ -325,9 +325,13 @@ gerado por rotina). O resto da seção não muda, ela só lê o array.
 
 ## SEO
 
-Aplicado em 10/08. As URLs apontam para `https://moveta-moveis.pages.dev`;
-**trocar nos 5 lugares** quando o domínio próprio entrar (canonical, og:url,
-og:image, twitter:image, JSON-LD, além de `robots.txt` e `sitemap.xml`).
+Aplicado em 10/08. Domínio oficial: **movetaplanejados.com.br** (apex, sem www),
+já aplicado nos 11 lugares (canonical, og:url, og:image, twitter:image, os 4
+campos do JSON-LD, `robots.txt` e `sitemap.xml`).
+
+> ⚠️ Configurar no Cloudflare o **301 de `www` para o apex**. O canonical aponta
+> para o apex; se o www responder 200 por conta própria, o Google enxerga duas
+> páginas com o mesmo conteúdo.
 
 - `canonical`, `robots` com `max-image-preview:large`, `geo.region`/`geo.placename`
 - Open Graph completo e Twitter `summary_large_image`

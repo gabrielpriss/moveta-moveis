@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://moveta-moveis.pages.dev/sitemap.xml
+Sitemap: https://movetaplanejados.com.br/sitemap.xml

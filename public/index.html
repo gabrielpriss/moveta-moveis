@@ -50,9 +50,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <link rel="icon" href="/assets/favicon-moveta.png" type="image/png">
     <link rel="apple-touch-icon" href="/assets/favicon-moveta.png">
 
-    <!-- SEO. Trocar https://moveta-moveis.pages.dev nas 5 URLs abaixo quando o dominio proprio entrar.
-         O canonical usa a forma sem barra final, igual ao que o Pages serve. -->
-    <link rel="canonical" href="https://moveta-moveis.pages.dev/">
+    <!-- SEO. Dominio oficial: movetaplanejados.com.br (apex, sem www).
+         O www deve responder com 301 para o apex la no Cloudflare, senao o
+         canonical aqui aponta para um endereco diferente do que o visitante
+         acessou e o Google trata como duas paginas. -->
+    <link rel="canonical" href="https://movetaplanejados.com.br/">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="author" content="Movetá Móveis Planejados">
     <meta name="geo.region" content="BR-PR">
@@ -63,8 +65,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <meta property="og:locale" content="pt_BR">
     <meta property="og:title" content="Movetá Móveis Planejados | Sob Medida em Curitiba e Região">
     <meta property="og:description" content="Móveis planejados sob medida para casa e empresa em Curitiba e região. Marcenaria própria, projeto apresentado antes de fechar e entrega em 25 dias.">
-    <meta property="og:url" content="https://moveta-moveis.pages.dev/">
-    <meta property="og:image" content="https://moveta-moveis.pages.dev/assets/hero-slide-01.webp">
+    <meta property="og:url" content="https://movetaplanejados.com.br/">
+    <meta property="og:image" content="https://movetaplanejados.com.br/assets/hero-slide-01.webp">
     <meta property="og:image:width" content="800">
     <meta property="og:image:height" content="1065">
     <meta property="og:image:alt" content="Painel ripado de madeira com TV e bancada, projeto executado pela Movetá">
@@ -72,7 +74,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Movetá Móveis Planejados | Sob Medida em Curitiba e Região">
     <meta name="twitter:description" content="Móveis planejados sob medida para casa e empresa em Curitiba e região. Entrega em 25 dias.">
-    <meta name="twitter:image" content="https://moveta-moveis.pages.dev/assets/hero-slide-01.webp">
+    <meta name="twitter:image" content="https://movetaplanejados.com.br/assets/hero-slide-01.webp">
 
     <!-- Schema.org. Sem endereco e sem aggregateRating de proposito: o barracao
          nao foi confirmado como endereco publico e a empresa ainda nao tem
@@ -81,12 +83,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     {
       "@context": "https://schema.org",
       "@type": "HomeAndConstructionBusiness",
-      "@id": "https://moveta-moveis.pages.dev/#empresa",
+      "@id": "https://movetaplanejados.com.br/#empresa",
       "name": "Movetá Móveis Planejados",
       "description": "Móveis planejados sob medida para residências e empresas em Curitiba e região metropolitana, com marcenaria própria e entrega em 25 dias.",
-      "url": "https://moveta-moveis.pages.dev/",
-      "image": "https://moveta-moveis.pages.dev/assets/hero-slide-01.webp",
-      "logo": "https://moveta-moveis.pages.dev/assets/logo-moveta.png",
+      "url": "https://movetaplanejados.com.br/",
+      "image": "https://movetaplanejados.com.br/assets/hero-slide-01.webp",
+      "logo": "https://movetaplanejados.com.br/assets/logo-moveta.png",
       "telephone": "+55-41-99126-4615",
       "priceRange": "$$",
       "areaServed": [
