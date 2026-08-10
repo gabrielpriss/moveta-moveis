@@ -150,9 +150,8 @@ Ao mexer no header, testar a 320px (iPhone SE) antes de subir.
    de obras (residencial e comercial)
 9. Avaliações do Google (ver abaixo)
 10. CTA final
-11. FAQ, 4 perguntas com termos soft
-13. "Você já ouviu alguma dessas histórias" (as 3 dores do 09:26), última seção
-14. Rodapé
+11. FAQ, 4 perguntas com termos soft, última seção
+12. Rodapé
 
 A seção "Antes de decidir" (comparativo planejado × móvel pronto) foi removida
 a pedido do Gabriel em 07/08. O FAQ ainda cobre o tema, que era o que capturava
@@ -405,8 +404,15 @@ entregar, contando a partir do fechamento (35:30 a 36:02).
 - **CNPJ no rodapé**: acordado, mas o número não foi passado e o CNPJ está em transição (33:17)
 - **Handle do Instagram**: o perfil ainda estava como "deg"; a Grazi ia trocar para movetaplanejados no mesmo dia. Confirmar antes de publicar (17:22, 55:29)
 
+### Resolvido depois da reunião (decisão do Gabriel, 10/08)
+- **"Dormitório" virou "Quarto"** em todos os 8 pontos: card, texto do card
+  "Para a sua casa", `data-ambiente`, opções do popup, alts e `makesOffer` do
+  JSON-LD. O nome do arquivo `residencial-dormitorio.webp` foi mantido, para não
+  quebrar o mapeamento em `scripts/tratar-fotos.py`.
+- **A seção "Você já ouviu alguma dessas histórias" foi removida.** Gabriel e
+  Eduardo concordaram na reunião que ficou repetitiva (32:15, 34:31) e a decisão
+  de remover veio na sequência. As 3 dores do 09:26 não aparecem mais na página.
+
 ### Discutido sem decisão, não aplicar sem confirmar
-- Renomear "Dormitório" para "Quarto": Gabriel disse "talvez ficaria mais natural", ninguém fechou (11:58)
-- Última seção considerada repetitiva por Gabriel e Eduardo, mas sem decisão entre remover ou substituir (32:15, 34:31)
 - Empresas tem 4 cards contra 6 do residencial: Gabriel levantou, sem decisão (14:36)
 - Power numbers: possibilidade de incluir "projetos entregues", sem decisão (29:30)
