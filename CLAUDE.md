@@ -145,13 +145,21 @@ Ao mexer no header, testar a 320px (iPhone SE) antes de subir.
 4. Residencial, 6 ambientes
 5. Empresas, 4 tipos de projeto
 6. Como funciona, 5 etapas
-7. Acabamentos
+7. Acabamentos (**oculta**, ver abaixo)
 8. Sobre, história real sem inflar tempo de mercado, seguido de duas galerias
    de obras (residencial e comercial)
 9. Avaliações do Google (ver abaixo)
 10. CTA final
 11. FAQ, 4 perguntas com termos soft, última seção
 12. Rodapé
+
+A seção **Acabamentos foi ocultada** em 19/08, a pedido do Gabriel: os blocos
+de cor eram placeholders SVG e a seção só volta quando chegarem as fotos de
+madeira real do cliente. O HTML continua no arquivo, dentro de um comentário
+(logo depois da seção "Como funciona"), e os 3 links de navegação (header, menu
+mobile e rodapé) estão comentados com a marca `acabamentos ocultos`. Para
+reexibir, basta remover esses 4 comentários. Junto com a seção saiu o botão
+"Solicitar catálogo no WhatsApp", que tinha sido fechado na reunião de 10/08.
 
 A seção "Antes de decidir" (comparativo planejado × móvel pronto) foi removida
 a pedido do Gabriel em 07/08. O FAQ ainda cobre o tema, que era o que capturava
@@ -398,7 +406,7 @@ entregar, contando a partir do fechamento (35:30 a 36:02).
 
 ### Pendente, aguardando material do cliente
 - **Foto de lavanderia de verdade**: a atual não é lavanderia. A Grazi ia mandar (12:18)
-- **Fotos dos acabamentos**: trocar os blocos de cor por madeiras reais. Ninguém tinha o material na reunião (44:51)
+- **Fotos dos acabamentos**: trocar os blocos de cor por madeiras reais. Ninguém tinha o material na reunião (44:51). A seção está oculta desde 19/08 justamente por isso
 - **Antes e depois**: Eduardo sugeriu um comparador deslizante. Depende de pares de fotos do mesmo ângulo (12:49)
 - **Foto da equipe** na seção "Quem faz" (27:28)
 - **CNPJ no rodapé**: acordado, mas o número não foi passado e o CNPJ está em transição (33:17)
