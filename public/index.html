@@ -384,58 +384,58 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <!-- Carrossel: anda sozinho a cada 4s e tambem no botao. Pausa no hover,
            no foco do teclado e quando a aba sai de vista. -->
       <div class="col-span-2 row-span-2 relative overflow-hidden rounded-2xl bg-white/5 ring-1 ring-white/10 group/carrossel"
-           id="hero-carrossel" aria-roledescription="carrossel" aria-label="Projetos executados pela Movetá">
+           id="hero-carrossel" data-carrossel aria-roledescription="carrossel" aria-label="Projetos executados pela Movetá">
           <img src="assets/hero-slide-01.webp" alt="Painel ripado de madeira com TV e bancada, projeto residencial" width="800" height="1065"
-               class="hero-slide absolute inset-0 w-full h-full object-cover"
+               class="carrossel-slide absolute inset-0 w-full h-full object-cover"
                data-indice="0" fetchpriority="high">
           <img src="assets/hero-slide-02.webp" alt="Balcão de recepção planejado, projeto comercial" width="800" height="600"
-               class="hero-slide absolute inset-0 w-full h-full object-cover"
+               class="carrossel-slide absolute inset-0 w-full h-full object-cover"
                data-indice="1" loading="lazy">
           <img src="assets/hero-slide-03.webp" alt="Home office planejado com bancada e iluminação embutida" width="800" height="1067"
-               class="hero-slide absolute inset-0 w-full h-full object-cover"
+               class="carrossel-slide absolute inset-0 w-full h-full object-cover"
                data-indice="2" loading="lazy">
           <img src="assets/hero-slide-04.webp" alt="Escritório com mesa em L planejada" width="800" height="1067"
-               class="hero-slide absolute inset-0 w-full h-full object-cover"
+               class="carrossel-slide absolute inset-0 w-full h-full object-cover"
                data-indice="3" loading="lazy">
           <img src="assets/hero-slide-05.webp" alt="Cozinha planejada em L com bancada de granito" width="800" height="564"
-               class="hero-slide absolute inset-0 w-full h-full object-cover"
+               class="carrossel-slide absolute inset-0 w-full h-full object-cover"
                data-indice="4" loading="lazy">
           <img src="assets/hero-slide-06.webp" alt="Mesa de reunião planejada com gaveteiros" width="800" height="600"
-               class="hero-slide absolute inset-0 w-full h-full object-cover"
+               class="carrossel-slide absolute inset-0 w-full h-full object-cover"
                data-indice="5" loading="lazy">
           <img src="assets/hero-slide-07.webp" alt="Painel ripado para TV na sala" width="800" height="1065"
-               class="hero-slide absolute inset-0 w-full h-full object-cover"
+               class="carrossel-slide absolute inset-0 w-full h-full object-cover"
                data-indice="6" loading="lazy">
           <img src="assets/hero-slide-08.webp" alt="Estações de trabalho planejadas em escritório" width="800" height="1067"
-               class="hero-slide absolute inset-0 w-full h-full object-cover"
+               class="carrossel-slide absolute inset-0 w-full h-full object-cover"
                data-indice="7" loading="lazy">
           <img src="assets/hero-slide-09.webp" alt="Armários de quarto com nichos e iluminação" width="800" height="1067"
-               class="hero-slide absolute inset-0 w-full h-full object-cover"
+               class="carrossel-slide absolute inset-0 w-full h-full object-cover"
                data-indice="8" loading="lazy">
           <img src="assets/hero-slide-10.webp" alt="Sala de reunião com painel para TV" width="800" height="1069"
-               class="hero-slide absolute inset-0 w-full h-full object-cover"
+               class="carrossel-slide absolute inset-0 w-full h-full object-cover"
                data-indice="9" loading="lazy">
 
-        <button type="button" id="hero-anterior" aria-label="Imagem anterior"
-                class="absolute left-2 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-carvao/60 text-white backdrop-blur flex items-center justify-center opacity-0 group-hover/carrossel:opacity-100 focus:opacity-100 transition-opacity">
+        <button type="button" aria-label="Imagem anterior"
+                class="js-carrossel-anterior absolute left-2 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-carvao/60 text-white backdrop-blur flex items-center justify-center opacity-0 group-hover/carrossel:opacity-100 focus:opacity-100 transition-opacity">
           <i class="fa-solid fa-chevron-left text-sm" aria-hidden="true"></i>
         </button>
-        <button type="button" id="hero-proximo" aria-label="Próxima imagem"
-                class="absolute right-2 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-carvao/60 text-white backdrop-blur flex items-center justify-center opacity-0 group-hover/carrossel:opacity-100 focus:opacity-100 transition-opacity">
+        <button type="button" aria-label="Próxima imagem"
+                class="js-carrossel-proximo absolute right-2 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-carvao/60 text-white backdrop-blur flex items-center justify-center opacity-0 group-hover/carrossel:opacity-100 focus:opacity-100 transition-opacity">
           <i class="fa-solid fa-chevron-right text-sm" aria-hidden="true"></i>
         </button>
 
         <div class="absolute inset-x-0 bottom-3 flex justify-center gap-1.5" id="hero-pontos">
-          <button type="button" class="hero-ponto w-2 h-2 rounded-full bg-white/40 transition-colors" data-ir="0" aria-label="Ir para a imagem 1"></button>
-          <button type="button" class="hero-ponto w-2 h-2 rounded-full bg-white/40 transition-colors" data-ir="1" aria-label="Ir para a imagem 2"></button>
-          <button type="button" class="hero-ponto w-2 h-2 rounded-full bg-white/40 transition-colors" data-ir="2" aria-label="Ir para a imagem 3"></button>
-          <button type="button" class="hero-ponto w-2 h-2 rounded-full bg-white/40 transition-colors" data-ir="3" aria-label="Ir para a imagem 4"></button>
-          <button type="button" class="hero-ponto w-2 h-2 rounded-full bg-white/40 transition-colors" data-ir="4" aria-label="Ir para a imagem 5"></button>
-          <button type="button" class="hero-ponto w-2 h-2 rounded-full bg-white/40 transition-colors" data-ir="5" aria-label="Ir para a imagem 6"></button>
-          <button type="button" class="hero-ponto w-2 h-2 rounded-full bg-white/40 transition-colors" data-ir="6" aria-label="Ir para a imagem 7"></button>
-          <button type="button" class="hero-ponto w-2 h-2 rounded-full bg-white/40 transition-colors" data-ir="7" aria-label="Ir para a imagem 8"></button>
-          <button type="button" class="hero-ponto w-2 h-2 rounded-full bg-white/40 transition-colors" data-ir="8" aria-label="Ir para a imagem 9"></button>
-          <button type="button" class="hero-ponto w-2 h-2 rounded-full bg-white/40 transition-colors" data-ir="9" aria-label="Ir para a imagem 10"></button>
+          <button type="button" class="carrossel-ponto w-2 h-2 rounded-full bg-white/40 transition-colors" data-ir="0" aria-label="Ir para a imagem 1"></button>
+          <button type="button" class="carrossel-ponto w-2 h-2 rounded-full bg-white/40 transition-colors" data-ir="1" aria-label="Ir para a imagem 2"></button>
+          <button type="button" class="carrossel-ponto w-2 h-2 rounded-full bg-white/40 transition-colors" data-ir="2" aria-label="Ir para a imagem 3"></button>
+          <button type="button" class="carrossel-ponto w-2 h-2 rounded-full bg-white/40 transition-colors" data-ir="3" aria-label="Ir para a imagem 4"></button>
+          <button type="button" class="carrossel-ponto w-2 h-2 rounded-full bg-white/40 transition-colors" data-ir="4" aria-label="Ir para a imagem 5"></button>
+          <button type="button" class="carrossel-ponto w-2 h-2 rounded-full bg-white/40 transition-colors" data-ir="5" aria-label="Ir para a imagem 6"></button>
+          <button type="button" class="carrossel-ponto w-2 h-2 rounded-full bg-white/40 transition-colors" data-ir="6" aria-label="Ir para a imagem 7"></button>
+          <button type="button" class="carrossel-ponto w-2 h-2 rounded-full bg-white/40 transition-colors" data-ir="7" aria-label="Ir para a imagem 8"></button>
+          <button type="button" class="carrossel-ponto w-2 h-2 rounded-full bg-white/40 transition-colors" data-ir="8" aria-label="Ir para a imagem 9"></button>
+          <button type="button" class="carrossel-ponto w-2 h-2 rounded-full bg-white/40 transition-colors" data-ir="9" aria-label="Ir para a imagem 10"></button>
         </div>
       </div>
       <div class="overflow-hidden rounded-2xl bg-white/5 ring-1 ring-white/10">
@@ -767,8 +767,64 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <section id="sobre" class="py-16 sm:py-24 bg-areia" aria-labelledby="sobre-titulo">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
 
-    <div class="rounded-3xl overflow-hidden bg-white aspect-[4/5] lg:aspect-[4/4.5] order-2 lg:order-1" data-aos="fade-right">
-      <img src="assets/sobre-equipe.svg" alt="Sócios da Movetá: comercial e marcenaria" width="800" height="1000" class="w-full h-full object-cover" loading="lazy">
+    <!-- As mesmas 10 obras do hero, na mesma ordem: a seção fala de quem faz,
+         e a prova de quem faz é o que já saiu da marcenaria. -->
+    <div class="rounded-3xl overflow-hidden bg-white aspect-[4/5] lg:aspect-[4/4.5] order-2 lg:order-1 relative group/carrossel"
+         id="sobre-carrossel" data-carrossel
+         aria-roledescription="carrossel" aria-label="Obras executadas pela Movetá"
+         data-aos="fade-right">
+        <img src="assets/hero-slide-01.webp" alt="Painel ripado de madeira com TV e bancada, projeto residencial" width="800" height="1065"
+             class="carrossel-slide absolute inset-0 w-full h-full object-cover"
+             data-indice="0" loading="lazy">
+        <img src="assets/hero-slide-02.webp" alt="Balcão de recepção planejado, projeto comercial" width="800" height="600"
+             class="carrossel-slide absolute inset-0 w-full h-full object-cover"
+             data-indice="1" loading="lazy">
+        <img src="assets/hero-slide-03.webp" alt="Home office planejado com bancada e iluminação embutida" width="800" height="1067"
+             class="carrossel-slide absolute inset-0 w-full h-full object-cover"
+             data-indice="2" loading="lazy">
+        <img src="assets/hero-slide-04.webp" alt="Escritório com mesa em L planejada" width="800" height="1067"
+             class="carrossel-slide absolute inset-0 w-full h-full object-cover"
+             data-indice="3" loading="lazy">
+        <img src="assets/hero-slide-05.webp" alt="Cozinha planejada em L com bancada de granito" width="800" height="564"
+             class="carrossel-slide absolute inset-0 w-full h-full object-cover"
+             data-indice="4" loading="lazy">
+        <img src="assets/hero-slide-06.webp" alt="Mesa de reunião planejada com gaveteiros" width="800" height="600"
+             class="carrossel-slide absolute inset-0 w-full h-full object-cover"
+             data-indice="5" loading="lazy">
+        <img src="assets/hero-slide-07.webp" alt="Painel ripado para TV na sala" width="800" height="1065"
+             class="carrossel-slide absolute inset-0 w-full h-full object-cover"
+             data-indice="6" loading="lazy">
+        <img src="assets/hero-slide-08.webp" alt="Estações de trabalho planejadas em escritório" width="800" height="1067"
+             class="carrossel-slide absolute inset-0 w-full h-full object-cover"
+             data-indice="7" loading="lazy">
+        <img src="assets/hero-slide-09.webp" alt="Armários de quarto com nichos e iluminação" width="800" height="1067"
+             class="carrossel-slide absolute inset-0 w-full h-full object-cover"
+             data-indice="8" loading="lazy">
+        <img src="assets/hero-slide-10.webp" alt="Sala de reunião com painel para TV" width="800" height="1069"
+             class="carrossel-slide absolute inset-0 w-full h-full object-cover"
+             data-indice="9" loading="lazy">
+
+        <button type="button" aria-label="Imagem anterior"
+                class="js-carrossel-anterior absolute left-2 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-carvao/60 text-white backdrop-blur flex items-center justify-center opacity-0 group-hover/carrossel:opacity-100 focus:opacity-100 transition-opacity">
+          <i class="fa-solid fa-chevron-left text-sm" aria-hidden="true"></i>
+        </button>
+        <button type="button" aria-label="Próxima imagem"
+                class="js-carrossel-proximo absolute right-2 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-carvao/60 text-white backdrop-blur flex items-center justify-center opacity-0 group-hover/carrossel:opacity-100 focus:opacity-100 transition-opacity">
+          <i class="fa-solid fa-chevron-right text-sm" aria-hidden="true"></i>
+        </button>
+
+        <div class="absolute inset-x-0 bottom-3 flex justify-center gap-1.5">
+          <button type="button" class="carrossel-ponto w-2 h-2 rounded-full bg-white/40 transition-colors" data-ir="0" aria-label="Ir para a imagem 1"></button>
+          <button type="button" class="carrossel-ponto w-2 h-2 rounded-full bg-white/40 transition-colors" data-ir="1" aria-label="Ir para a imagem 2"></button>
+          <button type="button" class="carrossel-ponto w-2 h-2 rounded-full bg-white/40 transition-colors" data-ir="2" aria-label="Ir para a imagem 3"></button>
+          <button type="button" class="carrossel-ponto w-2 h-2 rounded-full bg-white/40 transition-colors" data-ir="3" aria-label="Ir para a imagem 4"></button>
+          <button type="button" class="carrossel-ponto w-2 h-2 rounded-full bg-white/40 transition-colors" data-ir="4" aria-label="Ir para a imagem 5"></button>
+          <button type="button" class="carrossel-ponto w-2 h-2 rounded-full bg-white/40 transition-colors" data-ir="5" aria-label="Ir para a imagem 6"></button>
+          <button type="button" class="carrossel-ponto w-2 h-2 rounded-full bg-white/40 transition-colors" data-ir="6" aria-label="Ir para a imagem 7"></button>
+          <button type="button" class="carrossel-ponto w-2 h-2 rounded-full bg-white/40 transition-colors" data-ir="7" aria-label="Ir para a imagem 8"></button>
+          <button type="button" class="carrossel-ponto w-2 h-2 rounded-full bg-white/40 transition-colors" data-ir="8" aria-label="Ir para a imagem 9"></button>
+          <button type="button" class="carrossel-ponto w-2 h-2 rounded-full bg-white/40 transition-colors" data-ir="9" aria-label="Ir para a imagem 10"></button>
+        </div>
     </div>
 
     <div class="order-1 lg:order-2" data-aos="fade-left">
@@ -1490,16 +1546,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     if (link) evento('clique_whatsapp', { local: link.textContent.trim() || 'WhatsApp' });
   });
 
-  // ── Carrossel do hero ───────────────────────────────────────
-  // Anda sozinho a cada 4s, com os botões e os pontos como controle manual.
-  // Pausa no hover, no foco do teclado e quando a aba sai de vista, para não
-  // gastar bateria rodando invisível.
-  (function () {
-    var caixa = document.getElementById('hero-carrossel');
-    if (!caixa) return;
-
-    var slides = [].slice.call(caixa.querySelectorAll('.hero-slide'));
-    var pontos = [].slice.call(caixa.querySelectorAll('.hero-ponto'));
+  // ── Carrosséis de obras (hero e "Quem faz") ─────────────────
+  // Andam sozinhos a cada 4s, com os botões e os pontos como controle manual.
+  // Pausam no hover, no foco do teclado e quando a aba sai de vista, para não
+  // gastar bateria rodando invisível. Cada container com [data-carrossel]
+  // ganha a sua própria instância, com contagem independente.
+  [].slice.call(document.querySelectorAll('[data-carrossel]')).forEach(function (caixa) {
+    var slides = [].slice.call(caixa.querySelectorAll('.carrossel-slide'));
+    var pontos = [].slice.call(caixa.querySelectorAll('.carrossel-ponto'));
     if (slides.length < 2) return;
 
     var INTERVALO = 4000;
@@ -1535,8 +1589,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     // não trocar logo em seguida.
     function manual(n) { parar(); mostrar(n); comecar(); }
 
-    document.getElementById('hero-anterior').addEventListener('click', function () { manual(atual - 1); });
-    document.getElementById('hero-proximo').addEventListener('click', function () { manual(atual + 1); });
+    var anterior = caixa.querySelector('.js-carrossel-anterior');
+    var proximo  = caixa.querySelector('.js-carrossel-proximo');
+    if (anterior) anterior.addEventListener('click', function () { manual(atual - 1); });
+    if (proximo)  proximo.addEventListener('click', function () { manual(atual + 1); });
     pontos.forEach(function (p) {
       p.addEventListener('click', function () { manual(Number(p.dataset.ir)); });
     });
@@ -1551,7 +1607,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     mostrar(0);
     comecar();
-  })();
+  });
 
   // ── Setas das galerias de obras ─────────────────────────────
   // Rolam ~85% da largura visível, para sempre sobrar uma imagem de

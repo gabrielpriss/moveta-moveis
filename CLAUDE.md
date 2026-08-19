@@ -167,6 +167,12 @@ termo soft.
 
 ## Carrosséis
 
+O mesmo código roda os dois: cada container com `[data-carrossel]` ganha a sua
+instância, com contagem própria. Os slides são `.carrossel-slide`, os pontos
+`.carrossel-ponto` e as setas `.js-carrossel-anterior` / `.js-carrossel-proximo`,
+buscadas dentro do próprio container. Para criar um terceiro carrossel, basta
+repetir a marcação, sem tocar no script.
+
 **Hero (`#hero-carrossel`).** 10 obras alternando 1 residencial / 1 comercial,
 em `hero-slide-01` a `10` (ímpares residenciais, pares comerciais). Troca por
 fade a cada 4s e também nos botões e nos pontos. Uma ação manual reinicia a
@@ -177,6 +183,13 @@ visível fica com `aria-hidden="false"`.
 
 > Ao testar em aba de background, o avanço automático **não** acontece: é o
 > `visibilitychange` pausando de propósito, não bug. Verificar com a aba visível.
+
+**"Quem faz" (`#sobre-carrossel`).** As mesmas 10 fotos do hero, na mesma ordem,
+no lugar onde estava o placeholder `sobre-equipe.svg`. Decisão do Gabriel em
+19/08: enquanto a foto da equipe não chega, o espaço mostra obra executada em vez
+de um desenho. Roda independente do hero (contagem própria) e todas as imagens
+são `loading="lazy"`, já que a seção fica bem abaixo da dobra. Ao trocar as fotos
+do hero, este carrossel acompanha: os dois leem os mesmos `hero-slide-NN.webp`.
 
 **Galerias abaixo de "Quem faz".** Duas faixas de rolagem horizontal com
 scroll-snap, `#galeria-residencial` e `#galeria-comercial`, 8 fotos cada
@@ -290,8 +303,11 @@ Cuidados no processamento:
   15.36.57 (luz roxa de LED distorce a cor real do móvel).
 
 Ainda sem foto, seguem placeholder SVG: `processo-medicao`,
-`processo-apresentacao`, `sobre-equipe`, `marcenaria-01/02/03`. Não há no Drive
-nenhuma foto de pessoas medindo, apresentando projeto ou da oficina.
+`processo-apresentacao`, `marcenaria-01/02/03`. Não há no Drive nenhuma foto de
+pessoas medindo, apresentando projeto ou da oficina. O `sobre-equipe.svg`
+continua no repositório, mas saiu da página em 19/08: o espaço dele virou o
+carrossel de obras. Quando a foto da equipe chegar, decidir se ela substitui o
+carrossel ou entra em outro ponto da seção.
 
 ## Avaliações do Google
 
@@ -408,7 +424,7 @@ entregar, contando a partir do fechamento (35:30 a 36:02).
 - **Foto de lavanderia de verdade**: a atual não é lavanderia. A Grazi ia mandar (12:18)
 - **Fotos dos acabamentos**: trocar os blocos de cor por madeiras reais. Ninguém tinha o material na reunião (44:51). A seção está oculta desde 19/08 justamente por isso
 - **Antes e depois**: Eduardo sugeriu um comparador deslizante. Depende de pares de fotos do mesmo ângulo (12:49)
-- **Foto da equipe** na seção "Quem faz" (27:28)
+- **Foto da equipe** na seção "Quem faz" (27:28). Desde 19/08 o espaço mostra o carrossel de obras, não mais o placeholder
 - **CNPJ no rodapé**: acordado, mas o número não foi passado e o CNPJ está em transição (33:17)
 - **Handle do Instagram**: o perfil ainda estava como "deg"; a Grazi ia trocar para movetaplanejados no mesmo dia. Confirmar antes de publicar (17:22, 55:29)
 
