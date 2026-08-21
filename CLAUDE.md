@@ -205,20 +205,45 @@ Número no arquivo: `5541991264615`
 > (41) 99126-4615. Se estiver errado, buscar e substituir `5541991264615` no
 > `index.html` (rodapé, `tel:` e constante `WHATSAPP` do script).
 
-Todos os CTAs abrem o **popup qualificador** (4 etapas: perfil, ambiente, prazo,
-nome e telefone) e terminam abrindo o `wa.me` com a mensagem pronta:
+### CTAs: link direto, sem popup (decisão de 21/08)
 
-```
-Olá! Sou Ana e vim pelo site da Movetá.
+No início da campanha, **todo CTA é um `<a href="https://wa.me/...">`** com
+`target="_blank" rel="noopener"` e a mensagem já escrita na própria URL. São 19
+links, cada um com um texto curto e coerente com o botão que a pessoa clicou:
 
-Projeto para: Minha casa
-Ambiente: Cozinha
-Pretendo começar: O quanto antes
-Meu WhatsApp: (41) 98888-7777
-```
+| Origem | Mensagem |
+|---|---|
+| Header, Barra mobile | quero pedir um orçamento |
+| Hero | quero um orçamento de móveis planejados |
+| Card Residencial / Empresa | orçamento de planejados para a minha casa / empresa |
+| Cards de ambiente (6) | cozinha planejada, guarda-roupa para o quarto, painel de TV para a sala, gabinete para o banheiro, armários para a lavanderia, home office |
+| Cards de empresa (4) | móveis para escritório, painel para TV, armários e divisórias, mesa para sala de reunião |
+| CTA Empresas | móveis planejados para a minha empresa |
+| CTA Final | quero começar o meu projeto de planejados |
+| Botão flutuante | quero falar sobre um projeto |
 
-Botões com `data-perfil` / `data-ambiente` pulam as etapas que já respondem.
+Todas começam com "Olá! Vim pelo site da Movetá e ".
+
+O **popup qualificador continua inteiro no arquivo**, markup e script, só não é
+mais aberto por ninguém: o ouvinte que o abria está comentado, logo acima de
+`// ── Abertura pelos CTAs`. Para religar, descomentar esse bloco e devolver a
+classe `js-abrir-qualificador` aos CTAs no lugar do `href` do `wa.me`.
+
 Telefone visível **apenas no rodapé**; no resto da página, só CTA de WhatsApp.
+
+### Medição
+
+Um único ouvinte em `a[href*="wa.me"]` cobre a página inteira e dispara **um**
+evento por clique:
+
+```js
+{ event: 'clique_whatsapp', cta_origem: 'Ambiente',
+  cta_perfil: 'casa', cta_ambiente: 'Cozinha' }
+```
+
+Como o link abre em aba nova, a página não é descarregada e o dataLayer tem
+tempo de processar. O contêiner do GTM que lê esse evento e o transforma em
+conversão está em `docs/gtm/`, com o passo a passo no README de lá.
 
 ## Imagens
 Os `.svg` em `public/assets/` são **placeholders** dos ambientes que ainda não
@@ -323,24 +348,26 @@ receber as avaliações reais do Google Meu Negócio. Cores oficiais da marca:
   texto: 'Texto da avaliação.' }
 ```
 
-A nota média e o total do topo são calculados sozinhos a partir da lista.
+A nota média do topo é calculada sozinha a partir da lista. **O total de
+avaliações não é exibido**, por decisão do Gabriel em 21/08: o resumo mostra só
+a nota e as estrelas.
 
-**Três estados, todos testados:**
+`LINK_GOOGLE` aponta para o perfil real: `https://g.page/r/CQSL4kI014x2EAE/review`.
+O caminho `/review` abre o perfil com a caixa de avaliação em foco, que é para
+onde o botão "Ver no Google" leva.
+
+**Dois estados:**
 
 | Estado | Quando | O que aparece |
 |---|---|---|
-| Exemplo | alguma entrada com `exemplo: true` | cartões + **tarja âmbar de aviso** |
-| Real | nenhuma entrada com `exemplo: true` | cartões, sem tarja |
+| Com avaliação | `AVALIACOES` preenchido | resumo com a nota + cartões |
 | Vazio | `AVALIACOES = []` | convite honesto, resumo escondido |
 
-> A empresa tem **zero avaliações** hoje. Por isso a seção ships com três
-> entradas marcadas `exemplo: true`, cujo texto descreve o próprio layout em vez
-> de simular depoimento de cliente. Publicar avaliação inventada com nome de
-> pessoa seria fraude e viola as políticas do Google. Ao colar as reais, apagar
-> o campo `exemplo: true` de cada uma: a tarja some sozinha.
-
-Falta ainda trocar `LINK_GOOGLE` (hoje aponta para o Google Maps genérico) pelo
-perfil do Meu Negócio quando ele for criado.
+> ⚠️ **Os 3 textos que estão lá ainda descrevem o próprio layout**, não são
+> depoimentos. A tarja "Prévia de layout" que avisava disso saiu em 21/08, a
+> pedido do Gabriel, junto com o campo `exemplo: true`. Antes de publicar, colar
+> as avaliações reais do perfil ou deixar `AVALIACOES = []`. Publicar depoimento
+> inventado com nome de pessoa seria fraude e viola as políticas do Google.
 
 **Integração futura:** trocar a constante por um `fetch` que devolva o mesmo
 formato (Places API, endpoint `place/details`, campo `reviews`, ou um JSON
@@ -372,6 +399,18 @@ campos do JSON-LD, `robots.txt` e `sitemap.xml`).
 > declarar nota inventada é motivo de penalização manual do Google) e o endereço
 > de rua (o barracão não foi confirmado como endereço público). Quando o Meu
 > Negócio existir, os dois entram juntos.
+
+## Google Tag Manager
+
+Contêiner **GTM-MBGK6P3J**, ativo desde 20/08: script logo depois das metas
+`charset` e `viewport` no `<head>`, `<noscript>` na primeira linha do `<body>`.
+O `charset` vem antes de propósito, para continuar dentro do primeiro 1 KB do
+documento.
+
+O arquivo de importação do contêiner (tags, gatilho e variáveis da conversão de
+WhatsApp) está em `docs/gtm/`, com o passo a passo no README de lá. Falta
+preencher 3 constantes: o Measurement ID do GA4 e o ID + rótulo da conversão do
+Google Ads.
 
 ## Deploy
 
@@ -462,5 +501,5 @@ Vale para todos os elementos que alternam por `hidden`: `#lightbox`,
 
 Só as fotos das **duas galerias** abaixo de "Quem faz" (`#galeria-residencial`
 e `#galeria-comercial`) abrem ampliadas. O carrossel do hero e os cards de
-ambiente **não** abrem lightbox: os cards levam ao popup qualificador, que é o
+ambiente **não** abrem lightbox: os cards são links diretos de WhatsApp, que é o
 caminho de conversão. Ao mexer no seletor, manter esse escopo.
