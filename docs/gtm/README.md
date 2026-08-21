@@ -37,14 +37,23 @@ tempo de sobra para processar o push. Não é preciso `eventCallback` nem
 
 ## Preencher antes de publicar
 
-A importação entra com 3 constantes vazias, de propósito. Sem elas as tags
-sobem mas não registram nada.
+A conversão do Google Ads **já vem preenchida** (ação *WhatsApp LP*, 20/08).
+Falta só o GA4.
 
-| Variável | Onde achar o valor |
-|---|---|
-| `CONST - GA4 Measurement ID` | GA4 > Administrador > Fluxos de dados > o fluxo do site. Formato `G-XXXXXXXXXX` |
-| `CONST - Google Ads Conversion ID` | Google Ads > Objetivos > Conversões > ação **Contato WhatsApp** > Configurar tag. Formato `AW-XXXXXXXXXX` |
-| `CONST - Google Ads Conversion Label` | mesma tela, ao lado do ID |
+| Variável | Valor | Onde achar |
+|---|---|---|
+| `CONST - GA4 Measurement ID` | ⚠️ **falta preencher** | GA4 > Administrador > Fluxos de dados > o fluxo do site. Formato `G-XXXXXXXXXX` |
+| `CONST - Google Ads Conversion ID` | `18394853574` | Google Ads > Objetivos > Conversões > ação **WhatsApp LP** > Configurar tag |
+| `CONST - Google Ads Conversion Label` | `KbpnCM2Tl-UcEMbhrMNE` | mesma tela, ao lado do ID |
+
+> O ID vai **numérico puro**, sem o prefixo `AW-`. A tag *Google Ads Conversion
+> Tracking* do GTM monta o prefixo sozinha; colar `AW-18394853574` no campo faz
+> a tag subir sem registrar conversão. O `AW-` só aparece no formato
+> `send_to: 'AW-18394853574/KbpnCM2Tl-UcEMbhrMNE'`, que é do gtag.js puro,
+> caminho que não usamos aqui.
+
+Enquanto o GA4 não for preenchido, as duas tags de GA4 sobem sem registrar
+nada. A conversão do Google Ads, essa já funciona: ela não depende do GA4.
 
 A ação de conversão no Google Ads precisa ser criada antes, como
 **Site > Contato**, com contagem **Uma** (um clique em WhatsApp é um lead, não
@@ -69,7 +78,7 @@ importa quantas vezes a pessoa clique).
 | `GA4 - Configuracao` | todas as páginas | tag base do GA4 |
 | `GA4 - gerar_lead (clique WhatsApp)` | `CE - clique_whatsapp` | evento `gerar_lead` com origem, ambiente e perfil |
 | `Google Ads - Vinculador de conversoes` | todas as páginas | grava o GCLID no cookie `_gcl`, sem ele o Ads não atribui a conversão ao clique no anúncio |
-| `[PREENCHER ID] Google Ads - Conversao Contato WhatsApp` | `CE - clique_whatsapp` | conversão nativa do Google Ads |
+| `Google Ads - Conversao Contato WhatsApp` | `CE - clique_whatsapp` | conversão nativa do Google Ads |
 
 ## Dois caminhos para a conversão, escolha um
 
@@ -77,7 +86,7 @@ O arquivo entrega os dois montados. Deixar os dois ativos **conta a mesma
 conversão duas vezes** no Google Ads e estraga o CPA do relatório.
 
 - **Tag nativa do Ads** (recomendado para campanha nova): mantenha a tag
-  `[PREENCHER ID] Google Ads - Conversao Contato WhatsApp` e não importe o
+  `Google Ads - Conversao Contato WhatsApp` e não importe o
   `gerar_lead` do GA4 para o Ads. Conversão chega mais rápido, o que ajuda o
   Smart Bidding no começo.
 - **Importar do GA4**: pause a tag nativa e, no Google Ads, importe o evento

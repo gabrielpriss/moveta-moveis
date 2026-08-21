@@ -155,7 +155,7 @@
         "containerId": "0",
         "tagId": "4",
         "fingerprint": "0",
-        "name": "[PREENCHER ID] Google Ads - Conversao Contato WhatsApp",
+        "name": "Google Ads - Conversao Contato WhatsApp",
         "type": "awct",
         "parameter": [
           {
@@ -360,7 +360,7 @@
           {
             "type": "TEMPLATE",
             "key": "value",
-            "value": "AW-XXXXXXXXXX"
+            "value": "18394853574"
           }
         ],
         "formatValue": {}
@@ -377,7 +377,7 @@
           {
             "type": "TEMPLATE",
             "key": "value",
-            "value": "XXXXXXXXXXXXXXXXXX"
+            "value": "KbpnCM2Tl-UcEMbhrMNE"
           }
         ],
         "formatValue": {}

@@ -408,9 +408,18 @@ O `charset` vem antes de propósito, para continuar dentro do primeiro 1 KB do
 documento.
 
 O arquivo de importação do contêiner (tags, gatilho e variáveis da conversão de
-WhatsApp) está em `docs/gtm/`, com o passo a passo no README de lá. Falta
-preencher 3 constantes: o Measurement ID do GA4 e o ID + rótulo da conversão do
-Google Ads.
+WhatsApp) está em `docs/gtm/`, com o passo a passo no README de lá.
+
+Conversão do Google Ads **preenchida em 20/08**, ação *WhatsApp LP*:
+ID `18394853574` e rótulo `KbpnCM2Tl-UcEMbhrMNE`.
+
+> O ID entra **numérico puro** na tag do GTM. O prefixo `AW-` é do gtag.js
+> (`send_to: 'AW-18394853574/...'`); a tag *Google Ads Conversion Tracking* do
+> GTM monta o prefixo sozinha, e colar `AW-` no campo faz a tag subir sem
+> registrar conversão.
+
+Ainda **falta o Measurement ID do GA4** (`G-XXXXXXXXXX`). Sem ele as duas tags
+de GA4 sobem sem registrar nada; a conversão do Ads funciona independente.
 
 ## Deploy
 
