@@ -12,7 +12,9 @@ LP de captação para campanha de **Google Ads**. Canal principal de conversão:
 ```bash
 npm run dev
 ```
-Sobe em http://localhost:8934. Alternativa com o runtime real do Cloudflare: `npm run dev:wrangler`.
+Sobe em http://localhost:8934. A variante do teste A/B fica em
+http://localhost:8934/form/. Alternativa com o runtime real do Cloudflare:
+`npm run dev:wrangler`.
 
 ## Identidade visual (extraída da logo oficial)
 Logo: monograma M dourado em moldura quadrada, wordmark prata, subtítulo dourado.
@@ -196,6 +198,47 @@ scroll-snap, `#galeria-residencial` e `#galeria-comercial`, 8 fotos cada
 (`galeria-res-01..08`, `galeria-com-01..08`). As setas rolam 85% da largura
 visível, para sempre sobrar uma imagem de referência entre um avanço e outro.
 No mobile as setas somem e a rolagem é por toque.
+
+## Teste A/B: página do formulário (`/form/`)
+
+Fechado com o cliente em **25/09/2026**. Detalhes, medição e como ligar a
+planilha em [`docs/formulario/`](docs/formulario/README.md).
+
+O problema que originou: no primeiro mês o Google acusou **50 conversões** e a
+planilha do cliente tinha **18 leads**. A conversão dispara no clique do botão
+de WhatsApp, e clicar não é mandar mensagem. Na variante `/form/` ela só dispara
+quando alguém termina o formulário, então o número do relatório passa a ser o
+número real.
+
+| Variante | URL | Conversão |
+|---|---|---|
+| A | `/` | `clique_whatsapp`, no clique do CTA |
+| B | `/form/` | `lead_formulario`, no envio do formulário |
+
+`public/form/index.html` é **gerado**, não editar a mão:
+
+```bash
+npm run form
+```
+
+Fonte: `public/index.html` + `scripts/form-secao.html` + `scripts/form-script.js`,
+montados por `scripts/gerar-form.py`. Gerar em vez de manter duas páginas é o que
+mantém o teste honesto: se as variantes divergirem em foto ou texto, elas param
+de medir formulário × WhatsApp. Ao mexer na LP, rodar `npm run form` antes de
+publicar. O gerador falha com erro se um marcador esperado sumir da LP.
+
+O formulário reaproveita as 4 perguntas do popup qualificador (perfil, ambiente,
+prazo, contato). Os cards de ambiente pulam as etapas que já respondem. A
+variante é `noindex` e fica fora do `sitemap.xml`: existe só para o tráfego pago.
+
+> ⚠️ **Falta a tag no GTM.** A conversão atual escuta `clique_whatsapp`, que em
+> `/form/` nunca dispara, porque não sobrou link de `wa.me` na página. Sem uma
+> tag ouvindo `lead_formulario`, a variante B marca zero e o teste conclui o
+> contrário do que aconteceu.
+
+> ⚠️ **Falta a planilha.** `ENDPOINT_PLANILHA` em `scripts/form-script.js` está
+> vazio. Sem ele o formulário mede e leva ao WhatsApp normalmente, só não grava.
+> O Apps Script pronto está em `docs/formulario/planilha-apps-script.js`.
 
 ## WhatsApp
 Número no arquivo: `5541991264615`

@@ -24,6 +24,33 @@ Como o link abre em aba nova, a página não é descarregada e o dataLayer tem
 tempo de sobra para processar o push. Não é preciso `eventCallback` nem
 `transport_type: beacon`.
 
+### A variante `/form/` manda outro evento
+
+Desde 25/09 existe a variante do teste A/B em `/form/` (ver
+[`docs/formulario/`](../formulario/README.md)), onde todo CTA leva ao
+formulário. Lá **não existe link de `wa.me`**, então `clique_whatsapp` nunca
+dispara. A conversão daquela página é:
+
+```js
+{
+  event:        'lead_formulario',
+  cta_origem:   'Ambiente',        // mesmo vocabulário do clique_whatsapp
+  cta_perfil:   'Minha casa',
+  cta_ambiente: 'Cozinha',
+  lead_prazo:   'O quanto antes'   // só existe no formulário
+}
+```
+
+Há também `abriu_formulario` (mesmo `cta_origem`), que serve para medir
+desistência entre abrir e enviar. Não é conversão.
+
+> ⚠️ **Falta criar a tag.** Enquanto o GTM só ouvir `clique_whatsapp`, a
+> variante `/form/` registra **zero conversão** e o teste conclui o oposto do
+> que aconteceu. Duplicar a tag *Google Ads Conversion Tracking* que já existe
+> e trocar só o gatilho para `lead_formulario` resolve. Usar a **mesma** ação de
+> conversão (*WhatsApp LP*) mantém as duas variantes comparáveis no relatório;
+> criar uma ação separada só se quiserem separar as metas no Ads.
+
 ## Como importar
 
 1. GTM > **Administrador** > **Importar contêiner**

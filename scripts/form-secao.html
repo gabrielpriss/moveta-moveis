@@ -1,0 +1,119 @@
+<!-- ═══════════════════════════════════════════════════════════
+     FORMULÁRIO DE ORÇAMENTO (variante /form/ do teste A/B)
+     4 etapas, as mesmas perguntas do popup qualificador. As três
+     primeiras são de qualificação; o contato só é pedido no fim,
+     quando a pessoa já investiu tempo. Ao enviar, os dados vão
+     para a planilha e a pessoa é levada ao WhatsApp.
+     ═══════════════════════════════════════════════════════════ -->
+<section id="formulario" class="py-16 sm:py-24 bg-areia scroll-mt-20" aria-labelledby="formulario-titulo">
+  <div class="max-w-xl mx-auto px-4 sm:px-6">
+
+    <div class="text-center mb-10" data-aos="fade-up">
+      <p class="text-bronze font-semibold text-sm uppercase tracking-widest mb-3">Orçamento</p>
+      <h2 id="formulario-titulo" class="font-display text-3xl sm:text-4xl text-carvao mb-4">
+        Peça o seu orçamento
+      </h2>
+      <p class="text-pedra">
+        Quatro perguntas rápidas para a gente já chegar com <strong class="text-carvao">uma ideia do seu
+        projeto</strong>. Leva menos de um minuto.
+      </p>
+    </div>
+
+    <div class="bg-white rounded-3xl border border-carvao/10 shadow-sm p-6 sm:p-9" data-aos="fade-up">
+
+      <!-- Progresso: 4 bolinhas. aria-hidden porque o texto "Etapa X de 4"
+           logo abaixo já dá a mesma informação para o leitor de tela. -->
+      <div class="flex items-center justify-center gap-2 mb-8" aria-hidden="true">
+        <span class="f-ponto" data-progresso="1"></span>
+        <span class="f-ponto" data-progresso="2"></span>
+        <span class="f-ponto" data-progresso="3"></span>
+        <span class="f-ponto" data-progresso="4"></span>
+      </div>
+
+      <form id="orcamento-form" novalidate>
+
+        <!-- Etapa 1 -->
+        <div class="f-etapa" data-etapa="1">
+          <p class="font-display text-xl text-carvao mb-5">O projeto é para onde?</p>
+          <div class="grid gap-3">
+            <button type="button" class="opcao-btn border-2 border-carvao/15 rounded-xl px-4 py-4 text-left text-sm font-medium flex items-center gap-3"
+                    data-campo="perfil" data-valor="Minha casa">
+              <i class="fa-solid fa-house text-bronze w-5" aria-hidden="true"></i> Minha casa
+            </button>
+            <button type="button" class="opcao-btn border-2 border-carvao/15 rounded-xl px-4 py-4 text-left text-sm font-medium flex items-center gap-3"
+                    data-campo="perfil" data-valor="Minha empresa">
+              <i class="fa-solid fa-building text-bronze w-5" aria-hidden="true"></i> Minha empresa
+            </button>
+          </div>
+        </div>
+
+        <!-- Etapa 2: as opções são montadas pelo script, conforme a etapa 1 -->
+        <div class="f-etapa" data-etapa="2" hidden>
+          <p class="font-display text-xl text-carvao mb-5">Qual ambiente?</p>
+          <div id="f-ambientes" class="grid grid-cols-2 gap-3"></div>
+        </div>
+
+        <!-- Etapa 3 -->
+        <div class="f-etapa" data-etapa="3" hidden>
+          <p class="font-display text-xl text-carvao mb-5">Quando pretende começar?</p>
+          <div class="grid gap-3">
+            <button type="button" class="opcao-btn border-2 border-carvao/15 rounded-xl px-4 py-4 text-left text-sm font-medium"
+                    data-campo="prazo" data-valor="O quanto antes">O quanto antes</button>
+            <button type="button" class="opcao-btn border-2 border-carvao/15 rounded-xl px-4 py-4 text-left text-sm font-medium"
+                    data-campo="prazo" data-valor="Nos próximos 3 meses">Nos próximos 3 meses</button>
+            <button type="button" class="opcao-btn border-2 border-carvao/15 rounded-xl px-4 py-4 text-left text-sm font-medium"
+                    data-campo="prazo" data-valor="Ainda estou pesquisando">Ainda estou pesquisando</button>
+          </div>
+        </div>
+
+        <!-- Etapa 4: só aqui o contato é pedido -->
+        <div class="f-etapa" data-etapa="4" hidden>
+          <p class="font-display text-xl text-carvao mb-5">Para onde mandamos o orçamento?</p>
+
+          <label for="f-nome" class="block text-xs font-medium text-pedra mb-1.5">Seu nome</label>
+          <input id="f-nome" name="nome" type="text" autocomplete="given-name"
+                 class="w-full border-2 border-carvao/15 rounded-xl px-4 py-3.5 text-sm mb-1.5 focus:border-bronze focus:outline-none"
+                 placeholder="Ex.: Ana">
+          <p id="f-erro-nome" class="text-xs text-red-600 mb-3 hidden">Informe o seu nome.</p>
+
+          <label for="f-tel" class="block text-xs font-medium text-pedra mb-1.5 mt-4">Seu WhatsApp</label>
+          <input id="f-tel" name="telefone" type="tel" inputmode="numeric" autocomplete="tel"
+                 class="w-full border-2 border-carvao/15 rounded-xl px-4 py-3.5 text-sm mb-1.5 focus:border-bronze focus:outline-none"
+                 placeholder="(41) 90000-0000">
+          <p id="f-erro-tel" class="text-xs text-red-600 mb-3 hidden">Confira o número: precisa ter DDD e 9 dígitos.</p>
+
+          <button type="submit" id="f-enviar"
+                  class="btn-zap w-full rounded-full py-4 text-base font-semibold flex items-center justify-center gap-2.5 mt-6">
+            <i class="fa-brands fa-whatsapp text-xl" aria-hidden="true"></i>
+            Enviar e falar no WhatsApp
+          </button>
+          <p class="text-[11px] text-pedra text-center mt-3">
+            Seus dados são usados apenas para este atendimento.
+          </p>
+        </div>
+      </form>
+
+      <!-- Confirmação: aparece no lugar do formulário depois do envio -->
+      <div id="f-sucesso" hidden class="text-center py-6">
+        <i class="fa-solid fa-circle-check text-zap text-5xl mb-4" aria-hidden="true"></i>
+        <h3 class="font-display text-2xl text-carvao mb-2">Recebemos o seu pedido</h3>
+        <p class="text-sm text-pedra mb-6">
+          Estamos te levando para o WhatsApp com tudo preenchido. Se a conversa não
+          abrir sozinha, é só tocar no botão.
+        </p>
+        <a id="f-link-zap" href="#" target="_blank" rel="noopener"
+           class="btn-zap rounded-full px-7 py-3.5 text-sm font-semibold inline-flex items-center gap-2.5">
+          <i class="fa-brands fa-whatsapp text-lg" aria-hidden="true"></i>
+          Abrir a conversa
+        </a>
+      </div>
+
+      <div class="flex items-center justify-between mt-7 pt-5 border-t border-carvao/10">
+        <button type="button" id="f-voltar" class="text-xs text-pedra hover:text-bronze transition-colors flex items-center gap-1.5 invisible">
+          <i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Voltar
+        </button>
+        <span id="f-passo" class="text-xs text-pedra">Etapa 1 de 4</span>
+      </div>
+    </div>
+  </div>
+</section>
