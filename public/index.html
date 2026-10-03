@@ -170,8 +170,6 @@
       .btn-zap:hover { transform: translateY(-2px); filter: brightness(1.06); box-shadow: 0 12px 28px -8px rgba(37, 211, 102, .8); }
 
       /* Cartoes de ambiente: zoom leve na imagem */
-      .card-amb img { transition: transform .6s cubic-bezier(.22,1,.36,1); }
-      .card-amb:hover img { transform: scale(1.06); }
 
       /* Numero grande decorativo das etapas do processo */
       .etapa-num {
@@ -540,8 +538,8 @@
     </div>
 
     <div class="grid grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-      <!-- Cada card leva o ambiente para dentro da mensagem do WhatsApp -->
-      <a href="https://wa.me/5541991264615?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Movet%C3%A1%20e%20quero%20um%20or%C3%A7amento%20de%20cozinha%20planejada." target="_blank" rel="noopener" class="card-amb group relative overflow-hidden rounded-2xl bg-white text-left" data-origem="Ambiente" data-perfil="casa" data-ambiente="Cozinha" data-aos="fade-up">
+      <!-- Cards só ilustram: sem link, para não gerar clique acidental no WhatsApp -->
+      <div class="card-amb group relative overflow-hidden rounded-2xl bg-white text-left" data-aos="fade-up">
         <div class="aspect-[4/5] overflow-hidden bg-areia">
           <img src="assets/residencial-cozinha.webp" alt="Cozinha planejada em L com bancada de granito, executada pela Movetá" width="1200" height="846" class="w-full h-full object-cover" loading="lazy">
         </div>
@@ -549,9 +547,9 @@
           <h3 class="font-display text-lg sm:text-xl text-white">Cozinha</h3>
           <p class="text-white/70 text-xs sm:text-sm mt-0.5">Armários e bancada sob medida</p>
         </div>
-      </a>
+      </div>
 
-      <a href="https://wa.me/5541991264615?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Movet%C3%A1%20e%20quero%20um%20or%C3%A7amento%20de%20guarda-roupa%20planejado%20para%20o%20quarto." target="_blank" rel="noopener" class="card-amb group relative overflow-hidden rounded-2xl bg-white text-left" data-origem="Ambiente" data-perfil="casa" data-ambiente="Quarto" data-aos="fade-up" data-aos-delay="50">
+      <div class="card-amb group relative overflow-hidden rounded-2xl bg-white text-left" data-aos="fade-up" data-aos-delay="50">
         <div class="aspect-[4/5] overflow-hidden bg-areia">
           <img src="assets/residencial-dormitorio.webp" alt="Quarto planejado com bancada e armários aéreos" width="800" height="1067" class="w-full h-full object-cover" loading="lazy">
         </div>
@@ -559,9 +557,9 @@
           <h3 class="font-display text-lg sm:text-xl text-white">Quarto</h3>
           <p class="text-white/70 text-xs sm:text-sm mt-0.5">Guarda-roupa sob medida</p>
         </div>
-      </a>
+      </div>
 
-      <a href="https://wa.me/5541991264615?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Movet%C3%A1%20e%20quero%20um%20or%C3%A7amento%20de%20painel%20de%20TV%20para%20a%20sala." target="_blank" rel="noopener" class="card-amb group relative overflow-hidden rounded-2xl bg-white text-left" data-origem="Ambiente" data-perfil="casa" data-ambiente="Painel de TV / sala" data-aos="fade-up" data-aos-delay="100">
+      <div class="card-amb group relative overflow-hidden rounded-2xl bg-white text-left" data-aos="fade-up" data-aos-delay="100">
         <div class="aspect-[4/5] overflow-hidden bg-areia">
           <img src="assets/residencial-painel-tv.webp" alt="Painel ripado para TV com bancada, na sala" width="800" height="1065" class="w-full h-full object-cover" loading="lazy">
         </div>
@@ -569,9 +567,9 @@
           <h3 class="font-display text-lg sm:text-xl text-white">Sala</h3>
           <p class="text-white/70 text-xs sm:text-sm mt-0.5">Painel para TV</p>
         </div>
-      </a>
+      </div>
 
-      <a href="https://wa.me/5541991264615?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Movet%C3%A1%20e%20quero%20um%20or%C3%A7amento%20de%20gabinete%20planejado%20para%20o%20banheiro." target="_blank" rel="noopener" class="card-amb group relative overflow-hidden rounded-2xl bg-white text-left" data-origem="Ambiente" data-perfil="casa" data-ambiente="Banheiro" data-aos="fade-up" data-aos-delay="150">
+      <div class="card-amb group relative overflow-hidden rounded-2xl bg-white text-left" data-aos="fade-up" data-aos-delay="150">
         <div class="aspect-[4/5] overflow-hidden bg-areia">
           <img src="assets/residencial-banheiro.webp" alt="Gabinete de banheiro planejado com bancada de granito" width="800" height="1067" class="w-full h-full object-cover" loading="lazy">
         </div>
@@ -579,9 +577,9 @@
           <h3 class="font-display text-lg sm:text-xl text-white">Banheiro</h3>
           <p class="text-white/70 text-xs sm:text-sm mt-0.5">Gabinete sob medida</p>
         </div>
-      </a>
+      </div>
 
-      <a href="https://wa.me/5541991264615?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Movet%C3%A1%20e%20quero%20um%20or%C3%A7amento%20de%20arm%C3%A1rios%20para%20a%20lavanderia." target="_blank" rel="noopener" class="card-amb group relative overflow-hidden rounded-2xl bg-white text-left" data-origem="Ambiente" data-perfil="casa" data-ambiente="Lavanderia" data-aos="fade-up" data-aos-delay="200">
+      <div class="card-amb group relative overflow-hidden rounded-2xl bg-white text-left" data-aos="fade-up" data-aos-delay="200">
         <div class="aspect-[4/5] overflow-hidden bg-areia">
           <img src="assets/residencial-lavanderia.webp" alt="Lavanderia planejada com bancada e armários sob medida" width="800" height="1069" class="w-full h-full object-cover" loading="lazy">
         </div>
@@ -589,9 +587,9 @@
           <h3 class="font-display text-lg sm:text-xl text-white">Lavanderia</h3>
           <p class="text-white/70 text-xs sm:text-sm mt-0.5">Armários sob medida</p>
         </div>
-      </a>
+      </div>
 
-      <a href="https://wa.me/5541991264615?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Movet%C3%A1%20e%20quero%20um%20or%C3%A7amento%20de%20home%20office%20planejado." target="_blank" rel="noopener" class="card-amb group relative overflow-hidden rounded-2xl bg-white text-left" data-origem="Ambiente" data-perfil="casa" data-ambiente="Home office" data-aos="fade-up" data-aos-delay="250">
+      <div class="card-amb group relative overflow-hidden rounded-2xl bg-white text-left" data-aos="fade-up" data-aos-delay="250">
         <div class="aspect-[4/5] overflow-hidden bg-areia">
           <img src="assets/residencial-home-office.webp" alt="Home office planejado com armários e nichos iluminados" width="800" height="1067" class="w-full h-full object-cover" loading="lazy">
         </div>
@@ -599,7 +597,7 @@
           <h3 class="font-display text-lg sm:text-xl text-white">Home office</h3>
           <p class="text-white/70 text-xs sm:text-sm mt-0.5">Bancada e armários</p>
         </div>
-      </a>
+      </div>
     </div>
   </div>
 </section>
@@ -623,41 +621,41 @@
     </div>
 
     <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-      <a href="https://wa.me/5541991264615?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Movet%C3%A1%20e%20quero%20um%20or%C3%A7amento%20de%20m%C3%B3veis%20planejados%20para%20escrit%C3%B3rio." target="_blank" rel="noopener" class="card-amb group relative overflow-hidden rounded-2xl bg-white text-left" data-origem="Empresa" data-perfil="empresa" data-ambiente="Móveis para escritório" data-aos="fade-up">
+      <div class="card-amb group relative overflow-hidden rounded-2xl bg-white text-left" data-aos="fade-up">
         <div class="aspect-[4/5] overflow-hidden bg-areia">
           <img src="assets/empresa-escritorio.webp" alt="Escritório com estações de trabalho planejadas" width="800" height="1067" class="w-full h-full object-cover" loading="lazy">
         </div>
         <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-carvao/90 to-transparent p-4 sm:p-5">
           <h3 class="font-display text-base sm:text-lg text-white">Móveis para escritório</h3>
         </div>
-      </a>
+      </div>
 
-      <a href="https://wa.me/5541991264615?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Movet%C3%A1%20e%20quero%20um%20or%C3%A7amento%20de%20painel%20para%20TV%20na%20minha%20empresa." target="_blank" rel="noopener" class="card-amb group relative overflow-hidden rounded-2xl bg-white text-left" data-origem="Empresa" data-perfil="empresa" data-ambiente="Painel para TV" data-aos="fade-up" data-aos-delay="50">
+      <div class="card-amb group relative overflow-hidden rounded-2xl bg-white text-left" data-aos="fade-up" data-aos-delay="50">
         <div class="aspect-[4/5] overflow-hidden bg-areia">
           <img src="assets/empresa-painel-tv.webp" alt="Sala de reunião com painel para TV" width="800" height="1069" class="w-full h-full object-cover" loading="lazy">
         </div>
         <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-carvao/90 to-transparent p-4 sm:p-5">
           <h3 class="font-display text-base sm:text-lg text-white">Painel para TV</h3>
         </div>
-      </a>
+      </div>
 
-      <a href="https://wa.me/5541991264615?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Movet%C3%A1%20e%20quero%20um%20or%C3%A7amento%20de%20arm%C3%A1rios%20e%20divis%C3%B3rias%20para%20a%20minha%20empresa." target="_blank" rel="noopener" class="card-amb group relative overflow-hidden rounded-2xl bg-white text-left" data-origem="Empresa" data-perfil="empresa" data-ambiente="Armários e divisórias" data-aos="fade-up" data-aos-delay="100">
+      <div class="card-amb group relative overflow-hidden rounded-2xl bg-white text-left" data-aos="fade-up" data-aos-delay="100">
         <div class="aspect-[4/5] overflow-hidden bg-areia">
           <img src="assets/empresa-armarios.webp" alt="Escaninhos e nichos sob medida para equipe" width="800" height="1066" class="w-full h-full object-cover" loading="lazy">
         </div>
         <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-carvao/90 to-transparent p-4 sm:p-5">
           <h3 class="font-display text-base sm:text-lg text-white">Armários e divisórias</h3>
         </div>
-      </a>
+      </div>
 
-      <a href="https://wa.me/5541991264615?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Movet%C3%A1%20e%20quero%20um%20or%C3%A7amento%20de%20mesa%20para%20sala%20de%20reuni%C3%A3o." target="_blank" rel="noopener" class="card-amb group relative overflow-hidden rounded-2xl bg-white text-left" data-origem="Empresa" data-perfil="empresa" data-ambiente="Sala de reunião" data-aos="fade-up" data-aos-delay="150">
+      <div class="card-amb group relative overflow-hidden rounded-2xl bg-white text-left" data-aos="fade-up" data-aos-delay="150">
         <div class="aspect-[4/5] overflow-hidden bg-areia">
           <img src="assets/empresa-sala-reuniao.webp" alt="Mesa de reunião planejada com gaveteiros" width="800" height="600" class="w-full h-full object-cover" loading="lazy">
         </div>
         <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-carvao/90 to-transparent p-4 sm:p-5">
           <h3 class="font-display text-base sm:text-lg text-white">Mesa de reunião</h3>
         </div>
-      </a>
+      </div>
     </div>
 
     <div class="mt-10 text-center" data-aos="fade-up">
