@@ -32,6 +32,7 @@
   .tag.a { left:12px; } .tag.d { right:12px; background:rgba(201,162,75,.95); color:var(--carvao); }
   input[type=range] { width:100%; margin-top:12px; accent-color:var(--bronze); }
   .retrato { max-width:560px; margin:0 auto; }
+  h2.sec { font-family:Marcellus, serif; font-weight:400; font-size:30px; margin:46px 0 18px; padding-bottom:8px; border-bottom:2px solid var(--ouro); }
   .site { display:inline-block; margin-top:6px; color:var(--bronze); font-weight:600; }
   footer { text-align:center; color:var(--pedra); font-size:13px; padding:0 20px 40px; }
 </style>
@@ -40,44 +41,383 @@
 <header><img src="/assets/logo-moveta.png" alt="Movetá Móveis Planejados"></header>
 <main>
   <h1>Aprovação das imagens do site</h1>
-  <p class="intro">Estas são as fotos reais das obras de vocês, tratadas para o site. Os móveis são exatamente os que vocês entregaram: mesmas portas, gavetas, puxadores, cores e acabamentos. O que mudou foi o ambiente em volta, para a foto ter cara de projeto completo. Arrastem a barra de cada imagem para comparar o antes e o depois.</p>
-
+  <p class="intro">Estas são as fotos reais das obras de vocês, tratadas para o site. Os móveis são exatamente os que vocês entregaram: mesmas portas, gavetas, puxadores, cores e acabamentos. O que mudou foi o ambiente em volta (piso, parede, teto, luz e acabamentos da casa), para cada foto ter cara de projeto completo. Arrastem a barra de cada imagem para comparar o antes e o depois. São 31 fotos, separadas em residencial e empresas.</p>
+  <p class="intro"><a class="site" href="/">Ver o site com as imagens novas aplicadas</a></p>
+  <h2 class="sec">Residencial</h2>
   <section class="card">
     <div class="num">Imagem 1</div>
-    <h2>Cozinha</h2>
-    <ul>
-      <li>Cortina de linho cobrindo a janela inteira no lugar da cortina de renda</li>
-      <li>Parede em porcelanato claro efeito mármore no lugar do azulejo antigo</li>
-      <li>Torneira gourmet preta e bancada livre, sem o purificador</li>
-      <li>Marca d'água do celular removida</li>
-    </ul>
-    <div class="cmp" data-cmp>
-      <img draggable="false" src="cozinha-antes.webp" alt="Cozinha antes do tratamento">
-      <div class="depois"><img draggable="false" src="cozinha-depois.webp" alt="Cozinha depois do tratamento"></div>
-      <div class="linha"></div><span class="tag a">Antes</span><span class="tag d">Depois</span>
-    </div>
-    <input type="range" min="0" max="100" value="50" aria-label="Comparar antes e depois da cozinha">
-  </section>
-
-  <section class="card">
-    <div class="num">Imagem 2</div>
-    <h2>Escritório com teto inclinado</h2>
-    <ul>
-      <li>Piso de madeira clara no lugar do piso cerâmico</li>
-      <li>Teto branco com spots embutidos no lugar da luminária antiga</li>
-      <li>Ambiente limpo: sem cadeiras, objetos soltos e porta aberta, com quadro e planta</li>
-    </ul>
-    <div class="retrato">
+    <h2>Sala com painel ripado e TV</h2>
+    <div style="max-width:560px;margin:0 auto">
       <div class="cmp" data-cmp>
-        <img draggable="false" src="escritorio-antes.webp" alt="Escritório antes do tratamento">
-        <div class="depois"><img draggable="false" src="escritorio-depois.webp" alt="Escritório depois do tratamento"></div>
+        <img draggable="false" src="img/S01-antes.webp" alt="Sala com painel ripado e TV antes" loading="lazy" width="720" height="960">
+        <div class="depois"><img draggable="false" src="img/S01-depois.webp" alt="Sala com painel ripado e TV depois" loading="lazy"></div>
         <div class="linha"></div><span class="tag a">Antes</span><span class="tag d">Depois</span>
       </div>
-      <input type="range" min="0" max="100" value="50" aria-label="Comparar antes e depois do escritório">
+      <input type="range" min="0" max="100" value="50" aria-label="Comparar antes e depois: Sala com painel ripado e TV">
     </div>
   </section>
-
-  <p>Para ver as imagens já aplicadas no site, no topo e nos cards de cozinha e de escritório: <a class="site" href="/">abrir a versão de teste do site</a></p>
+  <section class="card">
+    <div class="num">Imagem 2</div>
+    <h2>Quarto com armários e bancada</h2>
+    <div style="max-width:560px;margin:0 auto">
+      <div class="cmp" data-cmp>
+        <img draggable="false" src="img/S03-antes.webp" alt="Quarto com armários e bancada antes" loading="lazy" width="720" height="960">
+        <div class="depois"><img draggable="false" src="img/S03-depois.webp" alt="Quarto com armários e bancada depois" loading="lazy"></div>
+        <div class="linha"></div><span class="tag a">Antes</span><span class="tag d">Depois</span>
+      </div>
+      <input type="range" min="0" max="100" value="50" aria-label="Comparar antes e depois: Quarto com armários e bancada">
+    </div>
+  </section>
+  <section class="card">
+    <div class="num">Imagem 3</div>
+    <h2>Cozinha</h2>
+    <div>
+      <div class="cmp" data-cmp>
+        <img draggable="false" src="img/S05-antes.webp" alt="Cozinha antes" loading="lazy" width="900" height="675">
+        <div class="depois"><img draggable="false" src="img/S05-depois.webp" alt="Cozinha depois" loading="lazy"></div>
+        <div class="linha"></div><span class="tag a">Antes</span><span class="tag d">Depois</span>
+      </div>
+      <input type="range" min="0" max="100" value="50" aria-label="Comparar antes e depois: Cozinha">
+    </div>
+  </section>
+  <section class="card">
+    <div class="num">Imagem 4</div>
+    <h2>Painel de TV</h2>
+    <div style="max-width:560px;margin:0 auto">
+      <div class="cmp" data-cmp>
+        <img draggable="false" src="img/S07-antes.webp" alt="Painel de TV antes" loading="lazy" width="720" height="958">
+        <div class="depois"><img draggable="false" src="img/S07-depois.webp" alt="Painel de TV depois" loading="lazy"></div>
+        <div class="linha"></div><span class="tag a">Antes</span><span class="tag d">Depois</span>
+      </div>
+      <input type="range" min="0" max="100" value="50" aria-label="Comparar antes e depois: Painel de TV">
+    </div>
+  </section>
+  <section class="card">
+    <div class="num">Imagem 5</div>
+    <h2>Home office com nichos</h2>
+    <div style="max-width:560px;margin:0 auto">
+      <div class="cmp" data-cmp>
+        <img draggable="false" src="img/S09-antes.webp" alt="Home office com nichos antes" loading="lazy" width="720" height="960">
+        <div class="depois"><img draggable="false" src="img/S09-depois.webp" alt="Home office com nichos depois" loading="lazy"></div>
+        <div class="linha"></div><span class="tag a">Antes</span><span class="tag d">Depois</span>
+      </div>
+      <input type="range" min="0" max="100" value="50" aria-label="Comparar antes e depois: Home office com nichos">
+    </div>
+  </section>
+  <section class="card">
+    <div class="num">Imagem 6</div>
+    <h2>Guarda-roupa até o teto</h2>
+    <div style="max-width:560px;margin:0 auto">
+      <div class="cmp" data-cmp>
+        <img draggable="false" src="img/S11-antes.webp" alt="Guarda-roupa até o teto antes" loading="lazy" width="720" height="960">
+        <div class="depois"><img draggable="false" src="img/S11-depois.webp" alt="Guarda-roupa até o teto depois" loading="lazy"></div>
+        <div class="linha"></div><span class="tag a">Antes</span><span class="tag d">Depois</span>
+      </div>
+      <input type="range" min="0" max="100" value="50" aria-label="Comparar antes e depois: Guarda-roupa até o teto">
+    </div>
+  </section>
+  <section class="card">
+    <div class="num">Imagem 7</div>
+    <h2>Dormitório</h2>
+    <div style="max-width:560px;margin:0 auto">
+      <div class="cmp" data-cmp>
+        <img draggable="false" src="img/S13-antes.webp" alt="Dormitório antes" loading="lazy" width="720" height="960">
+        <div class="depois"><img draggable="false" src="img/S13-depois.webp" alt="Dormitório depois" loading="lazy"></div>
+        <div class="linha"></div><span class="tag a">Antes</span><span class="tag d">Depois</span>
+      </div>
+      <input type="range" min="0" max="100" value="50" aria-label="Comparar antes e depois: Dormitório">
+    </div>
+  </section>
+  <section class="card">
+    <div class="num">Imagem 8</div>
+    <h2>Banheiro</h2>
+    <div style="max-width:560px;margin:0 auto">
+      <div class="cmp" data-cmp>
+        <img draggable="false" src="img/S14-antes.webp" alt="Banheiro antes" loading="lazy" width="720" height="960">
+        <div class="depois"><img draggable="false" src="img/S14-depois.webp" alt="Banheiro depois" loading="lazy"></div>
+        <div class="linha"></div><span class="tag a">Antes</span><span class="tag d">Depois</span>
+      </div>
+      <input type="range" min="0" max="100" value="50" aria-label="Comparar antes e depois: Banheiro">
+    </div>
+  </section>
+  <section class="card">
+    <div class="num">Imagem 9</div>
+    <h2>Lavanderia</h2>
+    <div>
+      <div class="cmp" data-cmp>
+        <img draggable="false" src="img/S15-antes.webp" alt="Lavanderia antes" loading="lazy" width="900" height="673">
+        <div class="depois"><img draggable="false" src="img/S15-depois.webp" alt="Lavanderia depois" loading="lazy"></div>
+        <div class="linha"></div><span class="tag a">Antes</span><span class="tag d">Depois</span>
+      </div>
+      <input type="range" min="0" max="100" value="50" aria-label="Comparar antes e depois: Lavanderia">
+    </div>
+  </section>
+  <section class="card">
+    <div class="num">Imagem 10</div>
+    <h2>Painel ripado de frente</h2>
+    <div style="max-width:560px;margin:0 auto">
+      <div class="cmp" data-cmp>
+        <img draggable="false" src="img/S17-antes.webp" alt="Painel ripado de frente antes" loading="lazy" width="720" height="958">
+        <div class="depois"><img draggable="false" src="img/S17-depois.webp" alt="Painel ripado de frente depois" loading="lazy"></div>
+        <div class="linha"></div><span class="tag a">Antes</span><span class="tag d">Depois</span>
+      </div>
+      <input type="range" min="0" max="100" value="50" aria-label="Comparar antes e depois: Painel ripado de frente">
+    </div>
+  </section>
+  <section class="card">
+    <div class="num">Imagem 11</div>
+    <h2>Home office em ângulo</h2>
+    <div>
+      <div class="cmp" data-cmp>
+        <img draggable="false" src="img/S18-antes.webp" alt="Home office em ângulo antes" loading="lazy" width="900" height="675">
+        <div class="depois"><img draggable="false" src="img/S18-depois.webp" alt="Home office em ângulo depois" loading="lazy"></div>
+        <div class="linha"></div><span class="tag a">Antes</span><span class="tag d">Depois</span>
+      </div>
+      <input type="range" min="0" max="100" value="50" aria-label="Comparar antes e depois: Home office em ângulo">
+    </div>
+  </section>
+  <section class="card">
+    <div class="num">Imagem 12</div>
+    <h2>Painel ripado na lateral</h2>
+    <div style="max-width:560px;margin:0 auto">
+      <div class="cmp" data-cmp>
+        <img draggable="false" src="img/S19-antes.webp" alt="Painel ripado na lateral antes" loading="lazy" width="720" height="958">
+        <div class="depois"><img draggable="false" src="img/S19-depois.webp" alt="Painel ripado na lateral depois" loading="lazy"></div>
+        <div class="linha"></div><span class="tag a">Antes</span><span class="tag d">Depois</span>
+      </div>
+      <input type="range" min="0" max="100" value="50" aria-label="Comparar antes e depois: Painel ripado na lateral">
+    </div>
+  </section>
+  <section class="card">
+    <div class="num">Imagem 13</div>
+    <h2>Quarto infantil</h2>
+    <div style="max-width:560px;margin:0 auto">
+      <div class="cmp" data-cmp>
+        <img draggable="false" src="img/S20-antes.webp" alt="Quarto infantil antes" loading="lazy" width="720" height="962">
+        <div class="depois"><img draggable="false" src="img/S20-depois.webp" alt="Quarto infantil depois" loading="lazy"></div>
+        <div class="linha"></div><span class="tag a">Antes</span><span class="tag d">Depois</span>
+      </div>
+      <input type="range" min="0" max="100" value="50" aria-label="Comparar antes e depois: Quarto infantil">
+    </div>
+  </section>
+  <section class="card">
+    <div class="num">Imagem 14</div>
+    <h2>Cômoda</h2>
+    <div style="max-width:560px;margin:0 auto">
+      <div class="cmp" data-cmp>
+        <img draggable="false" src="img/S21-antes.webp" alt="Cômoda antes" loading="lazy" width="720" height="962">
+        <div class="depois"><img draggable="false" src="img/S21-depois.webp" alt="Cômoda depois" loading="lazy"></div>
+        <div class="linha"></div><span class="tag a">Antes</span><span class="tag d">Depois</span>
+      </div>
+      <input type="range" min="0" max="100" value="50" aria-label="Comparar antes e depois: Cômoda">
+    </div>
+  </section>
+  <section class="card">
+    <div class="num">Imagem 15</div>
+    <h2>Estante com nichos</h2>
+    <div style="max-width:560px;margin:0 auto">
+      <div class="cmp" data-cmp>
+        <img draggable="false" src="img/S22-antes.webp" alt="Estante com nichos antes" loading="lazy" width="720" height="1279">
+        <div class="depois"><img draggable="false" src="img/S22-depois.webp" alt="Estante com nichos depois" loading="lazy"></div>
+        <div class="linha"></div><span class="tag a">Antes</span><span class="tag d">Depois</span>
+      </div>
+      <input type="range" min="0" max="100" value="50" aria-label="Comparar antes e depois: Estante com nichos">
+    </div>
+  </section>
+  <section class="card">
+    <div class="num">Imagem 16</div>
+    <h2>Quarto com armários aéreos</h2>
+    <div style="max-width:560px;margin:0 auto">
+      <div class="cmp" data-cmp>
+        <img draggable="false" src="img/S23-antes.webp" alt="Quarto com armários aéreos antes" loading="lazy" width="720" height="960">
+        <div class="depois"><img draggable="false" src="img/S23-depois.webp" alt="Quarto com armários aéreos depois" loading="lazy"></div>
+        <div class="linha"></div><span class="tag a">Antes</span><span class="tag d">Depois</span>
+      </div>
+      <input type="range" min="0" max="100" value="50" aria-label="Comparar antes e depois: Quarto com armários aéreos">
+    </div>
+  </section>
+  <section class="card">
+    <div class="num">Imagem 17</div>
+    <h2>Home office completo</h2>
+    <div style="max-width:560px;margin:0 auto">
+      <div class="cmp" data-cmp>
+        <img draggable="false" src="img/S24-antes.webp" alt="Home office completo antes" loading="lazy" width="720" height="960">
+        <div class="depois"><img draggable="false" src="img/S24-depois.webp" alt="Home office completo depois" loading="lazy"></div>
+        <div class="linha"></div><span class="tag a">Antes</span><span class="tag d">Depois</span>
+      </div>
+      <input type="range" min="0" max="100" value="50" aria-label="Comparar antes e depois: Home office completo">
+    </div>
+  </section>
+  <h2 class="sec">Empresas e escritórios</h2>
+  <section class="card">
+    <div class="num">Imagem 18</div>
+    <h2>Balcão de recepção</h2>
+    <div>
+      <div class="cmp" data-cmp>
+        <img draggable="false" src="img/S02-antes.webp" alt="Balcão de recepção antes" loading="lazy" width="900" height="675">
+        <div class="depois"><img draggable="false" src="img/S02-depois.webp" alt="Balcão de recepção depois" loading="lazy"></div>
+        <div class="linha"></div><span class="tag a">Antes</span><span class="tag d">Depois</span>
+      </div>
+      <input type="range" min="0" max="100" value="50" aria-label="Comparar antes e depois: Balcão de recepção">
+    </div>
+  </section>
+  <section class="card">
+    <div class="num">Imagem 19</div>
+    <h2>Escritório com mesa em L</h2>
+    <div style="max-width:560px;margin:0 auto">
+      <div class="cmp" data-cmp>
+        <img draggable="false" src="img/S04-antes.webp" alt="Escritório com mesa em L antes" loading="lazy" width="720" height="960">
+        <div class="depois"><img draggable="false" src="img/S04-depois.webp" alt="Escritório com mesa em L depois" loading="lazy"></div>
+        <div class="linha"></div><span class="tag a">Antes</span><span class="tag d">Depois</span>
+      </div>
+      <input type="range" min="0" max="100" value="50" aria-label="Comparar antes e depois: Escritório com mesa em L">
+    </div>
+  </section>
+  <section class="card">
+    <div class="num">Imagem 20</div>
+    <h2>Mesa de reunião</h2>
+    <div>
+      <div class="cmp" data-cmp>
+        <img draggable="false" src="img/S06-antes.webp" alt="Mesa de reunião antes" loading="lazy" width="900" height="675">
+        <div class="depois"><img draggable="false" src="img/S06-depois.webp" alt="Mesa de reunião depois" loading="lazy"></div>
+        <div class="linha"></div><span class="tag a">Antes</span><span class="tag d">Depois</span>
+      </div>
+      <input type="range" min="0" max="100" value="50" aria-label="Comparar antes e depois: Mesa de reunião">
+    </div>
+  </section>
+  <section class="card">
+    <div class="num">Imagem 21</div>
+    <h2>Estações de trabalho</h2>
+    <div style="max-width:560px;margin:0 auto">
+      <div class="cmp" data-cmp>
+        <img draggable="false" src="img/S08-antes.webp" alt="Estações de trabalho antes" loading="lazy" width="720" height="960">
+        <div class="depois"><img draggable="false" src="img/S08-depois.webp" alt="Estações de trabalho depois" loading="lazy"></div>
+        <div class="linha"></div><span class="tag a">Antes</span><span class="tag d">Depois</span>
+      </div>
+      <input type="range" min="0" max="100" value="50" aria-label="Comparar antes e depois: Estações de trabalho">
+    </div>
+  </section>
+  <section class="card">
+    <div class="num">Imagem 22</div>
+    <h2>Sala de reunião com TV</h2>
+    <div style="max-width:560px;margin:0 auto">
+      <div class="cmp" data-cmp>
+        <img draggable="false" src="img/S10-antes.webp" alt="Sala de reunião com TV antes" loading="lazy" width="720" height="962">
+        <div class="depois"><img draggable="false" src="img/S10-depois.webp" alt="Sala de reunião com TV depois" loading="lazy"></div>
+        <div class="linha"></div><span class="tag a">Antes</span><span class="tag d">Depois</span>
+      </div>
+      <input type="range" min="0" max="100" value="50" aria-label="Comparar antes e depois: Sala de reunião com TV">
+    </div>
+  </section>
+  <section class="card">
+    <div class="num">Imagem 23</div>
+    <h2>Mesas com gaveteiros</h2>
+    <div>
+      <div class="cmp" data-cmp>
+        <img draggable="false" src="img/S12-antes.webp" alt="Mesas com gaveteiros antes" loading="lazy" width="900" height="675">
+        <div class="depois"><img draggable="false" src="img/S12-depois.webp" alt="Mesas com gaveteiros depois" loading="lazy"></div>
+        <div class="linha"></div><span class="tag a">Antes</span><span class="tag d">Depois</span>
+      </div>
+      <input type="range" min="0" max="100" value="50" aria-label="Comparar antes e depois: Mesas com gaveteiros">
+    </div>
+  </section>
+  <section class="card">
+    <div class="num">Imagem 24</div>
+    <h2>Armários e escaninhos</h2>
+    <div style="max-width:560px;margin:0 auto">
+      <div class="cmp" data-cmp>
+        <img draggable="false" src="img/S16-antes.webp" alt="Armários e escaninhos antes" loading="lazy" width="720" height="958">
+        <div class="depois"><img draggable="false" src="img/S16-depois.webp" alt="Armários e escaninhos depois" loading="lazy"></div>
+        <div class="linha"></div><span class="tag a">Antes</span><span class="tag d">Depois</span>
+      </div>
+      <input type="range" min="0" max="100" value="50" aria-label="Comparar antes e depois: Armários e escaninhos">
+    </div>
+  </section>
+  <section class="card">
+    <div class="num">Imagem 25</div>
+    <h2>Mesa com painel</h2>
+    <div style="max-width:560px;margin:0 auto">
+      <div class="cmp" data-cmp>
+        <img draggable="false" src="img/S25-antes.webp" alt="Mesa com painel antes" loading="lazy" width="720" height="960">
+        <div class="depois"><img draggable="false" src="img/S25-depois.webp" alt="Mesa com painel depois" loading="lazy"></div>
+        <div class="linha"></div><span class="tag a">Antes</span><span class="tag d">Depois</span>
+      </div>
+      <input type="range" min="0" max="100" value="50" aria-label="Comparar antes e depois: Mesa com painel">
+    </div>
+  </section>
+  <section class="card">
+    <div class="num">Imagem 26</div>
+    <h2>Estação de trabalho em L</h2>
+    <div style="max-width:560px;margin:0 auto">
+      <div class="cmp" data-cmp>
+        <img draggable="false" src="img/S26-antes.webp" alt="Estação de trabalho em L antes" loading="lazy" width="720" height="960">
+        <div class="depois"><img draggable="false" src="img/S26-depois.webp" alt="Estação de trabalho em L depois" loading="lazy"></div>
+        <div class="linha"></div><span class="tag a">Antes</span><span class="tag d">Depois</span>
+      </div>
+      <input type="range" min="0" max="100" value="50" aria-label="Comparar antes e depois: Estação de trabalho em L">
+    </div>
+  </section>
+  <section class="card">
+    <div class="num">Imagem 27</div>
+    <h2>Balcão preto</h2>
+    <div style="max-width:560px;margin:0 auto">
+      <div class="cmp" data-cmp>
+        <img draggable="false" src="img/S27-antes.webp" alt="Balcão preto antes" loading="lazy" width="720" height="960">
+        <div class="depois"><img draggable="false" src="img/S27-depois.webp" alt="Balcão preto depois" loading="lazy"></div>
+        <div class="linha"></div><span class="tag a">Antes</span><span class="tag d">Depois</span>
+      </div>
+      <input type="range" min="0" max="100" value="50" aria-label="Comparar antes e depois: Balcão preto">
+    </div>
+  </section>
+  <section class="card">
+    <div class="num">Imagem 28</div>
+    <h2>Estação com janela</h2>
+    <div style="max-width:560px;margin:0 auto">
+      <div class="cmp" data-cmp>
+        <img draggable="false" src="img/S28-antes.webp" alt="Estação com janela antes" loading="lazy" width="720" height="1281">
+        <div class="depois"><img draggable="false" src="img/S28-depois.webp" alt="Estação com janela depois" loading="lazy"></div>
+        <div class="linha"></div><span class="tag a">Antes</span><span class="tag d">Depois</span>
+      </div>
+      <input type="range" min="0" max="100" value="50" aria-label="Comparar antes e depois: Estação com janela">
+    </div>
+  </section>
+  <section class="card">
+    <div class="num">Imagem 29</div>
+    <h2>Recepção com balcão ripado</h2>
+    <div style="max-width:560px;margin:0 auto">
+      <div class="cmp" data-cmp>
+        <img draggable="false" src="img/S29-antes.webp" alt="Recepção com balcão ripado antes" loading="lazy" width="720" height="962">
+        <div class="depois"><img draggable="false" src="img/S29-depois.webp" alt="Recepção com balcão ripado depois" loading="lazy"></div>
+        <div class="linha"></div><span class="tag a">Antes</span><span class="tag d">Depois</span>
+      </div>
+      <input type="range" min="0" max="100" value="50" aria-label="Comparar antes e depois: Recepção com balcão ripado">
+    </div>
+  </section>
+  <section class="card">
+    <div class="num">Imagem 30</div>
+    <h2>Escritório com ilha</h2>
+    <div>
+      <div class="cmp" data-cmp>
+        <img draggable="false" src="img/S30-antes.webp" alt="Escritório com ilha antes" loading="lazy" width="900" height="675">
+        <div class="depois"><img draggable="false" src="img/S30-depois.webp" alt="Escritório com ilha depois" loading="lazy"></div>
+        <div class="linha"></div><span class="tag a">Antes</span><span class="tag d">Depois</span>
+      </div>
+      <input type="range" min="0" max="100" value="50" aria-label="Comparar antes e depois: Escritório com ilha">
+    </div>
+  </section>
+  <section class="card">
+    <div class="num">Imagem 31</div>
+    <h2>Balcão preto de frente</h2>
+    <div style="max-width:560px;margin:0 auto">
+      <div class="cmp" data-cmp>
+        <img draggable="false" src="img/S31-antes.webp" alt="Balcão preto de frente antes" loading="lazy" width="720" height="960">
+        <div class="depois"><img draggable="false" src="img/S31-depois.webp" alt="Balcão preto de frente depois" loading="lazy"></div>
+        <div class="linha"></div><span class="tag a">Antes</span><span class="tag d">Depois</span>
+      </div>
+      <input type="range" min="0" max="100" value="50" aria-label="Comparar antes e depois: Balcão preto de frente">
+    </div>
+  </section>
+  <p>Para conferir as imagens já aplicadas no site: <a class="site" href="/">abrir a versão de teste do site</a></p>
 </main>
 <footer>Link provisório, só para aprovação. Não é o site no ar.</footer>
 <script>
