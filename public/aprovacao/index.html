@@ -22,8 +22,8 @@
   .card h2 { font-family:Marcellus, serif; font-weight:400; font-size:24px; margin:0 0 4px; }
   .card .num { color:var(--bronze); font-weight:600; font-size:13px; letter-spacing:.08em; text-transform:uppercase; }
   .card ul { margin:10px 0 18px; padding-left:18px; color:var(--pedra); }
-  .cmp { position:relative; overflow:hidden; border-radius:10px; user-select:none; touch-action:pan-y; background:var(--areia); }
-  .cmp img { display:block; width:100%; height:auto; }
+  .cmp { position:relative; overflow:hidden; border-radius:10px; user-select:none; -webkit-user-select:none; touch-action:pan-y; background:var(--areia); cursor:ew-resize; }
+  .cmp img { display:block; width:100%; height:auto; pointer-events:none; -webkit-user-drag:none; user-select:none; }
   .cmp .depois { position:absolute; inset:0; clip-path:inset(0 0 0 50%); }
   .cmp .depois img { width:100%; height:100%; object-fit:cover; }
   .cmp .linha { position:absolute; top:0; bottom:0; left:50%; width:3px; background:#fff; transform:translateX(-50%); box-shadow:0 0 0 1px rgba(0,0,0,.15); pointer-events:none; }
@@ -52,8 +52,8 @@
       <li>Marca d'água do celular removida</li>
     </ul>
     <div class="cmp" data-cmp>
-      <img src="cozinha-antes.webp" alt="Cozinha antes do tratamento">
-      <div class="depois"><img src="cozinha-depois.webp" alt="Cozinha depois do tratamento"></div>
+      <img draggable="false" src="cozinha-antes.webp" alt="Cozinha antes do tratamento">
+      <div class="depois"><img draggable="false" src="cozinha-depois.webp" alt="Cozinha depois do tratamento"></div>
       <div class="linha"></div><span class="tag a">Antes</span><span class="tag d">Depois</span>
     </div>
     <input type="range" min="0" max="100" value="50" aria-label="Comparar antes e depois da cozinha">
@@ -69,8 +69,8 @@
     </ul>
     <div class="retrato">
       <div class="cmp" data-cmp>
-        <img src="escritorio-antes.webp" alt="Escritório antes do tratamento">
-        <div class="depois"><img src="escritorio-depois.webp" alt="Escritório depois do tratamento"></div>
+        <img draggable="false" src="escritorio-antes.webp" alt="Escritório antes do tratamento">
+        <div class="depois"><img draggable="false" src="escritorio-depois.webp" alt="Escritório depois do tratamento"></div>
         <div class="linha"></div><span class="tag a">Antes</span><span class="tag d">Depois</span>
       </div>
       <input type="range" min="0" max="100" value="50" aria-label="Comparar antes e depois do escritório">
@@ -88,9 +88,16 @@
     range.addEventListener('input', function () { set(range.value); });
     function mover(x) { var r = cmp.getBoundingClientRect(); set(Math.max(0, Math.min(100, (x - r.left) / r.width * 100))); }
     var ativo = false;
-    cmp.addEventListener('pointerdown', function (e) { ativo = true; mover(e.clientX); });
-    window.addEventListener('pointermove', function (e) { if (ativo) mover(e.clientX); });
-    window.addEventListener('pointerup', function () { ativo = false; });
+    cmp.addEventListener('dragstart', function (e) { e.preventDefault(); });
+    cmp.addEventListener('pointerdown', function (e) {
+      e.preventDefault(); ativo = true; mover(e.clientX);
+      if (cmp.setPointerCapture) cmp.setPointerCapture(e.pointerId);
+    });
+    cmp.addEventListener('pointermove', function (e) { if (ativo) mover(e.clientX); });
+    function soltar() { ativo = false; }
+    cmp.addEventListener('pointerup', soltar);
+    cmp.addEventListener('pointercancel', soltar);
+    cmp.addEventListener('lostpointercapture', soltar);
   });
 </script>
 </body>
