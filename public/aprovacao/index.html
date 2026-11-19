@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Aprovação das imagens | Movetá Móveis Planejados</title>
+<link rel="icon" href="/assets/favicon-moveta.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root { --carvao:#211D1A; --ouro:#C9A24B; --bronze:#7A5F24; --prata:#D8D5D0; --areia:#EDE7DB; --creme:#F7F4EE; --pedra:#6B6560; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--creme); color:var(--carvao); font-family:Montserrat, system-ui, sans-serif; line-height:1.55; }
+  header { background:var(--carvao); padding:22px 20px; text-align:center; }
+  header img { height:54px; }
+  main { max-width:1080px; margin:0 auto; padding:36px 20px 64px; }
+  h1 { font-family:Marcellus, serif; font-weight:400; font-size:clamp(28px,4vw,40px); margin:0 0 10px; }
+  .intro { color:var(--pedra); max-width:720px; margin:0 0 34px; }
+  .card { background:#fff; border:1px solid var(--prata); border-radius:14px; padding:22px; margin-bottom:34px; }
+  .card h2 { font-family:Marcellus, serif; font-weight:400; font-size:24px; margin:0 0 4px; }
+  .card .num { color:var(--bronze); font-weight:600; font-size:13px; letter-spacing:.08em; text-transform:uppercase; }
+  .card ul { margin:10px 0 18px; padding-left:18px; color:var(--pedra); }
+  .cmp { position:relative; overflow:hidden; border-radius:10px; user-select:none; touch-action:pan-y; background:var(--areia); }
+  .cmp img { display:block; width:100%; height:auto; }
+  .cmp .depois { position:absolute; inset:0; clip-path:inset(0 0 0 50%); }
+  .cmp .depois img { width:100%; height:100%; object-fit:cover; }
+  .cmp .linha { position:absolute; top:0; bottom:0; left:50%; width:3px; background:#fff; transform:translateX(-50%); box-shadow:0 0 0 1px rgba(0,0,0,.15); pointer-events:none; }
+  .cmp .linha::after { content:"\2194"; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:38px; height:38px; border-radius:50%; background:var(--ouro); color:var(--carvao); display:grid; place-items:center; font-size:18px; font-weight:600; }
+  .tag { position:absolute; top:12px; padding:4px 10px; border-radius:20px; font-size:12px; font-weight:600; background:rgba(33,29,26,.78); color:#fff; pointer-events:none; }
+  .tag.a { left:12px; } .tag.d { right:12px; background:rgba(201,162,75,.95); color:var(--carvao); }
+  input[type=range] { width:100%; margin-top:12px; accent-color:var(--bronze); }
+  .retrato { max-width:560px; margin:0 auto; }
+  .site { display:inline-block; margin-top:6px; color:var(--bronze); font-weight:600; }
+  footer { text-align:center; color:var(--pedra); font-size:13px; padding:0 20px 40px; }
+</style>
+</head>
+<body>
+<header><img src="/assets/logo-moveta.png" alt="Movetá Móveis Planejados"></header>
+<main>
+  <h1>Aprovação das imagens do site</h1>
+  <p class="intro">Estas são as fotos reais das obras de vocês, tratadas para o site. Os móveis são exatamente os que vocês entregaram: mesmas portas, gavetas, puxadores, cores e acabamentos. O que mudou foi o ambiente em volta, para a foto ter cara de projeto completo. Arrastem a barra de cada imagem para comparar o antes e o depois.</p>
+
+  <section class="card">
+    <div class="num">Imagem 1</div>
+    <h2>Cozinha</h2>
+    <ul>
+      <li>Cortina de linho cobrindo a janela inteira no lugar da cortina de renda</li>
+      <li>Parede em porcelanato claro efeito mármore no lugar do azulejo antigo</li>
+      <li>Torneira gourmet preta e bancada livre, sem o purificador</li>
+      <li>Marca d'água do celular removida</li>
+    </ul>
+    <div class="cmp" data-cmp>
+      <img src="cozinha-antes.webp" alt="Cozinha antes do tratamento">
+      <div class="depois"><img src="cozinha-depois.webp" alt="Cozinha depois do tratamento"></div>
+      <div class="linha"></div><span class="tag a">Antes</span><span class="tag d">Depois</span>
+    </div>
+    <input type="range" min="0" max="100" value="50" aria-label="Comparar antes e depois da cozinha">
+  </section>
+
+  <section class="card">
+    <div class="num">Imagem 2</div>
+    <h2>Escritório com teto inclinado</h2>
+    <ul>
+      <li>Piso de madeira clara no lugar do piso cerâmico</li>
+      <li>Teto branco com spots embutidos no lugar da luminária antiga</li>
+      <li>Ambiente limpo: sem cadeiras, objetos soltos e porta aberta, com quadro e planta</li>
+    </ul>
+    <div class="retrato">
+      <div class="cmp" data-cmp>
+        <img src="escritorio-antes.webp" alt="Escritório antes do tratamento">
+        <div class="depois"><img src="escritorio-depois.webp" alt="Escritório depois do tratamento"></div>
+        <div class="linha"></div><span class="tag a">Antes</span><span class="tag d">Depois</span>
+      </div>
+      <input type="range" min="0" max="100" value="50" aria-label="Comparar antes e depois do escritório">
+    </div>
+  </section>
+
+  <p>Para ver as imagens já aplicadas no site, no topo e nos cards de cozinha e de escritório: <a class="site" href="/">abrir a versão de teste do site</a></p>
+</main>
+<footer>Link provisório, só para aprovação. Não é o site no ar.</footer>
+<script>
+  document.querySelectorAll('[data-cmp]').forEach(function (cmp) {
+    var range = cmp.parentElement.querySelector('input[type=range]');
+    var depois = cmp.querySelector('.depois'), linha = cmp.querySelector('.linha');
+    function set(v) { depois.style.clipPath = 'inset(0 0 0 ' + v + '%)'; linha.style.left = v + '%'; range.value = v; }
+    range.addEventListener('input', function () { set(range.value); });
+    function mover(x) { var r = cmp.getBoundingClientRect(); set(Math.max(0, Math.min(100, (x - r.left) / r.width * 100))); }
+    var ativo = false;
+    cmp.addEventListener('pointerdown', function (e) { ativo = true; mover(e.clientX); });
+    window.addEventListener('pointermove', function (e) { if (ativo) mover(e.clientX); });
+    window.addEventListener('pointerup', function () { ativo = false; });
+  });
+</script>
+</body>
+</html>
